@@ -1,2 +1,2 @@
 test:
-	./build/Build/bin/EigenTutorial-test	
+	./build/Build/bin/EigenTutorial-test
