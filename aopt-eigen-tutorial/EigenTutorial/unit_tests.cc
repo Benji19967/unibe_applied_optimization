@@ -114,7 +114,7 @@ TEST(EigenTutorial, MatrixAssignment_sparse) {
   using SintMat = Eigen::SparseMatrix<int>;  // sparse matrix type
   using T = Eigen::Triplet<int>;  // triplet, used to fill the sparse matrices
 
-  SintMat sparseA;
+  SintMat sparseA(5, 5);
   std::vector<T>
       triplets;  // nonzero entries: T(i, j, a_ij) where the element at the i-th
                  // row and j-th column is nonzero and whose value is a_ij
@@ -126,8 +126,6 @@ TEST(EigenTutorial, MatrixAssignment_sparse) {
   // | 0	0	0	0	0  |
   // | 0	0	14	0	8  |
 
-  /* TODO */
-  triplets.reserve(1000);
   triplets.push_back(T(0, 1, 3));
   triplets.push_back(T(1, 0, 22));
   triplets.push_back(T(1, 4, 17));
