@@ -38,7 +38,18 @@ namespace AOPT {
             //Todo: implement the 2d version of the grid search
             // algorithm to find minimum value of _func between _x_l and _x_u
             //------------------------------------------------------//
-           
+            double step_x = double(_x_u(0) - _x_l(0)) / n_cells_;
+            double step_y = double(_x_u(1) - _x_l(1)) / n_cells_;
+            for (double i = _x_l(0); i <= _x_u(0); i += step_x) {
+                for (double j = _x_l(1); j <= _x_u(1); j += step_y) {
+                    Eigen::Vector2d eval_point(i, j);
+                    f = _func->eval_f(eval_point);
+                    if (f < fmin) {
+                        fmin = f;
+                        x_min = eval_point;
+                    }
+                }
+            }
             
             //------------------------------------------------------//
             _f_min = fmin;
