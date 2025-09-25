@@ -1,6 +1,11 @@
 **/.DS_Store
 **/build/
+
+# Ignore all external/ dirs that are NOT at the root
 **/external/
+
+# But keep the top-level external/ directory
+!/external/
 
 # Prerequisites
 *.d
