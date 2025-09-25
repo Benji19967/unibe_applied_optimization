@@ -4,7 +4,7 @@ Exercises for course applied optimization at the University of Bern
 
 ## Getting started with an exercise
 
-```
+```bash
 cd aopt-exercise<n>
 mkdir build
 cd build
