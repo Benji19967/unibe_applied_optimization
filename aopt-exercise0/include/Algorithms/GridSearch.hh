@@ -69,7 +69,7 @@ namespace AOPT {
          *             _x_l and _x_u together define an ND cuboid in which the grid lies
          * \return 0 if all went well, -1 if not.*/
         int grid_search_nd(FunctionBase* _func, const Vec& _x_l, const Vec& _x_u, double& _f_min) const {
-            int n = _func->n_unknowns();
+            size_t n = _func->n_unknowns();
             if (_x_l.size() != n || _x_u.size() != n) {
                 std::cout << "Error: input limits are not of correct dimension!" << std::endl;
                 return -1;
@@ -82,8 +82,33 @@ namespace AOPT {
             //Todo: implement the nd version of the grid search
             // algorithm to find minimum value of a nd quadratic function
             // set f_min with the minimum, which is then stored in the referenced argument _f_min
+            Vec delta = (1.0 / n_cells_) * (_x_u - _x_l);
+            Vec index = Vec::Zero(n);
 
-            
+            bool done = false;
+            while (!done) {
+                Vec x(n);
+                x = _x_l + index.cwiseProduct(delta);
+
+                double f = _func->eval_f(x);
+                if (f < f_min) {
+                    f_min = f;
+                    x_min = x;
+                }             
+
+                for (size_t i = 0; i < n; ++i) {
+                    index(i)++;
+                    if (index(i) < n_cells_ + 1) {
+                        break;
+                    } else {
+                        index(i) = 0;
+                        if (i == n - 1) {
+                            done = true;
+                        }
+                    }
+                }
+            }
+
             //------------------------------------------------------//
             _f_min = f_min;
             std::cout << "Minimum value of the function is: " << f_min << " at x:\n" << x_min << std::endl;
