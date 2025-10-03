@@ -1,3 +1,5 @@
+# Csv can be visualized at: https://slides.cgg.unibe.ch/aopt20/plots/plot2d_custom.html
+
 func2d:
 	./build/Build/bin/CsvExporter ./assets/func2d_0.csv 1 -10 -10 10 10 20 20
 
