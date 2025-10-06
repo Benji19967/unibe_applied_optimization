@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+
+\title{Exercise 2}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Convex Functions (1 pt)}
+
+\subsection*{Simple functions (0.5 pt)}
+
+Are the following functions convex? Prove your statement.
+
+\begin{enumerate}
+    \item $f(x) = x^2$, $x \in \mathbb{R}$
+    \item $f(x) = e^{x^2}$, $x \in \mathbb{R}$
+    \item $f(x, y) = x^2 + 3xy + 2y^2$, $x \in \mathbb{R}$, $y \in \mathbb{R}$
+\end{enumerate}
+
+\subsection*{Log-sum-exp (0.5 pt)}
+
+Show that the function
+\[
+    f(\bm{x}) = \log(e^{x_1} + \ldots + e^{x_n})
+\]
+is convex on $\mathbb{R}^n$.
+
+\textit{Hint:} The proof is outlined in Boyd's book p. 74. Develop it yourself and provide the intermediate steps.
+
+\subsection*{Geometric Mean (Bonus (0.5 pt))}
+
+Show that the geometric mean
+\[
+    f(\bm{x}) = \left( \prod_{i=1}^{n} x_i \right)^{1/n}
+\]
+is concave on $\mathbb{R}_{++}^n$.
+
+\end{document}
