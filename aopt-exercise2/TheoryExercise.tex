@@ -24,6 +24,36 @@ Are the following functions convex? Prove your statement.
     \item $f(x, y) = x^2 + 3xy + 2y^2$, $x \in \mathbb{R}$, $y \in \mathbb{R}$
 \end{enumerate}
 
+1.
+\begin{align*}
+             & f(x) = x^2                                          \\
+    \implies & f'(x) = 2x                                          \\
+    \implies & f''(x) = 2 > 0 \quad \forall x \in \mathbb{R} \quad \\
+             & \therefore \text{$f$ is convex}
+\end{align*}
+
+2.
+\begin{align*}
+             & f(x) = e^{x^2}                                                                                   \\
+    \implies & f'(x) = 2x e^{x^2}                                                                               \\
+    \implies & f''(x) = 2 e^{x^2} + (2x) e^{x^2} (2x) = 2 e^{x^2} (2x^2 + 1) > 0 \quad \forall x \in \mathbb{R} \\
+             & \therefore \text{$f$ is convex}
+\end{align*}
+
+3.
+\begin{align*}
+             & f(x, y) = x^2 + 3xy + 2y^2          \\
+    \implies & \nabla f(x, y) = (2x + 3y, 3x + 4y) \\
+    \implies & \nabla^2 f(x, y) =
+    \begin{bmatrix}
+        2 & 3 \\
+        3 & 4
+    \end{bmatrix}
+\end{align*}
+
+$\nabla^2 f(x, y)$ is not positive semi-definite since its eigenvalues are $3 + \sqrt{10}$ and $3 - \sqrt{10} < 0 $.
+Therefore $f$ is not convex.
+
 \subsection*{Log-sum-exp (0.5 pt)}
 
 Show that the function
