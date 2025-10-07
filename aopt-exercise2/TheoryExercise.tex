@@ -3,6 +3,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{bm}
+\usepackage{hyperref}
 
 \title{Exercise 2}
 \author{}
@@ -71,5 +72,49 @@ Show that the geometric mean
     f(\bm{x}) = \left( \prod_{i=1}^{n} x_i \right)^{1/n}
 \]
 is concave on $\mathbb{R}_{++}^n$.
+
+\textbf{Solution:} One possible way is to analyze the Hessian (Boyd's book p. 74) but there is \href{https://math.stackexchange.com/questions/3839629/how-to-prove-the-geometric-mean-is-concave/3839952#3839952}{a more elegant solution}.
+
+We will use the AM-GM inequality: The arithmetic mean is greater or equal than the geometric mean.
+
+\[
+    \frac{1}{n} \sum_{i=1}^{n} a_i \geq \left( \prod_{i=1}^{n} a_i \right)^{1/n}
+\]
+
+Replace in the previous equation the following two values:
+
+\[
+    a_i = \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \quad b_i = \frac{y_i}{\lambda x_i + (1 - \lambda) y_i}
+\]
+
+To obtain two inequalities:
+
+\begin{align}
+     & \left( \prod_{i=1}^{n} \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \right)^{1/n} = \frac{f(x_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-1} \\
+     & \left( \prod_{i=1}^{n} \frac{y_i}{\lambda x_i + (1 - \lambda) y_i} \right)^{1/n} = \frac{f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{y_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-2}
+\end{align}
+
+Now multiply \eqref{am-gm-1} by $\lambda$ and \eqref{am-gm-2} by $(1 - \lambda)$:
+
+\begin{align}
+     & \frac{\lambda f(x_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{\lambda x_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-3}             \\
+     & \frac{(1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{(1 - \lambda) y_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-4}
+\end{align}
+
+Now sum both \eqref{am-gm-3} and \eqref{am-gm-4}:
+
+\begin{align*}
+             & \frac{\lambda f(x_i) + (1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \left( \frac{\lambda x_i}{\lambda x_i + (1 - \lambda) y_i} + \frac{(1 - \lambda) y_i}{\lambda x_i + (1 - \lambda) y_i} \right) = 1 \\
+             & \frac{\lambda f(x_i) + (1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq 1                                                                                                                                                             \\
+    \implies & \lambda f(x_i) + (1 - \lambda) f(y_i) \leq f(\lambda x_i + (1 - \lambda) y_i)
+\end{align*}
+
+Now take $g(\bm{x}) = -f(\bm{x})$ and replace:
+
+\[
+    g(\lambda x_i + (1 - \lambda) y_i) \leq \lambda  g(x_i) + (1 - \lambda) g(y_i)
+\]
+
+Which is the definition of a convex function. Since $g(\bm{x}) = -f(\bm{x})$, then $f(\bm{x}) $ is a concave function.
 
 \end{document}
