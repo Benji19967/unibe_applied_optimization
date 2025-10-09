@@ -1,8 +1,12 @@
+Theoretical Exercises (1.0 pt)
+
+The proofs are based on methods extracted from course material (slides) and specific methods are detailed in the solutions.
+
+Done by: Horacio Lisdero
+
 Programming Exercise: Convexity Test (1 pt)
 
 1. Solution Description
-
-The exercise implements a probabilistic search algorithm in AOPT::ConvexityTest::isConvex() to check for function convexity based on the definition: f(theta*x + (1-theta)*y) <= theta*f(x) + (1-theta)*f(y).
 
 The algorithm proceeds as follows:
 - Outer loop samples 1,000,000 random pairs of points (x, y).
@@ -17,6 +21,4 @@ The algorithm proceeds as follows:
 - Theta Sampling: Ensuring uniform sampling including endpoints (t=0 and t=1) across n_evals steps.
   - Solution: Calculated t as k / (n_evals - 1.0) for k = 0 to n_evals - 1.
 
-3. Project Member Contribution
-
-- Done by: Beñat Solaegui
+3. Done by: Beñat Solaegui
