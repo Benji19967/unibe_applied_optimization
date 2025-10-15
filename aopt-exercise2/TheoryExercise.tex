@@ -1,0 +1,287 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+
+\title{Exercise 2}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Convex Functions (1 pt)}
+
+\subsection*{Simple functions (0.5 pt)}
+
+Are the following functions convex? Prove your statement.
+
+\begin{enumerate}
+    \item $f(x) = x^2$, $x \in \mathbb{R}$
+    \item $f(x) = e^{x^2}$, $x \in \mathbb{R}$
+    \item $f(x, y) = x^2 + 3xy + 2y^2$, $x \in \mathbb{R}$, $y \in \mathbb{R}$
+\end{enumerate}
+
+1.
+\begin{align*}
+             & f(x) = x^2                                          \\
+    \implies & f'(x) = 2x                                          \\
+    \implies & f''(x) = 2 > 0 \quad \forall x \in \mathbb{R} \quad \\
+             & \therefore \text{$f$ is convex}
+\end{align*}
+
+2.
+\begin{align*}
+             & f(x) = e^{x^2}                                                                                   \\
+    \implies & f'(x) = 2x e^{x^2}                                                                               \\
+    \implies & f''(x) = 2 e^{x^2} + (2x) e^{x^2} (2x) = 2 e^{x^2} (2x^2 + 1) > 0 \quad \forall x \in \mathbb{R} \\
+             & \therefore \text{$f$ is convex}
+\end{align*}
+
+3.
+\begin{align*}
+             & f(x, y) = x^2 + 3xy + 2y^2          \\
+    \implies & \nabla f(x, y) = (2x + 3y, 3x + 4y) \\
+    \implies & \nabla^2 f(x, y) =
+    \begin{bmatrix}
+        2 & 3 \\
+        3 & 4
+    \end{bmatrix}
+\end{align*}
+
+$\nabla^2 f(x, y)$ is not positive semi-definite since its eigenvalues are $3 + \sqrt{10}$ and $3 - \sqrt{10} < 0 $.
+Therefore $f$ is not convex.
+
+\subsection*{Log-sum-exp (0.5 pt)}
+
+Show that the function
+\[
+    f(\bm{x}) = \log(e^{x_1} + \ldots + e^{x_n})
+\]
+is convex on $\mathbb{R}^n$.
+
+\textit{Hint:} The proof is outlined in Boyd's book p. 74. Develop it yourself and provide the intermediate steps.
+
+\textbf{Solution:} We will develop the proof in Boyd's book.
+
+Let's define for convenience two column vectors:
+
+\[
+    z =
+    \begin{bmatrix}
+        e^{x_1} &
+        e^{x_2} &
+        \dots   &
+        e^{x_n}
+    \end{bmatrix}^{T}
+\]
+
+\[
+    \bm{1} = \begin{bmatrix}
+        1     &
+        1     &
+        \dots &
+        1
+    \end{bmatrix}^{T}
+\]
+
+This allows us to rewrite $f(\bm{x})$ in a more compact manner since:
+
+\begin{align}
+     & \bm{1}^{T} z = \sum_{i=1}^{n} e^{x_i}                        \\
+     & f(\bm{x}) = \log(\sum_{i=1}^{n} e^{x_i}) = log(\bm{1}^{T} z)
+\end{align}
+
+First calculate the gradient:
+
+\begin{align}
+             & \frac{\partial f}{\partial x_i} =  \frac{e^{x_i}}{\sum_{i=1}^{n} e^{x_i}} \\
+    \implies & \nabla f(\bm{x}) = \frac{z}{\bm{1}^{T} z}
+\end{align}
+
+Then calculate the Hessian:
+
+%  
+% 
+
+\begin{align}
+    \frac{\partial f}{\partial x_i^2} & = \frac{(-1) e^{x_i}}{\left( \sum_{i=1}^{n} e^{x_i} \right)^2} + \frac{e^{x_i}}{\sum_{i=1}^{n} e^{x_i}}                      \\
+                                      & = \frac{1}{\left( \sum_{i=1}^{n} e^{x_i} \right)^2} \left( \left(\sum_{i=1}^{n} e^{x_i}\right) e^{x_i} - (e^{x_i})^2 \right)
+\end{align}
+
+\begin{align}
+    \frac{\partial f}{\partial x_i \partial x_j} & = \frac{(-1) e^{x_i} e^{x_j}}{\left( \sum_{i=1}^{n} e^{x_i} \right)^2}
+\end{align}
+
+Notice that the outer product $ z z^T $ gives us the matrix:
+
+\begin{equation}
+    z z^T =
+    \begin{bmatrix}
+        e^{x_1} \\
+        e^{x_2} \\
+        \dots   \\
+        e^{x_n}
+    \end{bmatrix} \begin{bmatrix}
+        e^{x_1} &
+        e^{x_2} &
+        \dots   &
+        e^{x_n}
+    \end{bmatrix} = \begin{bmatrix}
+        (e^{x_1})^2     & e^{x_1} e^{x_2} & e^{x_1} e^{x_3} & \dots & e^{x_1} e^{x_n} \\
+        e^{x_1} e^{x_2} & (e^{x_2})^2     & e^{x_2} e^{x_3} & \dots & \vdots          \\
+        e^{x_1} e^{x_3} & e^{x_2} e^{x_3} & (e^{x_3})^2     & \dots & \vdots          \\
+        \vdots          & \dots           & \dots           & \dots & \vdots          \\
+        e^{x_1} e^{x_n} & \dots           & \dots           & \dots & (e^{x_n})^2
+    \end{bmatrix}
+\end{equation}
+
+This accounts for the terms $- (e^{x_i})^2$ in $\frac{\partial f}{\partial x_i^2}$ and $(-1) e^{x_i} e^{x_j}$ in $\frac{\partial f}{\partial x_i \partial x_j}$.
+
+Next, define a matrix with $z$ in its diagonal:
+
+\begin{equation}
+    \bm{diag}(z) = \begin{bmatrix}
+        e^{x_1} & 0       & 0       & \dots & 0       \\
+        0       & e^{x_2} & 0       & \dots & \vdots  \\
+        0       & 0       & e^{x_3} & \dots & \vdots  \\
+        \vdots  & \dots   & \dots   & \dots & \vdots  \\
+        0       & \dots   & \dots   & \dots & e^{x_n}
+    \end{bmatrix}
+\end{equation}
+
+This will take care of the terms $e^{x_i}$ in $\frac{\partial f}{\partial x_i^2}$.
+
+Combining the previous results, we can express the gradient with compact notation as:
+
+\begin{equation}
+    \nabla^2 f(\bm{x}) = \frac{1}{(\bm{1}^{T} z)^2} \left( (\bm{1}^{T} z) \bm{diag}(z) - z z^T \right)
+\end{equation}
+
+To verify that $ \nabla^2 f(\bm{x}) \succeq 0 $ we must show that $ \forall v, v^T \nabla^2 f(\bm{x}) v \geq 0 $.
+Distributing the $v$ and $v^T$ to the inside, we get:
+
+\begin{align}
+    v^T \nabla^2 f(\bm{x}) v & = \frac{1}{(\bm{1}^{T} z)^2} \left( (\bm{1}^{T} z) v^T \bm{diag}(z) v - v^T z z^T v \right)
+\end{align}
+
+We care only about the two terms inside the parentheses:
+
+\begin{align}
+    v^T z z^T v & = (v^T z) (z^T v)                                                                     \\
+                & =
+    \left(
+    \begin{bmatrix}
+            v_1   &
+            v_2   &
+            \dots &
+            v_n
+        \end{bmatrix}
+    \begin{bmatrix}
+            e^{x_1} \\
+            e^{x_2} \\
+            \dots   \\
+            e^{x_n}
+        \end{bmatrix}
+    \right)
+    \left(
+    \begin{bmatrix}
+            e^{x_1} &
+            e^{x_2} &
+            \dots   &
+            e^{x_n}
+        \end{bmatrix}
+    \begin{bmatrix}
+            v_1   \\
+            v_2   \\
+            \dots \\
+            v_n
+        \end{bmatrix}
+    \right)                                                                                             \\
+                & = \left( \sum_{i=1}^{n} v_i e^{x_i} \right) \left( \sum_{i=1}^{n} v_i e^{x_i} \right) \\
+                & = \left( \sum_{i=1}^{n} v_i e^{x_i} \right)^2
+\end{align}
+
+And for the other term:
+
+\begin{equation}
+    v^T \bm{diag}(z) v = \sum_{i=1}^{n} v_i^2 e^{x_i}
+\end{equation}
+
+Replacing these results we get:
+
+\begin{align}
+    v^T \nabla^2 f(\bm{x}) v & = \frac{1}{(\bm{1}^{T} z)^2} \left( \left( \sum_{i=1}^{n} e^{x_i} \right) \left( \sum_{i=1}^{n} v_i^2 e^{x_i} \right) - \left( \sum_{i=1}^{n} v_i e^{x_i} \right)^2 \right) \geq 0
+\end{align}
+
+Take the Cauchy-Schwarz inequality:
+
+\begin{equation}
+    (\bm{a^T} \bm{a}) (\bm{b^T} \bm{b}) \geq (\bm{a^T} \bm{b})^2 \quad \forall \bm{a}, \bm{b} \in \mathbb{R}^n
+\end{equation}
+
+If $ a_i = v_i \sqrt{e^{x_i}} $ and $ b_i = \sqrt{e^{x_i}} $, we obtain:
+
+\begin{align}
+    \left( \sum_{i=1}^{n} v_i^2 e^{x_i} \right) \left( \sum_{i=1}^{n} e^{x_i} \right)                                               & \geq \left( \sum_{i=1}^{n} v_i e^{x_i} \right)^2 \\
+    \left( \sum_{i=1}^{n} v_i^2 e^{x_i} \right) \left( \sum_{i=1}^{n} e^{x_i} \right) - \left( \sum_{i=1}^{n} v_i e^{x_i} \right)^2 & \geq 0
+\end{align}
+
+This last equation is the inside of $ v^T \nabla^2 f(\bm{x}) v $. Therefore $f$ is convex.
+
+\subsection*{Geometric Mean (Bonus (0.5 pt))}
+
+Show that the geometric mean
+\[
+    f(\bm{x}) = \left( \prod_{i=1}^{n} x_i \right)^{1/n}
+\]
+is concave on $\mathbb{R}_{++}^n$.
+
+\textbf{Solution:} One possible way is to analyze the Hessian (Boyd's book p. 74) but there is \href{https://math.stackexchange.com/questions/3839629/how-to-prove-the-geometric-mean-is-concave/3839952#3839952}{a more elegant solution}.
+
+We will use the AM-GM inequality: The arithmetic mean is greater or equal than the geometric mean.
+
+\[
+    \frac{1}{n} \sum_{i=1}^{n} a_i \geq \left( \prod_{i=1}^{n} a_i \right)^{1/n}
+\]
+
+Replace in the previous equation the following two values:
+
+\[
+    a_i = \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \quad b_i = \frac{y_i}{\lambda x_i + (1 - \lambda) y_i}
+\]
+
+To obtain two inequalities:
+
+\begin{align}
+     & \left( \prod_{i=1}^{n} \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \right)^{1/n} = \frac{f(x_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{x_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-1} \\
+     & \left( \prod_{i=1}^{n} \frac{y_i}{\lambda x_i + (1 - \lambda) y_i} \right)^{1/n} = \frac{f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{y_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-2}
+\end{align}
+
+Now multiply \eqref{am-gm-1} by $\lambda$ and \eqref{am-gm-2} by $(1 - \lambda)$:
+
+\begin{align}
+     & \frac{\lambda f(x_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{\lambda x_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-3}             \\
+     & \frac{(1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \frac{(1 - \lambda) y_i}{\lambda x_i + (1 - \lambda) y_i} \label{am-gm-4}
+\end{align}
+
+Now sum both \eqref{am-gm-3} and \eqref{am-gm-4}:
+
+\begin{align*}
+             & \frac{\lambda f(x_i) + (1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq \frac{1}{n} \sum_{i=1}^{n} \left( \frac{\lambda x_i}{\lambda x_i + (1 - \lambda) y_i} + \frac{(1 - \lambda) y_i}{\lambda x_i + (1 - \lambda) y_i} \right) = 1 \\
+             & \frac{\lambda f(x_i) + (1 - \lambda) f(y_i)}{f(\lambda x_i + (1 - \lambda) y_i)} \leq 1                                                                                                                                                             \\
+    \implies & \lambda f(x_i) + (1 - \lambda) f(y_i) \leq f(\lambda x_i + (1 - \lambda) y_i)
+\end{align*}
+
+Now take $g(\bm{x}) = -f(\bm{x})$ and replace:
+
+\[
+    g(\lambda x_i + (1 - \lambda) y_i) \leq \lambda  g(x_i) + (1 - \lambda) g(y_i)
+\]
+
+Which is the definition of a convex function. Since $g(\bm{x}) = -f(\bm{x})$, then $f(\bm{x}) $ is a concave function.
+
+\end{document}
