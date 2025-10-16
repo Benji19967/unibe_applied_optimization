@@ -19,13 +19,16 @@ namespace AOPT {
  * It is a Parametric Function because it requires the elastic constant
  * parameter k_ab for the energy computation. */
 class SpringElement2D : public ParametricFunctionBase {
-public:
+ public:
   // E_ab(x) = 1/2 * k * ((x[0] - x[2])^2 + (x[1] - x[3])^2)
   // constructor
-  SpringElement2D() : ParametricFunctionBase() {}
+  SpringElement2D() : ParametricFunctionBase() {
+  }
 
   // number of unknowns
-  inline virtual int n_unknowns() override { return 4; }
+  inline virtual int n_unknowns() override {
+    return 4;
+  }
 
   /** evaluates the spring element's energy
    * \param _x contains x_a and x_b contiguously,
@@ -75,4 +78,4 @@ public:
 };
 
 //=============================================================================
-} // namespace AOPT
+}  // namespace AOPT
