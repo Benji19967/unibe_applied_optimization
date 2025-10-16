@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Transforming a general LP to standard form}
+
+\subsection*{Original problem}
+
+Let the general linear program be
+\begin{align*}
+    \text{minimize}\quad   & c^\top x + d  \\
+    \text{subject to}\quad & Gx \preceq h \\
+                           & Ax = b
+\end{align*}
+where \(G\in\mathbb{R}^{m\times n}\), \(A\in\mathbb{R}^{p\times n}\), \(c\in\mathbb{R}^n\), \(d\in\mathbb{R}\), \(h\in\mathbb{R}^m\), and \(b\in\mathbb{R}^p\).
+
+\subsection*{Step 1: Replace unrestricted variables by nonnegative pairs}
+
+We want to transform the problem to a form where all variables are positive or zero.
+For each component \(x_j\) introduce nonnegative variables \(x_j^+\ge 0\) and \(x_j^-\ge 0\) and set
+\[
+    x_j = x_j^+ - x_j^-.
+\]
+In vector form we define \(x^+,x^-\in\mathbb{R}^n\) and thus write
+\[
+    x = x^+ - x^- ,\qquad x^+\ge0,\;x^-\ge0.
+\]
+
+\subsection*{Step 2: Convert inequalities to equalities introducing slack variables}
+Introduce slack variables \(s\in\mathbb{R}^m\) with \(s\ge0\) to convert \(Gx\preceq h\) to an equality:
+\[
+    G(x^+ - x^-) + s = h,\qquad s\ge0.
+\]
+
+\subsection*{Step 3: Stack variables and build standard-form system}
+Form the stacked decision vector
+\[
+    x' \;=\; \begin{bmatrix} x^+ \\ x^- \\ s \end{bmatrix}
+    \in\mathbb{R}^{2n+m},\qquad x'\ge0.
+\]
+Define the block matrix \(B\) and right-hand side \(e\) by
+\[
+    B \;=\; \begin{bmatrix}
+        G & -G & I_m           \\[4pt]
+        A & -A & 0_{p\times m}
+    \end{bmatrix},
+    \qquad
+    e \;=\; \begin{bmatrix} h\\[4pt] b \end{bmatrix}.
+\]
+Then the constraints become the single equality
+\[
+    B x' = e.
+\]
+
+\subsection*{Objective function in the new variables}
+The original objective transforms as
+\[
+    c^\top x + d \;=\; c^\top(x^+ - x^-) + d
+    = p^\top x' + d,
+    \qquad
+    p \;=\; \begin{bmatrix} c \\ -c \\ 0_m \end{bmatrix}.
+\]
+where $0_m$ are m zeros in the vector. The constant \(d\) does not affect the minimization, so we can drop it.
+
+\subsection*{Standard-form LP}
+Discarding the additive constant \(d\) in the optimization problem (it may be added back to report the original objective value), the equivalent standard-form LP is
+\begin{align*}
+    \text{minimize}\quad   & p^\top x' \\
+    \text{subject to}\quad & B x' = e \\
+                           & x' \succeq 0
+\end{align*}
+
+\subsection*{Relation between feasible sets, optimal solutions, and optimal values}
+
+\paragraph{Feasible sets.}
+Let
+\[
+    F = \{x\in\mathbb{R}^n \mid Gx\preceq h,\; Ax=b\}
+\]
+be the feasible set of the original LP and
+\[
+    F' = \{x'\in\mathbb{R}^{2n+m}_{+} \mid Bx' = e\}
+\]
+the feasible set of the standard-form LP. Define the canonical mapping
+\[
+    \Phi:\; x \mapsto x' = \bigl(x^+,x^-,s\bigr)
+    = \bigl(\max(x,0),\;\max(-x,0),\;h-Gx\bigr).
+\]
+Then \(\Phi\) maps \(F\) into \(F'\). With the canonical choice \(x^+=\max(x,0)\) and \(x^-=\max(-x,0)\) the map is bijective onto \(F'\) and invertible by \(x = x^+ - x^-\). Thus feasibility is preserved exactly.
+
+\paragraph{Optimal solutions.}
+If \(x^\star\) is optimal for the original LP then \(x'^\star=\Phi(x^\star)\) is feasible for the standard form and attains
+\[
+    p^\top x'^\star = c^\top x^\star.
+\]
+Conversely any optimal \(x'^\star\in F'\) yields \(x^\star = x^{+\star}-x^{-\star}\in F\) with the same objective value (up to the constant \(d\)). Nonuniqueness in the split \((x^+,x^-)\) can produce multiple \(x'\) corresponding to the same \(x\) if one does not fix the canonical split. Using the canonical split removes that ambiguity.
+
+\paragraph{Optimal values.}
+Let \(v_{\text{orig}}\) denote the optimal value of the original LP and \(v_{\text{std}}\) the optimal value of the standard-form LP with objective \(p^\top x'\). Then
+\[
+    v_{\text{orig}} = v_{\text{std}} + d.
+\]
+Therefore we can recover the optimal value easily. 
+
+\end{document}
