@@ -48,8 +48,3 @@
 
 # debug information files
 *.dwo
-
-aopt-exercise3/**
-!aopt-exercise3/include/
-!aopt-exercise3/include/Functions/
-!aopt-exercise3/include/Functions/SpringElement2D.hh
