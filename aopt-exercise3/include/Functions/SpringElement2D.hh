@@ -39,7 +39,7 @@ class SpringElement2D : public ParametricFunctionBase {
     //------------------------------------------------------//
     // Todo: implement the function f(x) = 1/2 * k * ((x[0] - x[2])^2 + (x[1]
     // - x[3])^2)
-    return 0.5 * _coeffs[0] * pow(_x[0] - _x[2], 2) + pow(_x[1] - _x[3], 2);
+    return 0.5 * _coeffs[0] * (pow(_x[0] - _x[2], 2) + pow(_x[1] - _x[3], 2));
     //------------------------------------------------------//
   }
 
