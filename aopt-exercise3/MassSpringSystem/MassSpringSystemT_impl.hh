@@ -69,10 +69,43 @@ namespace AOPT {
     void MassSpringSystemT<MassSpringProblem>::setup_spring_graph() {
         //------------------------------------------------------//
         //TODO: set up the spring graph of n_grid_x by n_grid_y ()
-        
-        
-        //------------------------------------------------------//
+        for (int i = 0; i < n_grid_x_ + 1; i++) {
+            for (int j = 0; j < n_grid_y_ + 1; j++) {
+                sg_.add_vertex(Point(i, j));
+            }
+        }
+
+        // Each vertex has up to 8 neighbours
+        // Add neighbours if the indexes are not out of bounds.
+        // Avoid adding duplicate edges by ensuring v < u
+        int n_rows = n_grid_y_ + 1;
+        int n_cols = n_grid_x_ + 1;
+        for (int i = 0; i < n_rows; ++i) {
+            for (int j = 0; j < n_cols; ++j) {
+                int v = i * n_cols + j;
+
+                for (int di = -1; di <= 1; ++di) {
+                    for (int dj = -1; dj <= 1; ++dj) {
+                        if (di == 0 && dj == 0) continue;
+
+                        int ni = i + di;
+                        int nj = j + dj;
+
+                        if (ni >= 0 && ni < n_rows && nj >= 0 && nj < n_cols) {
+                            int u = ni * n_cols + nj;
+
+                            if (v < u) {  // add only if v < u to avoid duplicates
+                                sg_.add_edge(v, u);
+                            }
+                        }
+                    }
+                }
+            }   
+        }
     }
+    //------------------------------------------------------//
+
+
 
     template<class MassSpringProblem>
     typename MassSpringSystemT<MassSpringProblem>::Vec
