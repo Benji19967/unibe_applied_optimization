@@ -67,8 +67,24 @@ namespace AOPT {
             //TODO: assemble function values of all spring elements
             //use vector xe_ to store the local coordinates of two nodes of every spring
             //then pass it to func_.eval_f(...)
-            
-            
+
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
+
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                energy += func_.eval_f(xe_, coeff);
+            }
+
             //------------------------------------------------------//
 
             return energy;
