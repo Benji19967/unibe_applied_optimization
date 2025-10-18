@@ -79,9 +79,9 @@ namespace AOPT {
             const double r_norm = r.norm();
 
             Eigen::Matrix2d I = Eigen::Matrix2d::Identity();
-            Mat A = 2 * r * r.transpose() + (r.transpose() * r - pow(l, 2)) * I;
-            Mat M;
-            M << A, -A, A, -A;
+            Eigen::Matrix2d A = 2 * r * r.transpose() + (r.transpose() * r - pow(l, 2)) * I;
+            Eigen::Matrix4d M = Eigen::Matrix4d::Identity();
+            M << A, -A, -A, A;
             _H = 2 * k * M;
             //------------------------------------------------------//
         }
