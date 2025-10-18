@@ -95,7 +95,7 @@ namespace AOPT {
                             int u = ni * n_cols + nj;
 
                             if (v < u) {  // add only if v < u to avoid duplicates
-                                sg_.add_edge(v, u);
+                                sg_.add_edge(v, u, 1, sqrt(2));
                             }
                         }
                     }
