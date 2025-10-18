@@ -53,10 +53,11 @@ namespace AOPT {
 
             Vec xa = _x.segment(0, 2);
             Vec xb = _x.segment(2, 2);
-            const double r = (xa - xb).norm();
+            Vec r = xa - xb;
+            const double r_norm = r.norm();
 
-            _g.head<2>() = 2 * k * (pow(r, 2) - pow(l, 2)) * (xa - xb);
-            _g.tail<2>() = -2 * k * (pow(r, 2) - pow(l, 2)) * (xa - xb);
+            _g.head<2>() = 2 * k * (pow(r_norm, 2) - pow(l, 2)) * r;
+            _g.tail<2>() = -2 * k * (pow(r_norm, 2) - pow(l, 2)) * r;
             //------------------------------------------------------//
         }
 
@@ -69,8 +70,19 @@ namespace AOPT {
         inline virtual void eval_hessian(const Vec &_x, const Vec &_coeffs, Mat &_H) override {
             //------------------------------------------------------//
             //Todo: implement the hessian matrix and store in _H
+            double k = _coeffs[0];
+            double l = _coeffs[1];
 
-            
+            Vec xa = _x.segment(0, 2);
+            Vec xb = _x.segment(2, 2);
+            Vec r = xa - xb;
+            const double r_norm = r.norm();
+
+            Eigen::Matrix2d I = Eigen::Matrix2d::Identity();
+            Mat A = 2 * r * r.transpose() + (r.transpose() * r - pow(l, 2)) * I;
+            Mat M;
+            M << A, -A, A, -A;
+            _H = 2 * k * M;
             //------------------------------------------------------//
         }
     };
