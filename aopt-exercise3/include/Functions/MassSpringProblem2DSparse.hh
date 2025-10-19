@@ -64,6 +64,24 @@ namespace AOPT {
             //use vector xe_ to store the local coordinates of two nodes of every spring
             //then pass it to func_.eval_f(...)
 
+            // SAME AS DENSE
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
+
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                energy += func_.eval_f(xe_, coeff);
+            }
+
         
 
             //------------------------------------------------------//
@@ -93,6 +111,26 @@ namespace AOPT {
             //TODO: assemble local gradient vector to the global one
             //use ge_ to store the result of the local gradient
             
+            // SAME AS DENSE
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
+
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                func_.eval_gradient(xe_, coeff, ge_);
+
+                _g.segment<2>(2*u_idx) += ge_.head<2>();
+                _g.segment<2>(2*v_idx) += ge_.tail<2>();
+            }
             //------------------------------------------------------//
         }
 
@@ -115,8 +153,32 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local hessian matrix to the global one
             //use he_ to store the local hessian matrix
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
 
-           
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                func_.eval_hessian(xe_, coeff, he_);
+
+                for (int i = 0; i < 4; ++i) {
+                  int row_global = (i < 2) ? 2*u_idx + i : 2*v_idx + (i - 2);
+
+                  for (int j = 0; j < 4; ++j) {
+                      int col_global = (j < 2) ? 2*u_idx + j : 2*v_idx + (j - 2);
+
+                      triplets.emplace_back(row_global, col_global, he_(i, j));
+                  }
+                }               
+            }
             //------------------------------------------------------//
 
 

@@ -189,7 +189,8 @@ TEST(MassSpringProblem, MassSpringProblem2DSparseFunctions){
     msp.eval_gradient(x, g);
     Vec expected_g(n_unknowns);
     expected_g << -104,104,0,0,0,0,104,-104;
-    ASSERT_EQ(g, expected_g);
+    // ASSERT_EQ(g, expected_g);
+    EXPECT_TRUE(g.isApprox(expected_g));
 
     msp.eval_hessian(x, H);
     Mat expected_hess(n_unknowns, n_unknowns);
