@@ -151,6 +151,29 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local hessian matrix to the global one
             //use he_ to store the local hessian matrix
+
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
+
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                func_.eval_hessian(xe_, coeff, he_);
+
+                // Select blocks of 2x2 matrices and assign them where they belong
+                _h.block(2*u_idx, 2*u_idx, 2, 2) += he_.block<2, 2>(0, 0);
+                _h.block(2*u_idx, 2*v_idx, 2, 2) += he_.block<2, 2>(0, 2); 
+                _h.block(2*v_idx, 2*u_idx, 2, 2) += he_.block<2, 2>(2, 0); 
+                _h.block(2*v_idx, 2*v_idx, 2, 2) += he_.block<2, 2>(2, 2); 
+            }
             
             //------------------------------------------------------//
         }
