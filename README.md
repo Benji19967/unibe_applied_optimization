@@ -8,7 +8,7 @@ Exercises for course applied optimization at the University of Bern
 cd aopt-exercise<n>
 mkdir build
 cd build
-CMAKE_POLICY_VERSION_MINIMUM=3.5 cmake ..
+CMAKE_POLICY_VERSION_MINIMUM=3.5 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 make
 ```
 

@@ -112,7 +112,25 @@ namespace AOPT {
             //TODO: assemble local gradient vector to the global one
             //use ge_ to store the result of the local gradient
             
-            
+            for (size_t i = 0; i < springs_.size(); i++) {
+                Edge spring = springs_[i];
+                int u_idx = spring.first;
+                int v_idx = spring.second;
+                coeff[0] = ks_[i];
+                coeff[1] = ls_[i];
+
+                Vec u(2);
+                Vec v(2);
+                u << _x[2*u_idx], _x[2*u_idx+1];
+                v << _x[2*v_idx], _x[2*v_idx+1];
+
+                xe_ << u, v;
+
+                func_.eval_gradient(xe_, coeff, ge_);
+
+                _g.segment<2>(2*u_idx) += ge_.head<2>();
+                _g.segment<2>(2*v_idx) += ge_.tail<2>();
+            }
             //------------------------------------------------------//
         }
 
