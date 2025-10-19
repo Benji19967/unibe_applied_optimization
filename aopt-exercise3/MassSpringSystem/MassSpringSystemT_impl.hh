@@ -95,7 +95,9 @@ namespace AOPT {
                             int u = ni * n_cols + nj;
 
                             if (v < u) {  // add only if v < u to avoid duplicates
-                                sg_.add_edge(v, u, 1, sqrt(2));
+                                const bool is_diag = di == 0 or dj == 0 ? false : true;
+                                const double l = is_diag ? sqrt(2) : 1;
+                                sg_.add_edge(v, u, 1, l);
                             }
                         }
                     }
