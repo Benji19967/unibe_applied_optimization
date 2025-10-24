@@ -61,7 +61,9 @@ namespace AOPT {
          *           Actually useless since the Hessian is constant but the method
          *           should still use the same interface as FunctionBase
          * \param _H Hessian output */
-        inline virtual void eval_hessian(const Vec &_x, Mat &_H) {}
+        inline virtual void eval_hessian(const Vec &_x, Mat &_H) {
+            _H = 0.5 * (A_ + A_.transpose());
+        }
 
     private:
         void initialize_random_problem(double _max_val = 10.0, bool _convex = true, const int _random_index = 0)
