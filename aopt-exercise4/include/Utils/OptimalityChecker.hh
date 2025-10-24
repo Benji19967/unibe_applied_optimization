@@ -50,9 +50,80 @@ namespace AOPT {
             //5. check complementary slackness (cond. 3.)
             //6. check gradient (cond. 4.)
             //------------------------------------------------------//
-
+            if (_equality_constraints.empty() && _inequality_constraints.empty()) {
+                // In this case the gradient of the Lagrangian reduces to the gradient of the objective function
+                Vec g;
+                _objective->eval_gradient(_query_point, g);
+                // Norm zero implies zero vector,
+                // the best we can do is compare with the tolerance
+                if (g.norm() < eps_) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
             
-        }
+            // Size of dual variables should match the number of inequalities and equalities
+            if (_inequality_constraints.size() != _lambda.size() || _equality_constraints.size() != _nu.size()) {
+                return false;
+            }
+
+            // 2. check inequality constraints
+            for (auto constraint : _inequality_constraints) {
+                double val = constraint->eval_f(_query_point);
+                if (val > eps_) {
+                    return false;
+                }
+            }
+
+            // 3. check equality constraints
+            for (auto constraint : _equality_constraints) {
+                double val = constraint->eval_f(_query_point);
+                if (fabs(val) > eps_) {
+                    return false;
+                }
+            }
+
+            // 4. check lambda
+            for (size_t i = 0; i < _lambda.size(); ++i) {
+                // Comparing with -eps because very small negative numbers should still count as zero
+                if (_lambda[i] < -eps_) {
+                    return false;
+                }
+            }
+
+            // 5. check complementary slackness
+            for (size_t i = 0; i < _lambda.size(); ++i) {
+                double val = _inequality_constraints[i]->eval_f(_query_point);
+                if (fabs(val * _lambda[i]) > eps_) {
+                    return false;
+                }
+            }
+
+            // 6. check gradient
+            size_t dim = _objective->n_unknowns();
+            Vec g(dim); // Total gradient
+            Vec gi(dim); // Gradient of the current iteration
+            _objective->eval_gradient(_query_point, gi);
+            // Add the gradient of the objective function
+            g = gi;
+            // Add the gradient of the inequality constraints
+            for (size_t i = 0; i < _inequality_constraints.size(); i++) {
+                _inequality_constraints[i]->eval_gradient(_query_point, gi);
+                g += _lambda[i] * gi;
+            }
+            // Add the gradient of the equality constraints
+            for (size_t i = 0; i < _equality_constraints.size(); i++) {
+                _equality_constraints[i]->eval_gradient(_query_point, gi);
+                g += _nu[i] * gi;
+            }
+            if (g.norm() > eps_) {
+                return false;
+            }
+
+            return true;
+        }             
+            
 
     private:
         double eps_;
