@@ -44,7 +44,9 @@ namespace AOPT {
          *           Actually useless since the Hessian is constant but the method
          *           should still use the same interface as FunctionBase
          * \param _H Hessian output */
-        inline virtual void eval_hessian(const Vec &_x, Mat &_H) {}
+        inline virtual void eval_hessian(const Vec &_x, Mat &_H) {
+            _H << 1, 0, 0, gamma_;
+        }
 
         double get_gamma() const { return gamma_; }
 
