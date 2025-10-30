@@ -85,8 +85,21 @@ namespace AOPT {
             //TODO: assemble function values of all the constrained spring elements
             //use cs_xe_ to store the coordinate of the attached node index
             //and cse_ to compute the attached node's functions
-            
+            for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
+                double v_idx = attached_node_indices_[i];
+                int id0 = 2 * springs_[v_idx].first;
+                int id1 = 2 * springs_[v_idx].first + 1;
+                
+                cs_xe_[0] = _x[id0];
+                cs_xe_[1] = _x[id1];
 
+                Vec coeff(3); // We need a larger vector for constrained spring elements
+                coeff[0] = weights_[i];
+                coeff[1] = desired_points_[2*i];
+                coeff[2] = desired_points_[2*i+1];
+
+                energy += cse_.eval_f(cs_xe_, coeff);
+            }
             //------------------------------------------------------//
             
             return energy;
@@ -136,8 +149,23 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local gradient vector of all the constrained spring elements to the global one
             //use cs_ge_ to store the gradient of the attached node index
-            
-            
+            for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
+                double v_idx = attached_node_indices_[i];
+                int id0 = 2 * springs_[v_idx].first;
+                int id1 = 2 * springs_[v_idx].first + 1;
+
+                cs_xe_[0] = _x[id0];
+                cs_xe_[1] = _x[id1];
+
+                Vec coeff(3); // We need a larger vector for constrained spring elements
+                coeff[0] = weights_[i];
+                coeff[1] = desired_points_[2*i];
+                coeff[2] = desired_points_[2*i+1];
+                func_.eval_gradient(cs_xe_, coeff, cs_ge_);
+
+                _g[id0] += cs_ge_[0];
+                _g[id1] += cs_ge_[1];
+            }
             //------------------------------------------------------//
 
         }
@@ -205,8 +233,25 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local gradient vector of all the constrained spring elements to the global one
             //use cs_he_ to store the gradient of the attached node index
+            for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
+                double v_idx = attached_node_indices_[i];
+                int id0 = 2 * springs_[v_idx].first;
+                int id1 = 2 * springs_[v_idx].first + 1;
 
-            
+                cs_xe_[0] = _x[id0];
+                cs_xe_[1] = _x[id1];
+                
+                Vec coeff(3); // We need a larger vector for constrained spring elements
+                coeff[0] = weights_[i];
+                coeff[1] = desired_points_[2*i];
+                coeff[2] = desired_points_[2*i+1];
+                func_.eval_hessian(cs_xe_, coeff, cs_he_);
+                
+                triplets.emplace_back(id0, id0, cs_he_(0,0));
+                triplets.emplace_back(id0, id1, cs_he_(0,1));
+                triplets.emplace_back(id1, id0, cs_he_(1,0));
+                triplets.emplace_back(id1, id1, cs_he_(1,1));
+            }
             //------------------------------------------------------//
 
 
