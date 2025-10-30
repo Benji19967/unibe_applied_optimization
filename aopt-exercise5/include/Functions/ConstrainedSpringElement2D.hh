@@ -23,8 +23,12 @@ namespace AOPT {
         inline virtual double eval_f(const Vec &_x, const Vec &_coeffs) final {
             //------------------------------------------------------//
             //Todo: implement the function f(x) = 1/2 * penalty * ((x[0] - px)^2 + (x[1] - py)^2)
-          
+            double px = _coeffs[1];
+            double py = _coeffs[2];
             
+            double dx = _x[0] - px;
+            double dy = _x[1] - py;
+            return 0.5 * _coeffs[0] * (dx*dx + dy*dy);
             //------------------------------------------------------//
         }
 
@@ -36,8 +40,12 @@ namespace AOPT {
         inline virtual void eval_gradient(const Vec &_x, const Vec &_coeffs, Vec &_g) final {
             //------------------------------------------------------//
             //Todo: implement the gradient and store in _g
-           
-            //------------------------------------------------------//
+            double px = _coeffs[1];
+            double py = _coeffs[2];
+
+            _g[0] = _x[0] - px;
+            _g[1] = _x[1] - py;
+            _g *= _coeffs[0];
         }
 
         /** evaluates the spring element's energy Hessian
@@ -48,7 +56,9 @@ namespace AOPT {
         inline virtual void eval_hessian(const Vec &_x, const Vec &_coeffs, Mat &_H) final {
             //------------------------------------------------------//
             //Todo: implement the hessian matrix and store in _H
-            
+            double w = _coeffs[0];
+            _H << w, 0,
+                  0, w;
             //------------------------------------------------------//
         }
     };
