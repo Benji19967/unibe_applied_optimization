@@ -67,10 +67,32 @@ void MassSpringSystemT<MassSpringProblem>::add_constrained_spring_elements(const
     //------------------------------------------------------//
     //Todo: add constrained spring elements to the problem
     //implement both scenarios here.
-    
-    
+    // Scenario 1: Attach the four corner nodes in a m × n spring graph to target coordinates
+    // (0, 0), (2m, 0), (0, 2n) and (2m, 2n) respectively.
+    double w = 10000;
+    if (_scenario == 1) {
+        // bottom-left
+        msp_.get()->add_constrained_spring_element(get_grid_index(0, 0), w, 0, 0);
+        // top-left
+        msp_.get()->add_constrained_spring_element(get_grid_index(n_grid_x_, 0), w, 2*n_grid_x_, 0);
+        // bottom-right
+        msp_.get()->add_constrained_spring_element(get_grid_index(0, n_grid_y_), w, 0, 2*n_grid_y_);
+        // top-right
+        msp_.get()->add_constrained_spring_element(get_grid_index(n_grid_x_, n_grid_y_), w, 2*n_grid_x_, 2*n_grid_y_);
+        return;
+    }
     //------------------------------------------------------//
-
+    // Scenario 2: Attach the nodes on the side with index N(i,0) to target coordinates
+    // (i, 0) and nodes N(i,n) to coordinates (i, 2n), where i ∈ [0, m].
+    if (_scenario == 2) {
+        for (size_t i = 0; i <= n_grid_x_; ++i) {
+            // bottom row
+            msp_.get()->add_constrained_spring_element(get_grid_index(i, 0), w, i, 0);
+            // top row
+            msp_.get()->add_constrained_spring_element(get_grid_index(i, n_grid_y_), w, i, 2*n_grid_y_);
+        }
+        return;
+    }
     
 }
 
