@@ -85,10 +85,11 @@ namespace AOPT {
             //TODO: assemble function values of all the constrained spring elements
             //use cs_xe_ to store the coordinate of the attached node index
             //and cse_ to compute the attached node's functions
+            cs_xe_.resize(2);
             for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
                 double v_idx = attached_node_indices_[i];
-                int id0 = 2 * springs_[v_idx].first;
-                int id1 = 2 * springs_[v_idx].first + 1;
+                int id0 = 2 * v_idx;
+                int id1 = 2 * v_idx + 1;
                 
                 cs_xe_[0] = _x[id0];
                 cs_xe_[1] = _x[id1];
@@ -149,10 +150,12 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local gradient vector of all the constrained spring elements to the global one
             //use cs_ge_ to store the gradient of the attached node index
+            cs_xe_.resize(2);
+            cs_ge_.resize(func_.n_unknowns());
             for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
                 double v_idx = attached_node_indices_[i];
-                int id0 = 2 * springs_[v_idx].first;
-                int id1 = 2 * springs_[v_idx].first + 1;
+                int id0 = 2 * v_idx;
+                int id1 = 2 * v_idx + 1;
 
                 cs_xe_[0] = _x[id0];
                 cs_xe_[1] = _x[id1];
@@ -161,7 +164,7 @@ namespace AOPT {
                 coeff[0] = weights_[i];
                 coeff[1] = desired_points_[2*i];
                 coeff[2] = desired_points_[2*i+1];
-                func_.eval_gradient(cs_xe_, coeff, cs_ge_);
+                cse_.eval_gradient(cs_xe_, coeff, cs_ge_);
 
                 _g[id0] += cs_ge_[0];
                 _g[id1] += cs_ge_[1];
@@ -233,10 +236,12 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: assemble local gradient vector of all the constrained spring elements to the global one
             //use cs_he_ to store the gradient of the attached node index
+            cs_xe_.resize(2);
+            cs_he_.resize(func_.n_unknowns(), func_.n_unknowns());
             for (size_t i = 0; i < attached_node_indices_.size(); ++i) {
                 double v_idx = attached_node_indices_[i];
-                int id0 = 2 * springs_[v_idx].first;
-                int id1 = 2 * springs_[v_idx].first + 1;
+                int id0 = 2 * v_idx;
+                int id1 = 2 * v_idx + 1;
 
                 cs_xe_[0] = _x[id0];
                 cs_xe_[1] = _x[id1];
@@ -245,7 +250,7 @@ namespace AOPT {
                 coeff[0] = weights_[i];
                 coeff[1] = desired_points_[2*i];
                 coeff[2] = desired_points_[2*i+1];
-                func_.eval_hessian(cs_xe_, coeff, cs_he_);
+                cse_.eval_hessian(cs_xe_, coeff, cs_he_);
                 
                 triplets.emplace_back(id0, id0, cs_he_(0,0));
                 triplets.emplace_back(id0, id1, cs_he_(0,1));
