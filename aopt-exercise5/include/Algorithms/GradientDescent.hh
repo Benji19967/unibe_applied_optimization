@@ -43,7 +43,38 @@ namespace AOPT {
 
             //------------------------------------------------------//
             //TODO: implement the gradient descent
-            
+            double f_prev = _problem->eval_f(x);
+
+            for(iter = 0; iter < _max_iters; ++iter) {
+                _problem->eval_gradient(x, g);
+
+                if(g.squaredNorm() < e2) {
+                    std::cout << "Converged: gradient norm below epsilon after " << iter << " iterations." << std::endl;
+                    break;
+                }
+
+                double t = LineSearch::backtracking_line_search(_problem, x, g, -g, 1.0);
+
+                if(t == 0) {
+                    std::cout << "Line search failed. Stopping after " << iter << " iterations." << std::endl;
+                    break;
+                }
+
+                x -= t * g;
+
+                double f_new = _problem->eval_f(x);
+
+                if(f_new > f_prev + _eps) {
+                    std::cout << "Objective increased. Stopping at iteration " << iter << "." << std::endl;
+                    break;
+                }
+
+                f_prev = f_new;
+            }
+
+            if(iter == _max_iters) {
+                std::cout << "Reached maximum iterations (" << _max_iters << ")." << std::endl;
+            }
 
             //------------------------------------------------------//
 

@@ -1,0 +1,9 @@
+func_type,scenario,start_point,initial_energy,final_energy,energy_reduction
+noLength,1,1,3.84651e+07,386.813,3.84647e+07
+noLength,1,2,6.68945e+07,387.306,6.68941e+07
+noLength,2,1,9.88052e+07,456.031,9.88048e+07
+noLength,2,2,2.438e+08,456.031,2.438e+08
+withLength,1,1,3.84649e+07,1210.25,3.84637e+07
+withLength,1,2,7.12055e+07,1210.25,7.12043e+07
+withLength,2,1,9.88051e+07,789.953,9.88043e+07
+withLength,2,2,2.48111e+08,789.953,2.4811e+08

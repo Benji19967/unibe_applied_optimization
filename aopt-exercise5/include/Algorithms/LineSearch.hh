@@ -36,8 +36,30 @@ namespace AOPT {
             
             //------------------------------------------------------//
             //TODO: implement the backtracking line search algorithm
-            
+            t = _t0;
+            double f_x = _problem->eval_f(_x);
+            double t_min = 1e-20; // minimum step size to avoid infinite loop
+            double gtd = _g.dot(_dx);
 
+            while (t > t_min) {
+                Vec x_new = _x + t * _dx;
+                double f_new = _problem->eval_f(x_new);
+
+                if (std::isnan(f_new) || std::isinf(f_new)) {
+                    t *= _tau;
+                    continue;
+                }
+
+                if (f_new <= f_x + _alpha * t * gtd) {
+                    break;
+                }
+                t *= _tau;
+            }
+
+            if (t <= t_min) {
+                t = 0.0;
+            }
+            
             //------------------------------------------------------//
 
             return t;
