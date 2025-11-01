@@ -41,6 +41,11 @@ namespace AOPT {
             double t_min = 1e-20; // minimum step size to avoid infinite loop
             double gtd = _g.dot(_dx);
 
+            if (gtd > 0) {
+                std::cout << "dx does not point in a descent direction! gtd = " << gtd << std::endl;
+                return t;
+            }
+
             while (t > t_min) {
                 Vec x_new = _x + t * _dx;
                 double f_new = _problem->eval_f(x_new);
