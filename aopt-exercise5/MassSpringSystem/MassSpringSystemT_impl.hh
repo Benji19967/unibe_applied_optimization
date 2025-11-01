@@ -69,7 +69,7 @@ void MassSpringSystemT<MassSpringProblem>::add_constrained_spring_elements(const
     //implement both scenarios here.
     // Scenario 1: Attach the four corner nodes in a m × n spring graph to target coordinates
     // (0, 0), (2m, 0), (0, 2n) and (2m, 2n) respectively.
-    double w = 100000;
+    const double w(100000);
     if (_scenario == 1) {
         // bottom-left
         msp_.get()->add_constrained_spring_element(get_grid_index(0, 0), w, 0, 0);
