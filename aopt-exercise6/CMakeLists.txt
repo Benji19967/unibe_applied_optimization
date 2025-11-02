@@ -29,7 +29,7 @@ enable_testing()
 include(GoogleTest)
 
 
-set(AOPT_EXTERNAL "${CMAKE_CURRENT_SOURCE_DIR}/external")
+set(AOPT_EXTERNAL "${CMAKE_CURRENT_SOURCE_DIR}/../external")
 
 
 if(NOT CMAKE_BUILD_TYPE)
