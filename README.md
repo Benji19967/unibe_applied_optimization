@@ -18,3 +18,9 @@ make
 cd build
 ctest -R <regex to select tests>
 ```
+
+## Interactive visualization tools
+
+https://cgg.unibe.ch/interactive-education/
+
+Credits to Martin Heistermann
