@@ -2,6 +2,8 @@
 
 #include <FunctionBase/FunctionBaseSparse.hh>
 #include <limits>
+#include <ostream>
+#include "Eigen/src/Core/util/Constants.h"
 #include "Eigen/src/SparseCholesky/SimplicialCholesky.h"
 #include "LineSearch.hh"
 
@@ -58,11 +60,11 @@ namespace AOPT {
               _problem->eval_gradient(x, g);
               _problem->eval_hessian(x, H);
 
-              // solve for newton direction using Cholesky decomposition
-              Eigen::SimplicialLDLT<SMat> ldlt(H);
-              delta_x = ldlt.solve(-g);
+              // solve Newton system for Newton direction using Cholesky decomposition
+              solver.compute(H) ;
+              delta_x = solver.solve(-g);
 
-              // compute newton decrement, used for stopping criterion
+              // compute Newton decrement, used for stopping criterion
               lambda_squared = -g.transpose() * delta_x;
         
               // find backtrack step in search direction for sufficient decrease
@@ -133,8 +135,43 @@ namespace AOPT {
             //      repeat until factorization succeeds (make sure to update delta!)
            
             //------------------------------------------------------//
+            double lambda_squared = std::numeric_limits<double>::infinity();
+            while ( lambda_squared / 2 > _eps and iter < _max_iters) {
 
+              _problem->eval_gradient(x, g);
+              _problem->eval_hessian(x, H);
 
+              // Compute Cholesky decomposition
+              solver.compute(H);
+
+              double d = 0.001 * std::abs(H.diagonal().sum()) / n;
+              const double gamma = 10;
+              // If H is not positive definite decomposition will have failed
+              if(solver.info() != Eigen::Success) {
+                H = H + d*I;
+                d = d * gamma;
+
+                // Compute Cholesky decomposition
+                solver.compute(H);
+              }
+      
+              // Solve for Newton system for Newton direction
+              delta_x = solver.solve(-g);
+
+              // compute Newton decrement, used for stopping criterion
+              lambda_squared = -g.transpose() * delta_x;
+        
+              // find backtrack step in search direction for sufficient decrease
+              // start with full Newton step
+              const double t0 = 1;
+              const double t = LineSearch::backtracking_line_search(_problem, x, g, delta_x, t0);
+
+              // take a step
+              x = x + t * delta_x;
+
+              iter++;
+            }
+  
             return x;
         }
 
