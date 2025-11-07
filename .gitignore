@@ -1,5 +1,6 @@
 **/.DS_Store
 **/build/
+**/.cache/
 
 # Ignore all external/ dirs that are NOT at the root
 **/external/
