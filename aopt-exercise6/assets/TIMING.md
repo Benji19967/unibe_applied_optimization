@@ -2,6 +2,12 @@
 
 For an easier to view format, see `summary.csv`.
 
+Methods:
+
+- Standard Newton's method
+- Newton's method with projected Hessian
+- Gradient descent
+
 ## Standard Newton's method
 
 ### No length
@@ -250,4 +256,70 @@ eval_f time   : 0.00022s  ( #evals: 26 -> avg 0.00001s )
 eval_grad time: 0.00017s  ( #evals: 13 -> avg 0.00001s, factor: 1.54667)
 eval_hess time: 0.02270s  ( #evals: 13 -> avg 0.00175s, factor: 201.76000)
 Saving optimized spring graph to spring_withLengthPositiveLocalHessian_projected_hessian_20x20_opt_*.csv
+```
+
+## Gradient descent
+
+### No length
+
+```txt
+######## Timing statistics ########
+total time    : 0.288159s
+total time evaluation : 0.014652s  (5.08469 %)
+eval_f time   : 0.00428s  ( #evals: 357005 -> avg 0.00000s )
+eval_grad time: 0.01037s  ( #evals: 10000 -> avg 0.00000s, factor: 86.51532)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_noLength_gradient_descent_5x51_opt_*.csv
+```
+
+```txt
+######## Timing statistics ########
+total time    : 0.909113s
+total time evaluation : 0.537953s  (59.1734 %)
+eval_f time   : 0.49422s  ( #evals: 356683 -> avg 0.00000s )
+eval_grad time: 0.04374s  ( #evals: 10000 -> avg 0.00000s, factor: 3.15656)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_noLength_gradient_descent_10x101_opt_*.csv
+```
+
+```txt
+######## Timing statistics ########
+total time    : 3.23327s
+total time evaluation : 2.75016s  (85.0581 %)
+eval_f time   : 2.56924s  ( #evals: 355992 -> avg 0.00001s )
+eval_grad time: 0.18092s  ( #evals: 10000 -> avg 0.00002s, factor: 2.50684)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_noLength_gradient_descent_20x201_opt_*.csv
+```
+
+### With length
+
+```txt
+######## Timing statistics ########
+total time    : 0.029593s
+total time evaluation : 0.001243s  (4.20032 %)
+eval_f time   : 0.00074s  ( #evals: 36980 -> avg 0.00000s )
+eval_grad time: 0.00050s  ( #evals: 1021 -> avg 0.00000s, factor: 24.61940)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_withLength_gradient_descent_5x51_opt_*.csv
+```
+
+```txt
+######## Timing statistics ########
+total time    : 0.405147s
+total time evaluation : 0.32703s  (80.7189 %)
+eval_f time   : 0.31333s  ( #evals: 132232 -> avg 0.00000s )
+eval_grad time: 0.01370s  ( #evals: 3647 -> avg 0.00000s, factor: 1.58545)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_withLength_gradient_descent_10x101_opt_*.csv
+```
+
+```txt
+######## Timing statistics ########
+total time    : 3.73879s
+total time evaluation : 3.34401s  (89.4411 %)
+eval_f time   : 3.20044s  ( #evals: 363866 -> avg 0.00001s )
+eval_grad time: 0.14357s  ( #evals: 10000 -> avg 0.00001s, factor: 1.63231)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg -nans, factor: -nan)
+Saving optimized spring graph to spring_withLength_gradient_descent_20x201_opt_*.csv
 ```
