@@ -17,3 +17,9 @@ projected_hessian,with_length,20,4.29333e+08,0.02281
 projected_hessian,with_length_with_positive_local_hessian,5,2.43845e+07,0.001881
 projected_hessian,with_length_with_positive_local_hessian,10,7.90827e+07,0.007376
 projected_hessian,with_length_with_positive_local_hessian,20,4.29333e+08,0.037917
+gradient_descent,without_length,5,2.26635e+07,0.288159
+gradient_descent,without_length,10,7.30682e+07,0.909113
+gradient_descent,without_length,20,4.05053e+08,3.23327
+gradient_descent,with_length,5,2.43845e+07,0.029593
+gradient_descent,with_length,10,7.90827e+07,0.405147
+gradient_descent,with_length,20,4.29333e+08,3.73879
