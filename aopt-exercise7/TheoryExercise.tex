@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Secant Equation (0.5 pt)}
+
+The secant equation is:
+\[
+B_{k+1}s_k = y_k,
+\]
+where \(s_k = x_{k+1}-x_k\), \(y_k=\nabla f_{k+1}-\nabla f_k\), and \(B_{k+1}\) is an approximation of the Hessian \(\nabla^2 f_{k+1}\).
+\\
+Prove that the secant equation is consistent with the minimization of the quadratic model problem \(m(v)\).
+
+\paragraph{Solution.}
+Consider the standard quadratic model around \(x_k\)
+\[
+m(v) \;=\; f(x_k) + \nabla f(x_k)^{\!\top} v + \tfrac12 v^{\!\top} B_{k+1} v ,
+\qquad v\in\mathbb{R}^n.
+\]
+Its gradient is
+\[
+\nabla m(v)=\nabla f(x_k)+B_{k+1}v.
+\]
+To make the model consistent with the true function at the next iterate \(x_{k+1}=x_k+s_k\), we require that the model gradient interpolates the true gradient at both \(v=0\) and \(v=s_k\):
+\[
+\nabla m(0)=\nabla f(x_k), \qquad
+\nabla m(s_k)=\nabla f(x_{k+1}).
+\]
+The second condition gives
+\[
+\nabla f(x_k) + B_{k+1} s_k \;=\; \nabla f(x_{k+1})
+\quad\Longleftrightarrow\quad
+B_{k+1}s_k \;=\; \nabla f(x_{k+1})-\nabla f(x_k) \;=\; y_k,
+\]
+which is precisely the secant equation.
+
+\section*{Curvature Condition (0.5 pt)}
+
+Show that the curvature condition \(s_k^{\top}y_k>0\) is required for the Quasi-Newton method.
+Prove that the curvature condition is satisfied when the line search algorithm for the Wolfe conditions is used.
+
+\paragraph{Solution.}
+\textbf{(i) Derivation for a general quadratic model.}
+
+To make the quadratic model seen before consistent with the observed change in gradient along the realized step \(s_k=x_{k+1}-x_k\), the secant equation
+\(B_{k+1}s_k=y_k\) must hold.
+We assume that a positive definite \(B_{k+1}\) exists, then
+\[
+s_k^{\top}y_k = s_k^{\top} B_{k+1} s_k > 0,
+\]
+since \(B_{k+1}\succ 0\) implies \(z^{\top}B_{k+1}z>0\) for all nonzero \(z\).
+Therefore, \emph{if} a convex quadratic model consistent with the step exists, the curvature condition \(s_k^{\top}y_k>0\) is necessary. 
+
+\smallskip
+\textbf{(ii) Wolfe conditions.}
+Let \(\Delta x\) be a descent direction at \(x\) and define
+\[
+\phi(t)=f(x+t\,\Delta x), \qquad \phi'(t)=\nabla f(x+t\,\Delta x)^{\!\top}\Delta x .
+\]
+Suppose \(t>0\) is chosen by a line search that enforces the Wolfe conditions with
+\(\alpha\in(0,1)\) and \(\beta\in(\alpha,1)\):
+\begin{align*}
+&\text{(sufficient decrease)} & f(x+t\Delta x) &\le f(x)+ t\,\alpha\,\nabla f(x)^{\!\top}\Delta x &&\iff&& \phi(t)\le \phi(0)+ t\,\alpha\,\phi'(0),\\
+&\text{(curvature)} & \nabla f(x+t\Delta x)^{\!\top}\Delta x &\ge \beta\,\nabla f(x)^{\!\top}\Delta x &&\iff&& \phi'(t)\ge \beta\,\phi'(0).
+\end{align*}
+Set \(s_k=t\,\Delta x\) and \(y_k=\nabla f(x+t\Delta x)-\nabla f(x)\).
+Then
+\[
+s_k^{\top}y_k
+= t\Big(\Delta x^{\!\top}\nabla f(x+t\Delta x)-\Delta x^{\!\top}\nabla f(x)\Big)
+= t\big(\phi'(t)-\phi'(0)\big).
+\]
+By the curvature Wolfe condition,
+\(\phi'(t)\ge \beta\,\phi'(0)\).
+Since \(\Delta x\) is a descent direction, \(\phi'(0)=\nabla f(x)^{\!\top}\Delta x<0\).
+Therefore,
+\[
+s_k^{\top}y_k \;\ge\; t\big(\beta\,\phi'(0)-\phi'(0)\big)
+= t(\beta-1)\,\phi'(0) \;>\; 0,
+\]
+because \(\beta-1<0\), \(\phi'(0)<0\), and \(t>0\).
+Hence any step length chosen under these Wolfe conditions satisfies the curvature condition \(s_k^{\top}y_k>0\).
+
+\end{document}
