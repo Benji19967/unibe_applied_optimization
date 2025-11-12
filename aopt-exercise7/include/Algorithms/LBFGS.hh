@@ -99,7 +99,7 @@ namespace AOPT {
                 //evaluate current f
                 f = _problem->eval_f(x);
 
-                if(k > 0 && fp_ <= f) {
+                if(k > 0 && fp_<= f) {
                     std::cout<<"Function value converges!"<<std::endl;
                     return x;
                 }
@@ -128,18 +128,39 @@ namespace AOPT {
 
     private:
         void two_loop_recursion(const Vec& _g, const Vec& _sk, const Vec& _yk, const int _k) {
+
             //------------------------------------------------------//
             //TODO: implement the two-loop recursion as described in the lecture slides
-            
-            
+            int start = std::max(0, _k - m_);
+            int end = _k - 1;
+            Vec q = _g;
+
+            for(int i = end; i >= start; --i) {
+                alpha_[i % m_] = rho_[i % m_] * mat_s_.col(i % m_).dot(q);
+                q -= alpha_[i % m_] * mat_y_.col(i % m_);
+            }
+
+            r_ = q;
+
+            for(int i = start; i <= end; ++i) {
+                double beta = rho_[i % m_] * mat_y_.col(i % m_).dot(r_);
+                r_ += mat_s_.col(i % m_) * (alpha_[i % m_] - beta);
+            }
             //------------------------------------------------------//
         }
-
         void update_storage(const Vec& _g, const Vec& _sk, const Vec& _yk, const int _k) {
             //------------------------------------------------------//
             //TODO: update the si and yi stored in the mat_s_ and mat_y_ respectively
             //update rho_i stored in rho_[i]
-            
+            double ys = _yk.dot(_sk);
+            if(ys > 1e-10) {
+                int idx = _k % m_;
+                mat_s_.col(idx) = _sk;
+                mat_y_.col(idx) = _yk;
+                rho_[idx] = 1.0 / ys;
+            } else {
+                std::cout << "Skipping update due to curvature condition!" << std::endl;
+            }
             //------------------------------------------------------//
         }
 
