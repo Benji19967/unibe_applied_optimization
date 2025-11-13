@@ -79,7 +79,9 @@ namespace AOPT {
              * f(x) = 1/2*sum(rj^2(x))
              * Hint: implement eval_r to set r, containing all rj, and then use it to compute the energy */
 
-
+            Vec r;
+            eval_r(_x, r);
+            energy = 0.5 * r.squaredNorm();
 
             //------------------------------------------------------//
 
@@ -106,6 +108,11 @@ namespace AOPT {
              *        then eval_jacobian(_x, J) to compute J,
              * and then compute the gradient with J^T*r */
 
+            Vec r;
+            eval_r(_x, r);
+            SMat J;
+            eval_jacobian(_x, J);
+            _g = J.transpose() * r;
             
             //------------------------------------------------------//
         }
@@ -120,6 +127,9 @@ namespace AOPT {
             //------------------------------------------------------//
             //approximate the hessian with J^T*J
             
+            SMat J;
+            eval_jacobian(_x, J);
+            _h = J.transpose() * J;
             
             //------------------------------------------------------//
         }
@@ -171,7 +181,43 @@ namespace AOPT {
              *       else if spring_type_ == WITH_LENGTH, it is SpringElement2DWithLengthLeastSquare
              *       and every spring element has one rj(x), where x is a 4D vector */
 
-            
+            int idx = 0;
+
+            for (size_t s = 0; s < springs_.size(); ++s) {
+                int i0 = springs_[s].first;
+                int i1 = springs_[s].second;
+
+                if (spring_type_ == WITHOUT_LENGTH) {
+                    Vec xe(2);
+                    Vec coeffs(1);
+                    coeffs[0] = ks_[s];
+
+                    xe[0] = _x[2*i0];
+                    xe[1] = _x[2*i1];
+                    _r[idx]   = func_.eval_f(xe, coeffs);
+
+                    xe[0] = _x[2*i0+1];
+                    xe[1] = _x[2*i1+1];
+                    _r[idx+1] = func_.eval_f(xe, coeffs);
+
+                    idx += 2;
+
+                } else if (spring_type_ == WITH_LENGTH) {
+                    Vec xe(4);
+                    Vec coeffs(2);
+                    coeffs[0] = ks_[s];
+                    coeffs[1] = ls_[s];
+
+                    xe[0] = _x[2*i0];
+                    xe[1] = _x[2*i0+1];
+                    xe[2] = _x[2*i1];
+                    xe[3] = _x[2*i1+1];
+
+                    _r[idx] = func_.eval_f(xe, coeffs);
+                    idx += 1;
+                }
+            }
+
             
             //------------------------------------------------------//
 
@@ -181,6 +227,23 @@ namespace AOPT {
              *       in their expression, you can use that to get inspired */
           
             //------------------------------------------------------//
+
+            for (size_t c = 0; c < attached_node_indices_.size(); ++c) {
+                int i = attached_node_indices_[c];
+                Vec coeffs(2);
+                coeffs[0] = weights_[c];
+                coeffs[1] = desired_points_[2*c];
+                Vec xe(1);
+
+                xe[0] = _x[2*i];
+                _r[idx] = cse_.eval_f(xe, coeffs);
+                idx++;
+
+                xe[0] = _x[2*i+1];
+                coeffs[1] = desired_points_[2*c + 1];
+                _r[idx] = cse_.eval_f(xe, coeffs);
+                idx++;
+            }
 
         }
 
@@ -213,11 +276,79 @@ namespace AOPT {
              * Second hint: use triplets to set up the sparse matrix */
 
 
+            int idx = 0;
+
+            for (size_t s = 0; s < springs_.size(); ++s) {
+                int i0 = springs_[s].first;
+                int i1 = springs_[s].second;
+
+                if (spring_type_ == WITHOUT_LENGTH) {
+                    Vec xe(2);
+                    Vec coeffs(1);
+                    coeffs[0] = ks_[s];
+
+                    xe[0] = _x[2*i0];
+                    xe[1] = _x[2*i1];
+                    Vec ge(2);
+                    func_.eval_gradient(xe, coeffs, ge);
+
+                    triplets.emplace_back(idx, 2*i0, ge[0]);
+                    triplets.emplace_back(idx, 2*i1, ge[1]);
+                    idx++;
+
+                    xe[0] = _x[2*i0+1];
+                    xe[1] = _x[2*i1+1];
+                    func_.eval_gradient(xe, coeffs, ge);
+
+                    triplets.emplace_back(idx, 2*i0+1, ge[0]);
+                    triplets.emplace_back(idx, 2*i1+1, ge[1]);
+                    idx++;
+
+                } else if (spring_type_ == WITH_LENGTH) {
+                    Vec xe(4);
+                    Vec coeffs(2);
+                    coeffs[0] = ks_[s];
+                    coeffs[1] = ls_[s];
+
+                    xe[0] = _x[2*i0];
+                    xe[1] = _x[2*i0+1];
+                    xe[2] = _x[2*i1];
+                    xe[3] = _x[2*i1+1];
+
+                    Vec ge(4);
+                    func_.eval_gradient(xe, coeffs, ge);
+
+                    triplets.emplace_back(idx, 2*i0, ge[0]);
+                    triplets.emplace_back(idx, 2*i0 + 1, ge[1]);
+                    triplets.emplace_back(idx, 2*i1, ge[2]);
+                    triplets.emplace_back(idx, 2*i1 + 1, ge[3]);
+                    idx++;
+                }
+            }
+
+
             
             //------------------------------------------------------//
 
             /** hint:  set the hessian for the constrained springs */
           
+            for (size_t c = 0; c < attached_node_indices_.size(); ++c) {
+                int i = attached_node_indices_[c];
+                Vec coeffs(2);
+                coeffs[0] = weights_[c];
+                coeffs[1] = desired_points_[2*c];
+                Vec xe(1);
+                xe[0] = _x[2*i];
+                Vec ge(1);
+                cse_.eval_gradient(xe, coeffs, ge);
+                triplets.emplace_back(idx, 2*i, ge[0]);
+                idx++;
+                xe[0] = _x[2*i+1];
+                coeffs[1] = desired_points_[2*c + 1];
+                cse_.eval_gradient(xe, coeffs, ge);
+                triplets.emplace_back(idx, 2*i+1, ge[0]);
+                idx++;
+            }
 
             //------------------------------------------------------//
 

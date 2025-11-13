@@ -35,6 +35,13 @@ namespace AOPT {
         inline virtual double eval_f(const Vec &_x, const Vec &_coeffs) override {
             //------------------------------------------------------//
             //Todo: implement the function rj(x) = sqrt(k) * (||xa-xb||^2 - l^2)
+            double k = _coeffs[0];
+            double l = _coeffs[1];
+
+            double dx = _x[0] - _x[2];
+            double dy = _x[1] - _x[3];
+
+            return std::sqrt(k) * (dx*dx + dy*dy - l*l);
             
             //------------------------------------------------------//
         }
@@ -48,7 +55,17 @@ namespace AOPT {
         inline virtual void eval_gradient(const Vec &_x, const Vec &_coeffs, Vec &_g) override {
             //------------------------------------------------------//
             //Todo: implement the gradient and store in _g
-            
+            double k = _coeffs[0];
+
+            _g.resize(4);
+
+            double dx = _x[0] - _x[2];
+            double dy = _x[1] - _x[3];
+
+            _g[0] =  2.0 * std::sqrt(k) * dx;
+            _g[1] =  2.0 * std::sqrt(k) * dy;
+            _g[2] = -2.0 * std::sqrt(k) * dx;
+            _g[3] = -2.0 * std::sqrt(k) * dy;
             //------------------------------------------------------//
         }
 
