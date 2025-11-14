@@ -1,0 +1,801 @@
+
+Initial MassSpring system energy is 7.30682e+07
+Saving initial spring graph to assets/spring_systems/l_bfgs/spring_noLength_10x10_*.csv
+******** LBFGS ********
+iter: 0   obj = 7.30682e+07   ||g||^2 = 1.46082e+13
+iter: 1   obj = 4.44e+06   ||g||^2 = 8.82114e+11
+iter: 2   obj = 1.2544e+06   ||g||^2 = 1.6885e+11
+iter: 3   obj = 170582   ||g||^2 = 2.41587e+10
+iter: 4   obj = 98141.7   ||g||^2 = 1.52334e+10
+iter: 5   obj = 98074.6   ||g||^2 = 1.52168e+10
+iter: 6   obj = 42012.3   ||g||^2 = 3.98781e+09
+iter: 7   obj = 8965.23   ||g||^2 = 6.10792e+08
+iter: 8   obj = 3664.76   ||g||^2 = 2.38834e+08
+iter: 9   obj = 3657.42   ||g||^2 = 2.37346e+08
+iter: 10   obj = 2289.43   ||g||^2 = 1.17362e+08
+iter: 11   obj = 1601.29   ||g||^2 = 4.24137e+07
+iter: 12   obj = 1158.37   ||g||^2 = 6.34227e+06
+iter: 13   obj = 1148.22   ||g||^2 = 4.04441e+06
+iter: 14   obj = 1025.82   ||g||^2 = 371674
+iter: 15   obj = 987.247   ||g||^2 = 4781.99
+iter: 16   obj = 966.254   ||g||^2 = 1.08111e+06
+iter: 17   obj = 951.368   ||g||^2 = 183543
+iter: 18   obj = 896.771   ||g||^2 = 1.39366e+06
+iter: 19   obj = 827.17   ||g||^2 = 3.00051e+06
+iter: 20   obj = 811.684   ||g||^2 = 4.57292e+06
+iter: 21   obj = 752.818   ||g||^2 = 3.64891e+06
+iter: 22   obj = 699.757   ||g||^2 = 3.09818e+06
+iter: 23   obj = 695.36   ||g||^2 = 2.26041e+06
+iter: 24   obj = 694.987   ||g||^2 = 2.45708e+06
+iter: 25   obj = 693.533   ||g||^2 = 2.04742e+06
+iter: 26   obj = 693.516   ||g||^2 = 2.04914e+06
+iter: 27   obj = 693.293   ||g||^2 = 1.73391e+06
+iter: 28   obj = 690.121   ||g||^2 = 1.90179e+06
+iter: 29   obj = 684.465   ||g||^2 = 2.23933e+06
+iter: 30   obj = 658.327   ||g||^2 = 3.34787e+06
+iter: 31   obj = 639.919   ||g||^2 = 1.02904e+06
+iter: 32   obj = 638.697   ||g||^2 = 1.10726e+06
+iter: 33   obj = 638.336   ||g||^2 = 960737
+iter: 34   obj = 638.253   ||g||^2 = 897736
+iter: 35   obj = 625.561   ||g||^2 = 631891
+iter: 36   obj = 623.446   ||g||^2 = 716728
+iter: 37   obj = 611.181   ||g||^2 = 726548
+iter: 38   obj = 605.69   ||g||^2 = 176719
+iter: 39   obj = 605.584   ||g||^2 = 170183
+iter: 40   obj = 604.671   ||g||^2 = 208708
+iter: 41   obj = 604.104   ||g||^2 = 176314
+iter: 42   obj = 603.756   ||g||^2 = 164854
+iter: 43   obj = 603.161   ||g||^2 = 134661
+iter: 44   obj = 602.753   ||g||^2 = 98777.1
+iter: 45   obj = 602.032   ||g||^2 = 132989
+iter: 46   obj = 601.49   ||g||^2 = 101399
+iter: 47   obj = 601.387   ||g||^2 = 116422
+iter: 48   obj = 597.975   ||g||^2 = 235352
+iter: 49   obj = 596.048   ||g||^2 = 93925.7
+iter: 50   obj = 595.682   ||g||^2 = 101789
+iter: 51   obj = 595.582   ||g||^2 = 139207
+iter: 52   obj = 594.625   ||g||^2 = 29854
+iter: 53   obj = 594.524   ||g||^2 = 31732.7
+iter: 54   obj = 594.519   ||g||^2 = 29776.9
+iter: 55   obj = 594.516   ||g||^2 = 28959.7
+iter: 56   obj = 594.231   ||g||^2 = 30866.1
+iter: 57   obj = 594.103   ||g||^2 = 25370.2
+iter: 58   obj = 593.645   ||g||^2 = 5868.47
+iter: 59   obj = 593.597   ||g||^2 = 4224.38
+iter: 60   obj = 593.589   ||g||^2 = 6238.79
+iter: 61   obj = 593.075   ||g||^2 = 5454.22
+iter: 62   obj = 592.901   ||g||^2 = 24052
+iter: 63   obj = 592.643   ||g||^2 = 8441.7
+iter: 64   obj = 592.171   ||g||^2 = 8040.1
+iter: 65   obj = 591.919   ||g||^2 = 5066.76
+iter: 66   obj = 591.874   ||g||^2 = 5145.49
+iter: 67   obj = 590.637   ||g||^2 = 12190.8
+iter: 68   obj = 587.81   ||g||^2 = 18143.1
+iter: 69   obj = 587.675   ||g||^2 = 7365.21
+iter: 70   obj = 587.535   ||g||^2 = 8789.25
+iter: 71   obj = 587.242   ||g||^2 = 5278.15
+iter: 72   obj = 587.122   ||g||^2 = 20272.7
+iter: 73   obj = 586.908   ||g||^2 = 5624.5
+iter: 74   obj = 585.387   ||g||^2 = 3488.85
+iter: 75   obj = 585.345   ||g||^2 = 2672.21
+iter: 76   obj = 585.17   ||g||^2 = 16170.5
+iter: 77   obj = 581.757   ||g||^2 = 4476.11
+iter: 78   obj = 581.733   ||g||^2 = 3249.72
+iter: 79   obj = 581.702   ||g||^2 = 1748.92
+iter: 80   obj = 581.671   ||g||^2 = 1426.58
+iter: 81   obj = 581.665   ||g||^2 = 1451.67
+iter: 82   obj = 581.66   ||g||^2 = 1287.57
+iter: 83   obj = 581.567   ||g||^2 = 8538.15
+iter: 84   obj = 581.499   ||g||^2 = 1614.59
+iter: 85   obj = 581.413   ||g||^2 = 1945.25
+iter: 86   obj = 581.373   ||g||^2 = 747.351
+iter: 87   obj = 581.261   ||g||^2 = 4887.37
+iter: 88   obj = 580.887   ||g||^2 = 448.132
+iter: 89   obj = 580.595   ||g||^2 = 3544.36
+iter: 90   obj = 580.569   ||g||^2 = 1522.82
+iter: 91   obj = 580.533   ||g||^2 = 543.373
+iter: 92   obj = 580.503   ||g||^2 = 617.043
+iter: 93   obj = 580.495   ||g||^2 = 763.016
+iter: 94   obj = 580.489   ||g||^2 = 808.571
+iter: 95   obj = 580.16   ||g||^2 = 275.985
+iter: 96   obj = 580.148   ||g||^2 = 663.016
+iter: 97   obj = 580.128   ||g||^2 = 976.976
+iter: 98   obj = 579.889   ||g||^2 = 386.895
+iter: 99   obj = 579.88   ||g||^2 = 834.213
+iter: 100   obj = 579.174   ||g||^2 = 35419.5
+iter: 101   obj = 578.458   ||g||^2 = 3251.24
+iter: 102   obj = 578.119   ||g||^2 = 18782.6
+iter: 103   obj = 577.864   ||g||^2 = 5377.06
+iter: 104   obj = 577.821   ||g||^2 = 222.038
+iter: 105   obj = 577.813   ||g||^2 = 1257.88
+iter: 106   obj = 575.991   ||g||^2 = 17953.3
+iter: 107   obj = 570.765   ||g||^2 = 15257.8
+iter: 108   obj = 569.754   ||g||^2 = 9864
+iter: 109   obj = 569.34   ||g||^2 = 1936.75
+iter: 110   obj = 567.617   ||g||^2 = 359.573
+iter: 111   obj = 567.582   ||g||^2 = 3469.19
+iter: 112   obj = 567.452   ||g||^2 = 6274.45
+iter: 113   obj = 567.378   ||g||^2 = 1245.64
+iter: 114   obj = 567.359   ||g||^2 = 2797.25
+iter: 115   obj = 567.347   ||g||^2 = 1956.22
+iter: 116   obj = 567.306   ||g||^2 = 1084.53
+iter: 117   obj = 567.304   ||g||^2 = 1376.02
+iter: 118   obj = 567.303   ||g||^2 = 1501.16
+iter: 119   obj = 567.297   ||g||^2 = 1382.84
+iter: 120   obj = 567.296   ||g||^2 = 1574.27
+iter: 121   obj = 567.292   ||g||^2 = 1362.85
+iter: 122   obj = 567.29   ||g||^2 = 1369.36
+iter: 123   obj = 567.289   ||g||^2 = 1752.38
+iter: 124   obj = 567.288   ||g||^2 = 1616.74
+iter: 125   obj = 567.286   ||g||^2 = 1324.69
+iter: 126   obj = 567.273   ||g||^2 = 3015.35
+iter: 127   obj = 567.157   ||g||^2 = 2220.87
+iter: 128   obj = 566.941   ||g||^2 = 899.337
+iter: 129   obj = 566.843   ||g||^2 = 685.25
+iter: 130   obj = 566.831   ||g||^2 = 342.326
+iter: 131   obj = 566.752   ||g||^2 = 461.876
+iter: 132   obj = 566.697   ||g||^2 = 125.295
+iter: 133   obj = 566.694   ||g||^2 = 146.393
+iter: 134   obj = 566.692   ||g||^2 = 149.502
+iter: 135   obj = 566.69   ||g||^2 = 69.6652
+iter: 136   obj = 566.69   ||g||^2 = 46.0619
+iter: 137   obj = 566.681   ||g||^2 = 116.651
+iter: 138   obj = 566.678   ||g||^2 = 150.134
+iter: 139   obj = 566.676   ||g||^2 = 59.9955
+iter: 140   obj = 566.663   ||g||^2 = 76.1464
+iter: 141   obj = 566.64   ||g||^2 = 2340.17
+iter: 142   obj = 566.597   ||g||^2 = 349.693
+iter: 143   obj = 566.593   ||g||^2 = 301.98
+iter: 144   obj = 566.549   ||g||^2 = 2206.9
+iter: 145   obj = 566.518   ||g||^2 = 774.462
+iter: 146   obj = 566.501   ||g||^2 = 1547.85
+iter: 147   obj = 566.311   ||g||^2 = 1385.5
+iter: 148   obj = 566.299   ||g||^2 = 277.366
+iter: 149   obj = 566.169   ||g||^2 = 738.837
+iter: 150   obj = 566.124   ||g||^2 = 525.702
+iter: 151   obj = 566.108   ||g||^2 = 672.173
+iter: 152   obj = 565.672   ||g||^2 = 1282.58
+iter: 153   obj = 565.491   ||g||^2 = 674.996
+iter: 154   obj = 565.486   ||g||^2 = 271.785
+iter: 155   obj = 565.466   ||g||^2 = 843.309
+iter: 156   obj = 565.433   ||g||^2 = 972.066
+iter: 157   obj = 565.397   ||g||^2 = 882.671
+iter: 158   obj = 565.391   ||g||^2 = 192.972
+iter: 159   obj = 565.389   ||g||^2 = 344.524
+iter: 160   obj = 565.388   ||g||^2 = 438.291
+iter: 161   obj = 565.376   ||g||^2 = 205.534
+iter: 162   obj = 565.376   ||g||^2 = 159.545
+iter: 163   obj = 565.375   ||g||^2 = 207.728
+iter: 164   obj = 565.372   ||g||^2 = 467.8
+iter: 165   obj = 565.359   ||g||^2 = 837.549
+iter: 166   obj = 565.352   ||g||^2 = 224.787
+iter: 167   obj = 565.342   ||g||^2 = 209.367
+iter: 168   obj = 565.333   ||g||^2 = 400.231
+iter: 169   obj = 565.327   ||g||^2 = 326.714
+iter: 170   obj = 565.326   ||g||^2 = 169.747
+iter: 171   obj = 565.325   ||g||^2 = 98.0406
+iter: 172   obj = 565.324   ||g||^2 = 148.666
+iter: 173   obj = 565.305   ||g||^2 = 136.167
+iter: 174   obj = 565.302   ||g||^2 = 206.082
+iter: 175   obj = 565.301   ||g||^2 = 107.621
+iter: 176   obj = 565.299   ||g||^2 = 127.108
+iter: 177   obj = 565.297   ||g||^2 = 153.507
+iter: 178   obj = 565.292   ||g||^2 = 121.994
+iter: 179   obj = 565.292   ||g||^2 = 34.6144
+iter: 180   obj = 565.29   ||g||^2 = 97.3456
+iter: 181   obj = 565.289   ||g||^2 = 106.441
+iter: 182   obj = 565.285   ||g||^2 = 26.7419
+iter: 183   obj = 565.275   ||g||^2 = 568.358
+iter: 184   obj = 565.266   ||g||^2 = 71.7669
+iter: 185   obj = 565.265   ||g||^2 = 38.7117
+iter: 186   obj = 565.259   ||g||^2 = 254.16
+iter: 187   obj = 565.257   ||g||^2 = 53.5047
+iter: 188   obj = 565.253   ||g||^2 = 34.6385
+iter: 189   obj = 565.246   ||g||^2 = 34.0204
+iter: 190   obj = 565.246   ||g||^2 = 17.1653
+iter: 191   obj = 565.246   ||g||^2 = 15.55
+iter: 192   obj = 565.245   ||g||^2 = 20.8068
+iter: 193   obj = 565.245   ||g||^2 = 14.4085
+iter: 194   obj = 565.241   ||g||^2 = 16.4497
+iter: 195   obj = 565.238   ||g||^2 = 63.5821
+iter: 196   obj = 565.236   ||g||^2 = 396.282
+iter: 197   obj = 565.224   ||g||^2 = 316.834
+iter: 198   obj = 565.218   ||g||^2 = 28.4344
+iter: 199   obj = 565.218   ||g||^2 = 47.4712
+iter: 200   obj = 565.218   ||g||^2 = 34.9181
+iter: 201   obj = 565.197   ||g||^2 = 478.385
+iter: 202   obj = 565.193   ||g||^2 = 192.484
+iter: 203   obj = 565.188   ||g||^2 = 21.3949
+iter: 204   obj = 565.187   ||g||^2 = 51.7347
+iter: 205   obj = 565.187   ||g||^2 = 29.3467
+iter: 206   obj = 565.187   ||g||^2 = 15.5889
+iter: 207   obj = 565.186   ||g||^2 = 46.4088
+iter: 208   obj = 565.186   ||g||^2 = 10.513
+iter: 209   obj = 565.185   ||g||^2 = 6.92741
+iter: 210   obj = 565.184   ||g||^2 = 7.00966
+iter: 211   obj = 565.184   ||g||^2 = 8.65697
+iter: 212   obj = 565.183   ||g||^2 = 14.8782
+iter: 213   obj = 565.183   ||g||^2 = 6.39841
+iter: 214   obj = 565.183   ||g||^2 = 6.79284
+iter: 215   obj = 565.181   ||g||^2 = 5.99616
+iter: 216   obj = 565.18   ||g||^2 = 10.0176
+iter: 217   obj = 565.18   ||g||^2 = 27.6152
+iter: 218   obj = 565.179   ||g||^2 = 19.1605
+iter: 219   obj = 565.178   ||g||^2 = 17.8538
+iter: 220   obj = 565.178   ||g||^2 = 12.6691
+iter: 221   obj = 565.178   ||g||^2 = 12.9042
+iter: 222   obj = 565.174   ||g||^2 = 82.9261
+iter: 223   obj = 565.173   ||g||^2 = 80.0364
+iter: 224   obj = 565.171   ||g||^2 = 3.89137
+iter: 225   obj = 565.17   ||g||^2 = 7.30797
+iter: 226   obj = 565.17   ||g||^2 = 5.90338
+iter: 227   obj = 565.17   ||g||^2 = 15.4312
+iter: 228   obj = 565.169   ||g||^2 = 22.7465
+iter: 229   obj = 565.169   ||g||^2 = 6.26406
+iter: 230   obj = 565.162   ||g||^2 = 52.6795
+iter: 231   obj = 565.158   ||g||^2 = 4.56067
+iter: 232   obj = 565.157   ||g||^2 = 11.915
+iter: 233   obj = 565.157   ||g||^2 = 13.1177
+iter: 234   obj = 565.157   ||g||^2 = 3.94411
+iter: 235   obj = 565.156   ||g||^2 = 18.75
+iter: 236   obj = 565.154   ||g||^2 = 1.94499
+iter: 237   obj = 565.152   ||g||^2 = 16.1339
+iter: 238   obj = 565.151   ||g||^2 = 89.1992
+iter: 239   obj = 565.15   ||g||^2 = 8.02472
+iter: 240   obj = 565.15   ||g||^2 = 6.10408
+iter: 241   obj = 565.149   ||g||^2 = 13.2642
+iter: 242   obj = 565.149   ||g||^2 = 9.93723
+iter: 243   obj = 565.147   ||g||^2 = 33.0711
+iter: 244   obj = 565.147   ||g||^2 = 17.1006
+iter: 245   obj = 565.147   ||g||^2 = 6.36626
+iter: 246   obj = 565.145   ||g||^2 = 78.3446
+iter: 247   obj = 565.144   ||g||^2 = 15.5764
+iter: 248   obj = 565.143   ||g||^2 = 40.521
+iter: 249   obj = 565.142   ||g||^2 = 36.0799
+iter: 250   obj = 565.142   ||g||^2 = 15.7792
+iter: 251   obj = 565.14   ||g||^2 = 22.7729
+iter: 252   obj = 565.139   ||g||^2 = 9.70675
+iter: 253   obj = 565.139   ||g||^2 = 10.6347
+iter: 254   obj = 565.138   ||g||^2 = 36.5992
+iter: 255   obj = 565.137   ||g||^2 = 63.3126
+iter: 256   obj = 565.124   ||g||^2 = 17.4205
+iter: 257   obj = 565.124   ||g||^2 = 9.88171
+iter: 258   obj = 565.124   ||g||^2 = 15.6694
+iter: 259   obj = 565.124   ||g||^2 = 12.2267
+iter: 260   obj = 565.124   ||g||^2 = 11.3723
+iter: 261   obj = 565.124   ||g||^2 = 9.32028
+iter: 262   obj = 565.123   ||g||^2 = 11.0792
+iter: 263   obj = 565.123   ||g||^2 = 7.28488
+iter: 264   obj = 565.123   ||g||^2 = 8.07743
+iter: 265   obj = 565.123   ||g||^2 = 6.99682
+iter: 266   obj = 565.123   ||g||^2 = 7.67134
+iter: 267   obj = 565.123   ||g||^2 = 4.83703
+iter: 268   obj = 565.123   ||g||^2 = 6.61908
+iter: 269   obj = 565.121   ||g||^2 = 97.37
+iter: 270   obj = 565.118   ||g||^2 = 20.5189
+iter: 271   obj = 565.118   ||g||^2 = 5.33153
+iter: 272   obj = 565.115   ||g||^2 = 1.18246
+iter: 273   obj = 565.115   ||g||^2 = 1.48555
+iter: 274   obj = 565.115   ||g||^2 = 1.85611
+iter: 275   obj = 565.115   ||g||^2 = 9.61029
+iter: 276   obj = 565.115   ||g||^2 = 9.56054
+iter: 277   obj = 565.114   ||g||^2 = 1.43409
+iter: 278   obj = 565.114   ||g||^2 = 1.24677
+iter: 279   obj = 565.113   ||g||^2 = 2.75405
+iter: 280   obj = 565.111   ||g||^2 = 34.7783
+iter: 281   obj = 565.111   ||g||^2 = 3.93477
+iter: 282   obj = 565.111   ||g||^2 = 8.29257
+iter: 283   obj = 565.11   ||g||^2 = 4.40807
+iter: 284   obj = 565.11   ||g||^2 = 5.10157
+iter: 285   obj = 565.11   ||g||^2 = 2.4706
+iter: 286   obj = 565.11   ||g||^2 = 3.80469
+iter: 287   obj = 565.109   ||g||^2 = 5.96935
+iter: 288   obj = 565.109   ||g||^2 = 12.7631
+iter: 289   obj = 565.109   ||g||^2 = 3.9698
+iter: 290   obj = 565.109   ||g||^2 = 14.7052
+iter: 291   obj = 565.108   ||g||^2 = 4.6684
+iter: 292   obj = 565.108   ||g||^2 = 3.86459
+iter: 293   obj = 565.107   ||g||^2 = 2.06676
+iter: 294   obj = 565.107   ||g||^2 = 5.08034
+iter: 295   obj = 565.107   ||g||^2 = 6.40793
+iter: 296   obj = 565.104   ||g||^2 = 140.035
+iter: 297   obj = 565.103   ||g||^2 = 40.1632
+iter: 298   obj = 565.101   ||g||^2 = 1.76415
+iter: 299   obj = 565.1   ||g||^2 = 3.94222
+iter: 300   obj = 565.099   ||g||^2 = 5.24914
+iter: 301   obj = 565.099   ||g||^2 = 4.26669
+iter: 302   obj = 565.099   ||g||^2 = 1.30839
+iter: 303   obj = 565.099   ||g||^2 = 1.67929
+iter: 304   obj = 565.099   ||g||^2 = 1.10464
+iter: 305   obj = 565.099   ||g||^2 = 1.19013
+iter: 306   obj = 565.099   ||g||^2 = 0.904099
+iter: 307   obj = 565.099   ||g||^2 = 1.45004
+iter: 308   obj = 565.099   ||g||^2 = 1.13934
+iter: 309   obj = 565.099   ||g||^2 = 0.870538
+iter: 310   obj = 565.099   ||g||^2 = 0.658723
+iter: 311   obj = 565.099   ||g||^2 = 1.04053
+iter: 312   obj = 565.099   ||g||^2 = 0.649362
+iter: 313   obj = 565.099   ||g||^2 = 0.467145
+iter: 314   obj = 565.099   ||g||^2 = 0.408331
+iter: 315   obj = 565.099   ||g||^2 = 0.616738
+iter: 316   obj = 565.099   ||g||^2 = 0.704397
+iter: 317   obj = 565.099   ||g||^2 = 4.14144
+iter: 318   obj = 565.099   ||g||^2 = 0.464201
+iter: 319   obj = 565.099   ||g||^2 = 0.379392
+iter: 320   obj = 565.098   ||g||^2 = 1.1152
+iter: 321   obj = 565.098   ||g||^2 = 0.927594
+iter: 322   obj = 565.098   ||g||^2 = 0.62369
+iter: 323   obj = 565.098   ||g||^2 = 0.528379
+iter: 324   obj = 565.098   ||g||^2 = 0.455248
+iter: 325   obj = 565.098   ||g||^2 = 0.747267
+iter: 326   obj = 565.098   ||g||^2 = 0.493865
+iter: 327   obj = 565.098   ||g||^2 = 0.26976
+iter: 328   obj = 565.098   ||g||^2 = 2.13615
+iter: 329   obj = 565.098   ||g||^2 = 4.16885
+iter: 330   obj = 565.097   ||g||^2 = 16.8038
+iter: 331   obj = 565.097   ||g||^2 = 0.638088
+iter: 332   obj = 565.097   ||g||^2 = 25.6964
+iter: 333   obj = 565.096   ||g||^2 = 2.53187
+iter: 334   obj = 565.096   ||g||^2 = 1.04744
+iter: 335   obj = 565.095   ||g||^2 = 1.06805
+iter: 336   obj = 565.095   ||g||^2 = 0.417174
+iter: 337   obj = 565.095   ||g||^2 = 0.742308
+iter: 338   obj = 565.095   ||g||^2 = 0.585213
+iter: 339   obj = 565.095   ||g||^2 = 0.418277
+iter: 340   obj = 565.095   ||g||^2 = 0.451706
+iter: 341   obj = 565.095   ||g||^2 = 0.87986
+iter: 342   obj = 565.095   ||g||^2 = 0.58092
+iter: 343   obj = 565.095   ||g||^2 = 0.307035
+iter: 344   obj = 565.095   ||g||^2 = 0.335972
+iter: 345   obj = 565.095   ||g||^2 = 0.488318
+iter: 346   obj = 565.095   ||g||^2 = 0.505625
+iter: 347   obj = 565.095   ||g||^2 = 0.425045
+iter: 348   obj = 565.095   ||g||^2 = 0.507641
+iter: 349   obj = 565.095   ||g||^2 = 0.298608
+iter: 350   obj = 565.095   ||g||^2 = 0.47539
+iter: 351   obj = 565.095   ||g||^2 = 0.76313
+iter: 352   obj = 565.095   ||g||^2 = 0.278476
+iter: 353   obj = 565.095   ||g||^2 = 0.248269
+iter: 354   obj = 565.095   ||g||^2 = 0.324502
+iter: 355   obj = 565.095   ||g||^2 = 0.142537
+iter: 356   obj = 565.095   ||g||^2 = 0.470112
+iter: 357   obj = 565.095   ||g||^2 = 0.148964
+iter: 358   obj = 565.095   ||g||^2 = 0.268863
+iter: 359   obj = 565.095   ||g||^2 = 0.263197
+iter: 360   obj = 565.095   ||g||^2 = 0.217277
+iter: 361   obj = 565.095   ||g||^2 = 0.320869
+iter: 362   obj = 565.095   ||g||^2 = 3.59654
+iter: 363   obj = 565.094   ||g||^2 = 1.52837
+iter: 364   obj = 565.094   ||g||^2 = 1.09659
+iter: 365   obj = 565.094   ||g||^2 = 0.591396
+iter: 366   obj = 565.094   ||g||^2 = 13.4378
+iter: 367   obj = 565.093   ||g||^2 = 1.6108
+iter: 368   obj = 565.093   ||g||^2 = 0.775535
+iter: 369   obj = 565.093   ||g||^2 = 0.598808
+iter: 370   obj = 565.093   ||g||^2 = 0.548014
+iter: 371   obj = 565.093   ||g||^2 = 0.156474
+iter: 372   obj = 565.093   ||g||^2 = 0.387357
+iter: 373   obj = 565.093   ||g||^2 = 0.363431
+iter: 374   obj = 565.093   ||g||^2 = 0.337098
+iter: 375   obj = 565.093   ||g||^2 = 0.434473
+iter: 376   obj = 565.093   ||g||^2 = 0.430174
+iter: 377   obj = 565.093   ||g||^2 = 0.481554
+iter: 378   obj = 565.093   ||g||^2 = 0.602871
+iter: 379   obj = 565.093   ||g||^2 = 0.473035
+iter: 380   obj = 565.093   ||g||^2 = 0.528917
+iter: 381   obj = 565.093   ||g||^2 = 0.554811
+iter: 382   obj = 565.093   ||g||^2 = 0.496553
+iter: 383   obj = 565.093   ||g||^2 = 0.0738069
+iter: 384   obj = 565.093   ||g||^2 = 0.135118
+iter: 385   obj = 565.093   ||g||^2 = 0.0637455
+iter: 386   obj = 565.093   ||g||^2 = 0.0789012
+iter: 387   obj = 565.093   ||g||^2 = 0.337185
+iter: 388   obj = 565.093   ||g||^2 = 0.0246484
+iter: 389   obj = 565.093   ||g||^2 = 0.0277956
+iter: 390   obj = 565.093   ||g||^2 = 0.0327995
+iter: 391   obj = 565.093   ||g||^2 = 0.0898734
+iter: 392   obj = 565.093   ||g||^2 = 0.0778885
+iter: 393   obj = 565.093   ||g||^2 = 0.075363
+iter: 394   obj = 565.093   ||g||^2 = 0.0314075
+iter: 395   obj = 565.093   ||g||^2 = 0.185968
+iter: 396   obj = 565.093   ||g||^2 = 0.00830995
+iter: 397   obj = 565.093   ||g||^2 = 0.0193916
+iter: 398   obj = 565.093   ||g||^2 = 0.0507661
+iter: 399   obj = 565.093   ||g||^2 = 0.015332
+iter: 400   obj = 565.093   ||g||^2 = 0.0356534
+iter: 401   obj = 565.093   ||g||^2 = 0.0659646
+iter: 402   obj = 565.093   ||g||^2 = 0.152456
+iter: 403   obj = 565.093   ||g||^2 = 0.10245
+iter: 404   obj = 565.093   ||g||^2 = 0.417725
+iter: 405   obj = 565.093   ||g||^2 = 0.0432392
+iter: 406   obj = 565.093   ||g||^2 = 0.0638145
+iter: 407   obj = 565.093   ||g||^2 = 1.31931
+iter: 408   obj = 565.093   ||g||^2 = 0.311647
+iter: 409   obj = 565.093   ||g||^2 = 0.178539
+iter: 410   obj = 565.093   ||g||^2 = 0.876187
+iter: 411   obj = 565.093   ||g||^2 = 0.0406444
+iter: 412   obj = 565.093   ||g||^2 = 0.0515219
+iter: 413   obj = 565.093   ||g||^2 = 0.0262987
+iter: 414   obj = 565.093   ||g||^2 = 0.0345362
+iter: 415   obj = 565.093   ||g||^2 = 0.0291232
+iter: 416   obj = 565.093   ||g||^2 = 0.0333845
+iter: 417   obj = 565.093   ||g||^2 = 0.0324515
+iter: 418   obj = 565.093   ||g||^2 = 0.031136
+iter: 419   obj = 565.093   ||g||^2 = 0.0286929
+iter: 420   obj = 565.093   ||g||^2 = 0.0226545
+iter: 421   obj = 565.093   ||g||^2 = 0.0274302
+iter: 422   obj = 565.093   ||g||^2 = 0.0190213
+iter: 423   obj = 565.093   ||g||^2 = 0.0232822
+iter: 424   obj = 565.093   ||g||^2 = 0.0169008
+iter: 425   obj = 565.093   ||g||^2 = 0.0167124
+iter: 426   obj = 565.093   ||g||^2 = 0.0230947
+iter: 427   obj = 565.093   ||g||^2 = 0.0194105
+iter: 428   obj = 565.093   ||g||^2 = 0.0496744
+iter: 429   obj = 565.093   ||g||^2 = 0.0381053
+iter: 430   obj = 565.093   ||g||^2 = 0.0168268
+iter: 431   obj = 565.093   ||g||^2 = 0.0105081
+iter: 432   obj = 565.093   ||g||^2 = 0.00562728
+iter: 433   obj = 565.093   ||g||^2 = 0.0664727
+iter: 434   obj = 565.093   ||g||^2 = 0.0655427
+iter: 435   obj = 565.093   ||g||^2 = 0.247492
+iter: 436   obj = 565.093   ||g||^2 = 0.0277528
+iter: 437   obj = 565.093   ||g||^2 = 0.184104
+iter: 438   obj = 565.093   ||g||^2 = 0.021373
+iter: 439   obj = 565.093   ||g||^2 = 0.0493581
+iter: 440   obj = 565.093   ||g||^2 = 0.0114142
+iter: 441   obj = 565.093   ||g||^2 = 0.0378283
+iter: 442   obj = 565.093   ||g||^2 = 0.00953319
+iter: 443   obj = 565.093   ||g||^2 = 0.0343285
+iter: 444   obj = 565.093   ||g||^2 = 0.0430211
+iter: 445   obj = 565.093   ||g||^2 = 0.0224069
+iter: 446   obj = 565.093   ||g||^2 = 0.289515
+iter: 447   obj = 565.093   ||g||^2 = 0.0362216
+iter: 448   obj = 565.093   ||g||^2 = 0.0241622
+iter: 449   obj = 565.093   ||g||^2 = 0.0914391
+iter: 450   obj = 565.093   ||g||^2 = 0.00202238
+iter: 451   obj = 565.093   ||g||^2 = 0.00492363
+iter: 452   obj = 565.093   ||g||^2 = 0.00640379
+iter: 453   obj = 565.093   ||g||^2 = 0.00817355
+iter: 454   obj = 565.093   ||g||^2 = 0.012294
+iter: 455   obj = 565.093   ||g||^2 = 0.00182814
+iter: 456   obj = 565.093   ||g||^2 = 0.00856777
+iter: 457   obj = 565.093   ||g||^2 = 0.00571071
+iter: 458   obj = 565.093   ||g||^2 = 0.00411057
+iter: 459   obj = 565.093   ||g||^2 = 0.00385551
+iter: 460   obj = 565.093   ||g||^2 = 0.0158487
+iter: 461   obj = 565.093   ||g||^2 = 0.00263743
+iter: 462   obj = 565.093   ||g||^2 = 0.0232555
+iter: 463   obj = 565.093   ||g||^2 = 0.0142315
+iter: 464   obj = 565.093   ||g||^2 = 0.0372805
+iter: 465   obj = 565.093   ||g||^2 = 0.0489697
+iter: 466   obj = 565.093   ||g||^2 = 0.0152543
+iter: 467   obj = 565.093   ||g||^2 = 0.00763276
+iter: 468   obj = 565.093   ||g||^2 = 0.00354803
+iter: 469   obj = 565.093   ||g||^2 = 0.00537402
+iter: 470   obj = 565.093   ||g||^2 = 0.0065596
+iter: 471   obj = 565.093   ||g||^2 = 0.00508886
+iter: 472   obj = 565.093   ||g||^2 = 0.00718035
+iter: 473   obj = 565.093   ||g||^2 = 1.02691
+iter: 474   obj = 565.093   ||g||^2 = 0.0265587
+iter: 475   obj = 565.093   ||g||^2 = 0.0828
+iter: 476   obj = 565.093   ||g||^2 = 0.0141027
+iter: 477   obj = 565.093   ||g||^2 = 0.019758
+iter: 478   obj = 565.093   ||g||^2 = 0.0100811
+iter: 479   obj = 565.093   ||g||^2 = 0.0070349
+iter: 480   obj = 565.093   ||g||^2 = 0.00767782
+iter: 481   obj = 565.093   ||g||^2 = 0.0104679
+iter: 482   obj = 565.093   ||g||^2 = 0.00598797
+iter: 483   obj = 565.093   ||g||^2 = 0.00593237
+iter: 484   obj = 565.093   ||g||^2 = 0.00765301
+iter: 485   obj = 565.093   ||g||^2 = 0.00351172
+iter: 486   obj = 565.093   ||g||^2 = 0.00366745
+iter: 487   obj = 565.093   ||g||^2 = 0.00425186
+iter: 488   obj = 565.093   ||g||^2 = 0.00488295
+iter: 489   obj = 565.093   ||g||^2 = 0.00632003
+iter: 490   obj = 565.093   ||g||^2 = 0.0187721
+iter: 491   obj = 565.093   ||g||^2 = 0.0151626
+iter: 492   obj = 565.093   ||g||^2 = 0.00839769
+iter: 493   obj = 565.093   ||g||^2 = 0.0334595
+iter: 494   obj = 565.093   ||g||^2 = 0.0293188
+iter: 495   obj = 565.093   ||g||^2 = 0.00108511
+iter: 496   obj = 565.093   ||g||^2 = 0.00333387
+iter: 497   obj = 565.093   ||g||^2 = 0.00109002
+iter: 498   obj = 565.093   ||g||^2 = 0.0011176
+iter: 499   obj = 565.093   ||g||^2 = 0.000475504
+iter: 500   obj = 565.093   ||g||^2 = 0.000728832
+iter: 501   obj = 565.093   ||g||^2 = 0.000445191
+iter: 502   obj = 565.093   ||g||^2 = 0.000622405
+iter: 503   obj = 565.093   ||g||^2 = 0.000454276
+iter: 504   obj = 565.093   ||g||^2 = 0.000395509
+iter: 505   obj = 565.093   ||g||^2 = 0.000387422
+iter: 506   obj = 565.093   ||g||^2 = 0.000466537
+iter: 507   obj = 565.093   ||g||^2 = 0.000392743
+iter: 508   obj = 565.093   ||g||^2 = 0.000502122
+iter: 509   obj = 565.093   ||g||^2 = 0.000502145
+iter: 510   obj = 565.093   ||g||^2 = 0.000790911
+iter: 511   obj = 565.093   ||g||^2 = 0.000931712
+iter: 512   obj = 565.093   ||g||^2 = 0.00026272
+iter: 513   obj = 565.093   ||g||^2 = 0.000446941
+iter: 514   obj = 565.093   ||g||^2 = 0.00124316
+iter: 515   obj = 565.093   ||g||^2 = 0.000232382
+iter: 516   obj = 565.093   ||g||^2 = 0.000125483
+iter: 517   obj = 565.093   ||g||^2 = 0.000234799
+iter: 518   obj = 565.093   ||g||^2 = 0.000117419
+iter: 519   obj = 565.093   ||g||^2 = 0.000170293
+iter: 520   obj = 565.093   ||g||^2 = 0.000140199
+iter: 521   obj = 565.093   ||g||^2 = 0.000633441
+iter: 522   obj = 565.093   ||g||^2 = 0.000198147
+iter: 523   obj = 565.093   ||g||^2 = 0.00160672
+iter: 524   obj = 565.093   ||g||^2 = 0.000205707
+iter: 525   obj = 565.093   ||g||^2 = 0.000125907
+iter: 526   obj = 565.093   ||g||^2 = 3.61861e-05
+iter: 527   obj = 565.093   ||g||^2 = 0.000132249
+iter: 528   obj = 565.093   ||g||^2 = 8.95943e-05
+iter: 529   obj = 565.093   ||g||^2 = 7.7926e-05
+iter: 530   obj = 565.093   ||g||^2 = 0.000193829
+iter: 531   obj = 565.093   ||g||^2 = 0.000489252
+iter: 532   obj = 565.093   ||g||^2 = 0.000145947
+iter: 533   obj = 565.093   ||g||^2 = 5.33005e-05
+iter: 534   obj = 565.093   ||g||^2 = 6.37689e-05
+iter: 535   obj = 565.093   ||g||^2 = 0.000143427
+iter: 536   obj = 565.093   ||g||^2 = 8.60274e-05
+iter: 537   obj = 565.093   ||g||^2 = 7.48962e-05
+iter: 538   obj = 565.093   ||g||^2 = 0.000646413
+iter: 539   obj = 565.093   ||g||^2 = 0.000445064
+iter: 540   obj = 565.093   ||g||^2 = 0.000157586
+iter: 541   obj = 565.093   ||g||^2 = 0.000198056
+iter: 542   obj = 565.093   ||g||^2 = 0.000113834
+iter: 543   obj = 565.093   ||g||^2 = 6.24489e-05
+iter: 544   obj = 565.093   ||g||^2 = 0.000440026
+iter: 545   obj = 565.093   ||g||^2 = 7.1624e-05
+iter: 546   obj = 565.093   ||g||^2 = 0.000243074
+iter: 547   obj = 565.093   ||g||^2 = 9.72752e-05
+iter: 548   obj = 565.093   ||g||^2 = 9.93993e-05
+iter: 549   obj = 565.093   ||g||^2 = 7.70377e-05
+iter: 550   obj = 565.093   ||g||^2 = 4.20037e-05
+iter: 551   obj = 565.093   ||g||^2 = 5.99588e-05
+iter: 552   obj = 565.093   ||g||^2 = 0.00107395
+iter: 553   obj = 565.093   ||g||^2 = 5.77797e-05
+iter: 554   obj = 565.093   ||g||^2 = 8.20918e-05
+iter: 555   obj = 565.093   ||g||^2 = 2.83809e-05
+iter: 556   obj = 565.093   ||g||^2 = 8.11267e-05
+iter: 557   obj = 565.093   ||g||^2 = 7.84481e-05
+iter: 558   obj = 565.093   ||g||^2 = 5.02649e-05
+iter: 559   obj = 565.093   ||g||^2 = 6.39783e-05
+iter: 560   obj = 565.093   ||g||^2 = 2.94001e-05
+iter: 561   obj = 565.093   ||g||^2 = 3.80763e-05
+iter: 562   obj = 565.093   ||g||^2 = 0.000149869
+iter: 563   obj = 565.093   ||g||^2 = 2.27209e-05
+Skipping update due to curvature condition!
+iter: 564   obj = 565.093   ||g||^2 = 2.99521e-05
+Skipping update due to curvature condition!
+iter: 565   obj = 565.093   ||g||^2 = 3.9594e-05
+Skipping update due to curvature condition!
+iter: 566   obj = 565.093   ||g||^2 = 3.11729e-05
+iter: 567   obj = 565.093   ||g||^2 = 5.20902e-05
+iter: 568   obj = 565.093   ||g||^2 = 6.3738e-05
+iter: 569   obj = 565.093   ||g||^2 = 3.85707e-05
+Skipping update due to curvature condition!
+iter: 570   obj = 565.093   ||g||^2 = 3.16465e-05
+Skipping update due to curvature condition!
+iter: 571   obj = 565.093   ||g||^2 = 3.2401e-05
+Skipping update due to curvature condition!
+iter: 572   obj = 565.093   ||g||^2 = 3.1484e-05
+Skipping update due to curvature condition!
+iter: 573   obj = 565.093   ||g||^2 = 3.27469e-05
+Skipping update due to curvature condition!
+iter: 574   obj = 565.093   ||g||^2 = 3.13687e-05
+Skipping update due to curvature condition!
+iter: 575   obj = 565.093   ||g||^2 = 3.23504e-05
+Skipping update due to curvature condition!
+iter: 576   obj = 565.093   ||g||^2 = 3.12073e-05
+Skipping update due to curvature condition!
+iter: 577   obj = 565.093   ||g||^2 = 3.2016e-05
+Skipping update due to curvature condition!
+iter: 578   obj = 565.093   ||g||^2 = 3.10627e-05
+Skipping update due to curvature condition!
+iter: 579   obj = 565.093   ||g||^2 = 3.24248e-05
+Skipping update due to curvature condition!
+iter: 580   obj = 565.093   ||g||^2 = 3.09104e-05
+Skipping update due to curvature condition!
+iter: 581   obj = 565.093   ||g||^2 = 3.85197e-05
+Skipping update due to curvature condition!
+iter: 582   obj = 565.093   ||g||^2 = 3.07026e-05
+Skipping update due to curvature condition!
+iter: 583   obj = 565.093   ||g||^2 = 3.04592e-05
+Skipping update due to curvature condition!
+iter: 584   obj = 565.093   ||g||^2 = 3.05554e-05
+Skipping update due to curvature condition!
+iter: 585   obj = 565.093   ||g||^2 = 3.06345e-05
+Skipping update due to curvature condition!
+iter: 586   obj = 565.093   ||g||^2 = 3.02622e-05
+Skipping update due to curvature condition!
+iter: 587   obj = 565.093   ||g||^2 = 3.49223e-05
+Skipping update due to curvature condition!
+iter: 588   obj = 565.093   ||g||^2 = 2.97834e-05
+Skipping update due to curvature condition!
+iter: 589   obj = 565.093   ||g||^2 = 3.03754e-05
+Skipping update due to curvature condition!
+iter: 590   obj = 565.093   ||g||^2 = 2.9696e-05
+Skipping update due to curvature condition!
+iter: 591   obj = 565.093   ||g||^2 = 3.06693e-05
+Skipping update due to curvature condition!
+iter: 592   obj = 565.093   ||g||^2 = 2.96279e-05
+iter: 593   obj = 565.093   ||g||^2 = 3.84916e-05
+iter: 594   obj = 565.093   ||g||^2 = 4.8209e-05
+iter: 595   obj = 565.093   ||g||^2 = 4.57125e-05
+iter: 596   obj = 565.093   ||g||^2 = 2.10973e-05
+iter: 597   obj = 565.093   ||g||^2 = 2.77821e-05
+iter: 598   obj = 565.093   ||g||^2 = 2.73121e-05
+Skipping update due to curvature condition!
+iter: 599   obj = 565.093   ||g||^2 = 2.79374e-05
+Skipping update due to curvature condition!
+iter: 600   obj = 565.093   ||g||^2 = 2.78803e-05
+Skipping update due to curvature condition!
+iter: 601   obj = 565.093   ||g||^2 = 2.84335e-05
+Skipping update due to curvature condition!
+iter: 602   obj = 565.093   ||g||^2 = 2.83928e-05
+Skipping update due to curvature condition!
+iter: 603   obj = 565.093   ||g||^2 = 2.88654e-05
+Skipping update due to curvature condition!
+iter: 604   obj = 565.093   ||g||^2 = 2.88111e-05
+Skipping update due to curvature condition!
+iter: 605   obj = 565.093   ||g||^2 = 2.91924e-05
+Skipping update due to curvature condition!
+iter: 606   obj = 565.093   ||g||^2 = 2.9223e-05
+Skipping update due to curvature condition!
+iter: 607   obj = 565.093   ||g||^2 = 2.80606e-05
+iter: 608   obj = 565.093   ||g||^2 = 0.000137299
+iter: 609   obj = 565.093   ||g||^2 = 6.21738e-05
+iter: 610   obj = 565.093   ||g||^2 = 0.000119184
+iter: 611   obj = 565.093   ||g||^2 = 5.42223e-05
+iter: 612   obj = 565.093   ||g||^2 = 2.3315e-05
+iter: 613   obj = 565.093   ||g||^2 = 2.66297e-05
+Skipping update due to curvature condition!
+iter: 614   obj = 565.093   ||g||^2 = 2.68572e-05
+Skipping update due to curvature condition!
+iter: 615   obj = 565.093   ||g||^2 = 2.62553e-05
+Skipping update due to curvature condition!
+iter: 616   obj = 565.093   ||g||^2 = 2.63239e-05
+Skipping update due to curvature condition!
+iter: 617   obj = 565.093   ||g||^2 = 2.61813e-05
+Skipping update due to curvature condition!
+iter: 618   obj = 565.093   ||g||^2 = 2.62661e-05
+Skipping update due to curvature condition!
+iter: 619   obj = 565.093   ||g||^2 = 2.61226e-05
+Skipping update due to curvature condition!
+iter: 620   obj = 565.093   ||g||^2 = 2.62014e-05
+Skipping update due to curvature condition!
+iter: 621   obj = 565.093   ||g||^2 = 2.60541e-05
+Skipping update due to curvature condition!
+iter: 622   obj = 565.093   ||g||^2 = 2.63319e-05
+Skipping update due to curvature condition!
+iter: 623   obj = 565.093   ||g||^2 = 2.59532e-05
+Skipping update due to curvature condition!
+iter: 624   obj = 565.093   ||g||^2 = 2.61016e-05
+Skipping update due to curvature condition!
+iter: 625   obj = 565.093   ||g||^2 = 2.60037e-05
+Skipping update due to curvature condition!
+iter: 626   obj = 565.093   ||g||^2 = 2.5851e-05
+Skipping update due to curvature condition!
+iter: 627   obj = 565.093   ||g||^2 = 2.59233e-05
+Skipping update due to curvature condition!
+iter: 628   obj = 565.093   ||g||^2 = 2.58333e-05
+Skipping update due to curvature condition!
+iter: 629   obj = 565.093   ||g||^2 = 2.58002e-05
+Skipping update due to curvature condition!
+iter: 630   obj = 565.093   ||g||^2 = 2.57423e-05
+Skipping update due to curvature condition!
+iter: 631   obj = 565.093   ||g||^2 = 2.57478e-05
+Skipping update due to curvature condition!
+iter: 632   obj = 565.093   ||g||^2 = 2.56005e-05
+Skipping update due to curvature condition!
+iter: 633   obj = 565.093   ||g||^2 = 2.56382e-05
+Skipping update due to curvature condition!
+iter: 634   obj = 565.093   ||g||^2 = 2.54716e-05
+Skipping update due to curvature condition!
+iter: 635   obj = 565.093   ||g||^2 = 2.65379e-05
+Skipping update due to curvature condition!
+iter: 636   obj = 565.093   ||g||^2 = 2.44987e-05
+Skipping update due to curvature condition!
+iter: 637   obj = 565.093   ||g||^2 = 2.48523e-05
+Skipping update due to curvature condition!
+iter: 638   obj = 565.093   ||g||^2 = 2.47804e-05
+Skipping update due to curvature condition!
+iter: 639   obj = 565.093   ||g||^2 = 2.47403e-05
+Skipping update due to curvature condition!
+iter: 640   obj = 565.093   ||g||^2 = 2.4768e-05
+Skipping update due to curvature condition!
+iter: 641   obj = 565.093   ||g||^2 = 2.50439e-05
+Skipping update due to curvature condition!
+iter: 642   obj = 565.093   ||g||^2 = 2.48104e-05
+Skipping update due to curvature condition!
+iter: 643   obj = 565.093   ||g||^2 = 2.59611e-05
+Skipping update due to curvature condition!
+iter: 644   obj = 565.093   ||g||^2 = 2.48362e-05
+Skipping update due to curvature condition!
+iter: 645   obj = 565.093   ||g||^2 = 2.48475e-05
+Skipping update due to curvature condition!
+iter: 646   obj = 565.093   ||g||^2 = 2.48066e-05
+Skipping update due to curvature condition!
+iter: 647   obj = 565.093   ||g||^2 = 2.4955e-05
+Skipping update due to curvature condition!
+iter: 648   obj = 565.093   ||g||^2 = 2.47675e-05
+Skipping update due to curvature condition!
+iter: 649   obj = 565.093   ||g||^2 = 2.58536e-05
+Skipping update due to curvature condition!
+iter: 650   obj = 565.093   ||g||^2 = 2.47525e-05
+Skipping update due to curvature condition!
+iter: 651   obj = 565.093   ||g||^2 = 2.52945e-05
+Skipping update due to curvature condition!
+iter: 652   obj = 565.093   ||g||^2 = 2.47431e-05
+Skipping update due to curvature condition!
+iter: 653   obj = 565.093   ||g||^2 = 2.48126e-05
+Skipping update due to curvature condition!
+iter: 654   obj = 565.093   ||g||^2 = 2.46493e-05
+Skipping update due to curvature condition!
+iter: 655   obj = 565.093   ||g||^2 = 2.54634e-05
+Skipping update due to curvature condition!
+iter: 656   obj = 565.093   ||g||^2 = 2.42989e-05
+Skipping update due to curvature condition!
+iter: 657   obj = 565.093   ||g||^2 = 2.48128e-05
+Skipping update due to curvature condition!
+iter: 658   obj = 565.093   ||g||^2 = 2.45997e-05
+Skipping update due to curvature condition!
+iter: 659   obj = 565.093   ||g||^2 = 2.56821e-05
+Skipping update due to curvature condition!
+iter: 660   obj = 565.093   ||g||^2 = 2.47055e-05
+Skipping update due to curvature condition!
+iter: 661   obj = 565.093   ||g||^2 = 2.47437e-05
+Skipping update due to curvature condition!
+iter: 662   obj = 565.093   ||g||^2 = 2.46968e-05
+Skipping update due to curvature condition!
+iter: 663   obj = 565.093   ||g||^2 = 2.46927e-05
+Skipping update due to curvature condition!
+iter: 664   obj = 565.093   ||g||^2 = 2.47565e-05
+Skipping update due to curvature condition!
+iter: 665   obj = 565.093   ||g||^2 = 2.46288e-05
+Skipping update due to curvature condition!
+iter: 666   obj = 565.093   ||g||^2 = 2.91897e-05
+Skipping update due to curvature condition!
+iter: 667   obj = 565.093   ||g||^2 = 2.47678e-05
+Skipping update due to curvature condition!
+iter: 668   obj = 565.093   ||g||^2 = 2.4625e-05
+Skipping update due to curvature condition!
+iter: 669   obj = 565.093   ||g||^2 = 2.64532e-05
+Skipping update due to curvature condition!
+iter: 670   obj = 565.093   ||g||^2 = 2.43708e-05
+Skipping update due to curvature condition!
+iter: 671   obj = 565.093   ||g||^2 = 2.44667e-05
+Skipping update due to curvature condition!
+iter: 672   obj = 565.093   ||g||^2 = 2.44294e-05
+Skipping update due to curvature condition!
+iter: 673   obj = 565.093   ||g||^2 = 2.47604e-05
+Skipping update due to curvature condition!
+iter: 674   obj = 565.093   ||g||^2 = 2.44809e-05
+Skipping update due to curvature condition!
+iter: 675   obj = 565.093   ||g||^2 = 2.56264e-05
+Skipping update due to curvature condition!
+iter: 676   obj = 565.093   ||g||^2 = 2.42876e-05
+Skipping update due to curvature condition!
+iter: 677   obj = 565.093   ||g||^2 = 2.45206e-05
+Skipping update due to curvature condition!
+iter: 678   obj = 565.093   ||g||^2 = 2.43621e-05
+Skipping update due to curvature condition!
+iter: 679   obj = 565.093   ||g||^2 = 2.46599e-05
+Skipping update due to curvature condition!
+iter: 680   obj = 565.093   ||g||^2 = 2.44322e-05
+Skipping update due to curvature condition!
+iter: 681   obj = 565.093   ||g||^2 = 2.69185e-05
+Skipping update due to curvature condition!
+iter: 682   obj = 565.093   ||g||^2 = 2.47691e-05
+Skipping update due to curvature condition!
+iter: 683   obj = 565.093   ||g||^2 = 2.46427e-05
+Function value converges!
+######## Timing statistics ########
+total time    : 0.044047s
+total time evaluation : 0.026575s  (60.3333 %)
+eval_f time   : 0.02468s  ( #evals: 24540 -> avg 0.00000s )
+eval_grad time: 0.00190s  ( #evals: 684 -> avg 0.00000s, factor: 2.75945)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg nans, factor: nan)
+Saving optimized spring graph to assets/spring_systems/l_bfgs/spring_noLength_10x10_opt_*.csv

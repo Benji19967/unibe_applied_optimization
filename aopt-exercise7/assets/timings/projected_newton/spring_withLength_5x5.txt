@@ -1,0 +1,22 @@
+
+Initial MassSpring system energy is 2.43845e+07
+Saving initial spring graph to assets/spring_systems/projected_newton/spring_withLength_5x5_*.csv
+******** Newton Method with projected hessian ********
+iter: 1   obj = 2.43845e+07   ||lambda||^2 = 4.73719e+07   n_projection_steps = 0
+iter: 2   obj = 383057   ||lambda||^2 = 504665   n_projection_steps = 0
+iter: 3   obj = 78987.9   ||lambda||^2 = 102114   n_projection_steps = 0
+iter: 4   obj = 17300.8   ||lambda||^2 = 21477.8   n_projection_steps = 0
+iter: 5   obj = 4267.86   ||lambda||^2 = 4876.12   n_projection_steps = 0
+iter: 6   obj = 1301.4   ||lambda||^2 = 1102.95   n_projection_steps = 0
+iter: 7   obj = 651.785   ||lambda||^2 = 186.718   n_projection_steps = 0
+iter: 8   obj = 545.977   ||lambda||^2 = 12.163   n_projection_steps = 0
+iter: 9   obj = 539.739   ||lambda||^2 = 0.16373   n_projection_steps = 0
+iter: 10   obj = 539.656   ||lambda||^2 = 7.57103e-05   n_projection_steps = 0
+iter: 11   obj = 539.656   ||lambda||^2 = 2.8946e-11   n_projection_steps = 0
+######## Timing statistics ########
+total time    : 0.000561s
+total time evaluation : 0.000166s  (29.59 %)
+eval_f time   : 0.00000s  ( #evals: 31 -> avg 0.00000s )
+eval_grad time: 0.00000s  ( #evals: 11 -> avg 0.00000s, factor: inf)
+eval_hess time: 0.00016s  ( #evals: 11 -> avg 0.00002s, factor: inf)
+Saving optimized spring graph to assets/spring_systems/projected_newton/spring_withLength_5x5_opt_*.csv

@@ -1,0 +1,14 @@
+
+Initial MassSpring system energy is 2.26635e+07
+Saving initial spring graph to assets/spring_systems/gauss_newton/spring_noLength_5x5_*.csv
+******** Newton Method ********
+iter: 1   obj = 2.26635e+07   ||lambda||^2 = 4.53266e+07
+iter: 2   obj = 1.41663e+06   ||lambda||^2 = 2.83291e+06
+iter: 3   obj = 176.537   ||lambda||^2 = 1.56985e-25
+######## Timing statistics ########
+total time    : 0.000508s
+total time evaluation : 0.000156s  (30.7087 %)
+eval_f time   : 0.00002s  ( #evals: 8 -> avg 0.00000s )
+eval_grad time: 0.00008s  ( #evals: 3 -> avg 0.00003s, factor: 8.88889)
+eval_hess time: 0.00005s  ( #evals: 3 -> avg 0.00002s, factor: 5.77778)
+Saving optimized spring graph to assets/spring_systems/gauss_newton/spring_noLength_5x5_opt_*.csv

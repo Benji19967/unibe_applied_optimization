@@ -1,0 +1,57 @@
+
+Initial MassSpring system energy is 7632.83
+Saving initial spring graph to assets/spring_systems/gradient_descent/spring_noLength_5x51_*.csv
+******** Gradient Descent ********
+iter: 1   obj = 7632.83   ||g||^2 = 109046
+iter: 2   obj = 1113.67   ||g||^2 = 9519.9
+iter: 3   obj = 201.999   ||g||^2 = 1139.65
+iter: 4   obj = 88.0893   ||g||^2 = 433.974
+iter: 5   obj = 52.2105   ||g||^2 = 166.748
+iter: 6   obj = 28.7225   ||g||^2 = 132.263
+iter: 7   obj = 19.299   ||g||^2 = 53.5963
+iter: 8   obj = 12.8017   ||g||^2 = 61.444
+iter: 9   obj = 9.01517   ||g||^2 = 16.6664
+iter: 10   obj = 2.20144   ||g||^2 = 21.5545
+iter: 11   obj = 1.12061   ||g||^2 = 1.8922
+iter: 12   obj = 0.630941   ||g||^2 = 3.07171
+iter: 13   obj = 0.453394   ||g||^2 = 0.667384
+iter: 14   obj = 0.148743   ||g||^2 = 1.23989
+iter: 15   obj = 0.0854322   ||g||^2 = 0.130557
+iter: 16   obj = 0.0429563   ||g||^2 = 0.310436
+iter: 17   obj = 0.0266633   ||g||^2 = 0.0400563
+iter: 18   obj = 0.0116316   ||g||^2 = 0.134842
+iter: 19   obj = 0.0054259   ||g||^2 = 0.0114801
+iter: 20   obj = 0.00416644   ||g||^2 = 0.00928238
+iter: 21   obj = 0.00320428   ||g||^2 = 0.00757069
+iter: 22   obj = 0.00246747   ||g||^2 = 0.00621685
+iter: 23   obj = 0.00190271   ||g||^2 = 0.0051391
+iter: 24   obj = 0.00148753   ||g||^2 = 0.00262496
+iter: 25   obj = 0.00103429   ||g||^2 = 0.00461139
+iter: 26   obj = 0.000761573   ||g||^2 = 0.00110689
+iter: 27   obj = 0.000203607   ||g||^2 = 0.00312801
+iter: 28   obj = 6.258e-05   ||g||^2 = 0.000178924
+iter: 29   obj = 4.86311e-05   ||g||^2 = 8.80203e-05
+iter: 30   obj = 3.44019e-05   ||g||^2 = 0.000164958
+iter: 31   obj = 2.48479e-05   ||g||^2 = 3.62384e-05
+iter: 32   obj = 8.14925e-06   ||g||^2 = 6.66535e-05
+iter: 33   obj = 4.73533e-06   ||g||^2 = 7.20689e-06
+iter: 34   obj = 2.35941e-06   ||g||^2 = 1.67107e-05
+iter: 35   obj = 1.47895e-06   ||g||^2 = 2.21579e-06
+iter: 36   obj = 6.33818e-07   ||g||^2 = 7.23624e-06
+iter: 37   obj = 3.00462e-07   ||g||^2 = 6.26995e-07
+iter: 38   obj = 2.30845e-07   ||g||^2 = 5.07869e-07
+iter: 39   obj = 1.7753e-07   ||g||^2 = 4.13919e-07
+iter: 40   obj = 1.36681e-07   ||g||^2 = 3.39502e-07
+iter: 41   obj = 1.05368e-07   ||g||^2 = 2.80277e-07
+iter: 42   obj = 8.25048e-08   ||g||^2 = 1.44631e-07
+iter: 43   obj = 5.71108e-08   ||g||^2 = 2.49592e-07
+iter: 44   obj = 4.22623e-08   ||g||^2 = 6.13711e-08
+iter: 45   obj = 1.10387e-08   ||g||^2 = 1.67887e-07
+iter: 46   obj = 3.46469e-09   ||g||^2 = 9.74805e-09
+######## Timing statistics ########
+total time    : 0.001168s
+total time evaluation : 0.000485s  (41.524 %)
+eval_f time   : 0.00039s  ( #evals: 389 -> avg 0.00000s )
+eval_grad time: 0.00009s  ( #evals: 46 -> avg 0.00000s, factor: 1.97964)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg nans, factor: nan)
+Saving optimized spring graph to assets/spring_systems/gradient_descent/spring_noLength_5x51_opt_*.csv

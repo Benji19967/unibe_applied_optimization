@@ -19,8 +19,21 @@ cd build
 ctest -R <regex to select tests>
 ```
 
-## Interactive visualization tools
+## Visualization tools
+
+### Contour and Surface plots
+
+https://slides.cgg.unibe.ch/aopt20/plots/plot2d_custom.html
+
+### Spring System
+
+https://slides.cgg.unibe.ch/aopt20/plots/springsys.html
+
+### Taylor approx and descent methods
 
 https://cgg.unibe.ch/interactive-education/
+
+- Taylor polynomial approx in 1-D and 2-D
+- Descent methods in 2-D
 
 Credits to Martin Heistermann

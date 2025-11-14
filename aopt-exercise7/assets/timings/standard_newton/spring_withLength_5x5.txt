@@ -1,0 +1,23 @@
+
+Initial MassSpring system energy is 2.43845e+07
+Saving initial spring graph to assets/spring_systems/standard_newton/spring_withLength_5x5_*.csv
+******** Newton Method ********
+iter: 1   obj = 2.43845e+07   ||lambda||^2 = 4.73719e+07
+iter: 2   obj = 383058   ||lambda||^2 = 504665
+iter: 3   obj = 78988.1   ||lambda||^2 = 102112
+iter: 4   obj = 17301.8   ||lambda||^2 = 21474.9
+iter: 5   obj = 4269.24   ||lambda||^2 = 4854.79
+iter: 6   obj = 1307.85   ||lambda||^2 = 1112.96
+iter: 7   obj = 654.237   ||lambda||^2 = 182.376
+iter: 8   obj = 548.007   ||lambda||^2 = 16.7295
+iter: 9   obj = 540.214   ||lambda||^2 = 1.09158
+iter: 10   obj = 539.657   ||lambda||^2 = 0.00182784
+iter: 11   obj = 539.656   ||lambda||^2 = 6.40663e-08
+iter: 12   obj = 539.656   ||lambda||^2 = 1.02577e-11
+######## Timing statistics ########
+total time    : 0.001811s
+total time evaluation : 0.001392s  (76.8636 %)
+eval_f time   : 0.00000s  ( #evals: 35 -> avg 0.00000s )
+eval_grad time: 0.00000s  ( #evals: 12 -> avg 0.00000s, factor: inf)
+eval_hess time: 0.00139s  ( #evals: 12 -> avg 0.00012s, factor: inf)
+Saving optimized spring graph to assets/spring_systems/standard_newton/spring_withLength_5x5_opt_*.csv

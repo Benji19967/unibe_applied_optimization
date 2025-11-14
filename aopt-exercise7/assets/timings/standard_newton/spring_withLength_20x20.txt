@@ -1,0 +1,27 @@
+
+Initial MassSpring system energy is 4.29333e+08
+Saving initial spring graph to assets/spring_systems/standard_newton/spring_withLength_20x20_*.csv
+******** Newton Method ********
+iter: 1   obj = 4.29333e+08   ||lambda||^2 = 8.40803e+08
+iter: 2   obj = 5.23493e+06   ||lambda||^2 = 6.89175e+06
+iter: 3   obj = 1.08117e+06   ||lambda||^2 = 1.39625e+06
+iter: 4   obj = 237751   ||lambda||^2 = 293552
+iter: 5   obj = 59672.7   ||lambda||^2 = 66130.9
+iter: 6   obj = 19339   ||lambda||^2 = 17002.4
+iter: 7   obj = 8900.54   ||lambda||^2 = 4323.92
+iter: 8   obj = 6679.92   ||lambda||^2 = 604.646
+iter: 9   obj = 6351.37   ||lambda||^2 = 23.4991
+iter: 10   obj = 6338.61   ||lambda||^2 = 0.473901
+iter: 11   obj = 6338.34   ||lambda||^2 = 0.0162616
+iter: 12   obj = 6338.33   ||lambda||^2 = 0.000714689
+iter: 13   obj = 6338.32   ||lambda||^2 = 3.44027e-05
+iter: 14   obj = 6338.32   ||lambda||^2 = 1.76136e-06
+iter: 15   obj = 6338.32   ||lambda||^2 = 9.3628e-08
+iter: 16   obj = 6338.32   ||lambda||^2 = 5.08818e-09
+######## Timing statistics ########
+total time    : 0.040716s
+total time evaluation : 0.026111s  (64.1296 %)
+eval_f time   : 0.00023s  ( #evals: 46 -> avg 0.00000s )
+eval_grad time: 0.00019s  ( #evals: 16 -> avg 0.00001s, factor: 2.41704)
+eval_hess time: 0.02569s  ( #evals: 16 -> avg 0.00161s, factor: 326.87223)
+Saving optimized spring graph to assets/spring_systems/standard_newton/spring_withLength_20x20_opt_*.csv

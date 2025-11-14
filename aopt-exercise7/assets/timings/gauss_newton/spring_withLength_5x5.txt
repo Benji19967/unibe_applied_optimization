@@ -1,0 +1,51 @@
+
+Initial MassSpring system energy is 2.43845e+07
+Saving initial spring graph to assets/spring_systems/gauss_newton/spring_withLength_5x5_*.csv
+******** Newton Method ********
+iter: 1   obj = 2.43845e+07   ||lambda||^2 = 4.87434e+07
+iter: 2   obj = 2.09412e+06   ||lambda||^2 = 4.18166e+06
+iter: 3   obj = 256477   ||lambda||^2 = 508450
+iter: 4   obj = 42427.1   ||lambda||^2 = 82492.5
+iter: 5   obj = 8479.23   ||lambda||^2 = 15685.2
+iter: 6   obj = 2239.46   ||lambda||^2 = 3594.13
+iter: 7   obj = 1143.89   ||lambda||^2 = 1435.03
+iter: 8   obj = 725.045   ||lambda||^2 = 488.604
+iter: 9   obj = 618.729   ||lambda||^2 = 343.951
+iter: 10   obj = 583.351   ||lambda||^2 = 149.883
+iter: 11   obj = 558.371   ||lambda||^2 = 152.965
+iter: 12   obj = 549.114   ||lambda||^2 = 47.3217
+iter: 13   obj = 545.657   ||lambda||^2 = 41.0242
+iter: 14   obj = 543.823   ||lambda||^2 = 14.8727
+iter: 15   obj = 541.835   ||lambda||^2 = 21.9708
+iter: 16   obj = 541.076   ||lambda||^2 = 4.09478
+iter: 17   obj = 539.806   ||lambda||^2 = 2.19441
+iter: 18   obj = 539.734   ||lambda||^2 = 0.283868
+iter: 19   obj = 539.695   ||lambda||^2 = 0.219042
+iter: 20   obj = 539.679   ||lambda||^2 = 0.0819192
+iter: 21   obj = 539.669   ||lambda||^2 = 0.109457
+iter: 22   obj = 539.664   ||lambda||^2 = 0.0294575
+iter: 23   obj = 539.661   ||lambda||^2 = 0.0395243
+iter: 24   obj = 539.66   ||lambda||^2 = 0.0136048
+iter: 25   obj = 539.659   ||lambda||^2 = 0.0205483
+iter: 26   obj = 539.658   ||lambda||^2 = 0.00671851
+iter: 27   obj = 539.657   ||lambda||^2 = 0.0110895
+iter: 28   obj = 539.657   ||lambda||^2 = 0.00253121
+iter: 29   obj = 539.656   ||lambda||^2 = 0.000123468
+iter: 30   obj = 539.656   ||lambda||^2 = 2.09493e-05
+iter: 31   obj = 539.656   ||lambda||^2 = 3.1442e-05
+iter: 32   obj = 539.656   ||lambda||^2 = 4.59093e-06
+iter: 33   obj = 539.656   ||lambda||^2 = 1.53233e-05
+iter: 34   obj = 539.656   ||lambda||^2 = 8.40454e-07
+iter: 35   obj = 539.656   ||lambda||^2 = 1.03087e-06
+iter: 36   obj = 539.656   ||lambda||^2 = 2.81261e-07
+iter: 37   obj = 539.656   ||lambda||^2 = 6.7206e-07
+iter: 38   obj = 539.656   ||lambda||^2 = 8.16645e-08
+iter: 39   obj = 539.656   ||lambda||^2 = 1.40064e-07
+iter: 40   obj = 539.656   ||lambda||^2 = 1.08355e-08
+######## Timing statistics ########
+total time    : 0.003747s
+total time evaluation : 0.002202s  (58.767 %)
+eval_f time   : 0.00100s  ( #evals: 332 -> avg 0.00000s )
+eval_grad time: 0.00049s  ( #evals: 40 -> avg 0.00001s, factor: 4.12500)
+eval_hess time: 0.00071s  ( #evals: 40 -> avg 0.00002s, factor: 5.92500)
+Saving optimized spring graph to assets/spring_systems/gauss_newton/spring_withLength_5x5_opt_*.csv

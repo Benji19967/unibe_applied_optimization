@@ -1,0 +1,1321 @@
+
+Initial MassSpring system energy is 2.43845e+07
+Saving initial spring graph to assets/spring_systems/l_bfgs/spring_withLength_5x5_*.csv
+******** LBFGS ********
+iter: 0   obj = 2.43845e+07   ||g||^2 = 4.63179e+12
+iter: 1   obj = 2.80796e+06   ||g||^2 = 2.67955e+11
+iter: 2   obj = 1.83792e+06   ||g||^2 = 2.84093e+11
+iter: 3   obj = 1.65823e+06   ||g||^2 = 2.66868e+11
+iter: 4   obj = 1.6146e+06   ||g||^2 = 2.67156e+11
+iter: 5   obj = 1.6032e+06   ||g||^2 = 2.65476e+11
+iter: 6   obj = 1.57765e+06   ||g||^2 = 2.64103e+11
+iter: 7   obj = 1.57655e+06   ||g||^2 = 2.63913e+11
+iter: 8   obj = 1.56261e+06   ||g||^2 = 2.6153e+11
+iter: 9   obj = 1.562e+06   ||g||^2 = 2.61437e+11
+iter: 10   obj = 1.55258e+06   ||g||^2 = 2.59827e+11
+iter: 11   obj = 1.54393e+06   ||g||^2 = 2.58761e+11
+iter: 12   obj = 1.54105e+06   ||g||^2 = 2.57951e+11
+iter: 13   obj = 1.53421e+06   ||g||^2 = 2.55989e+11
+iter: 14   obj = 1.53068e+06   ||g||^2 = 2.55654e+11
+iter: 15   obj = 1.52052e+06   ||g||^2 = 2.53345e+11
+iter: 16   obj = 1.50248e+06   ||g||^2 = 2.48778e+11
+iter: 17   obj = 1.50152e+06   ||g||^2 = 2.48461e+11
+iter: 18   obj = 1.48275e+06   ||g||^2 = 2.4401e+11
+iter: 19   obj = 1.44485e+06   ||g||^2 = 2.34433e+11
+iter: 20   obj = 1.41482e+06   ||g||^2 = 2.27003e+11
+iter: 21   obj = 1.3755e+06   ||g||^2 = 2.17429e+11
+iter: 22   obj = 236633   ||g||^2 = 2.23313e+09
+iter: 23   obj = 89408.8   ||g||^2 = 3.55952e+09
+iter: 24   obj = 67846   ||g||^2 = 2.12133e+09
+iter: 25   obj = 62049.6   ||g||^2 = 2.10887e+09
+iter: 26   obj = 61670.2   ||g||^2 = 2.00394e+09
+iter: 27   obj = 59093.5   ||g||^2 = 1.92511e+09
+iter: 28   obj = 59052.8   ||g||^2 = 1.91398e+09
+iter: 29   obj = 57834.2   ||g||^2 = 1.94159e+09
+iter: 30   obj = 57824   ||g||^2 = 1.94093e+09
+iter: 31   obj = 57520.9   ||g||^2 = 1.91174e+09
+iter: 32   obj = 56847.1   ||g||^2 = 1.80641e+09
+iter: 33   obj = 56771.3   ||g||^2 = 1.81508e+09
+iter: 34   obj = 56390.6   ||g||^2 = 1.87838e+09
+iter: 35   obj = 55832.1   ||g||^2 = 1.81751e+09
+iter: 36   obj = 55772.8   ||g||^2 = 1.78877e+09
+iter: 37   obj = 55576   ||g||^2 = 1.73232e+09
+iter: 38   obj = 55498.2   ||g||^2 = 1.72789e+09
+iter: 39   obj = 55030.2   ||g||^2 = 1.64273e+09
+iter: 40   obj = 54697.7   ||g||^2 = 1.54202e+09
+iter: 41   obj = 54075.9   ||g||^2 = 1.42589e+09
+iter: 42   obj = 53609.1   ||g||^2 = 1.35503e+09
+iter: 43   obj = 46188.6   ||g||^2 = 2.08763e+08
+iter: 44   obj = 12976.2   ||g||^2 = 3.5328e+08
+iter: 45   obj = 9809.77   ||g||^2 = 1.16674e+08
+iter: 46   obj = 9054.87   ||g||^2 = 8.90356e+07
+iter: 47   obj = 9046.81   ||g||^2 = 8.52604e+07
+iter: 48   obj = 8685.62   ||g||^2 = 7.31966e+07
+iter: 49   obj = 8668.94   ||g||^2 = 7.37402e+07
+iter: 50   obj = 8405.38   ||g||^2 = 7.66414e+07
+iter: 51   obj = 8402.65   ||g||^2 = 7.67718e+07
+iter: 52   obj = 8215.85   ||g||^2 = 7.31786e+07
+iter: 53   obj = 8150.36   ||g||^2 = 6.19308e+07
+iter: 54   obj = 8132.09   ||g||^2 = 6.40079e+07
+iter: 55   obj = 7901.76   ||g||^2 = 7.63565e+07
+iter: 56   obj = 7845.86   ||g||^2 = 6.94439e+07
+iter: 57   obj = 7836.41   ||g||^2 = 7.22351e+07
+iter: 58   obj = 7819.15   ||g||^2 = 6.76651e+07
+iter: 59   obj = 7813.06   ||g||^2 = 6.79361e+07
+iter: 60   obj = 7776.46   ||g||^2 = 6.17908e+07
+iter: 61   obj = 7739.43   ||g||^2 = 6.86985e+07
+iter: 62   obj = 7673.55   ||g||^2 = 5.71151e+07
+iter: 63   obj = 7609.37   ||g||^2 = 5.09725e+07
+iter: 64   obj = 7301.14   ||g||^2 = 1.9636e+07
+iter: 65   obj = 2694.76   ||g||^2 = 3.19379e+07
+iter: 66   obj = 2267.88   ||g||^2 = 1.00114e+07
+iter: 67   obj = 2192.6   ||g||^2 = 7.00701e+06
+iter: 68   obj = 2191.32   ||g||^2 = 7.43966e+06
+iter: 69   obj = 2135.26   ||g||^2 = 6.68347e+06
+iter: 70   obj = 2131.39   ||g||^2 = 6.34724e+06
+iter: 71   obj = 2096.75   ||g||^2 = 6.64635e+06
+iter: 72   obj = 2096.02   ||g||^2 = 6.68124e+06
+iter: 73   obj = 2027.9   ||g||^2 = 6.11364e+06
+iter: 74   obj = 2026.42   ||g||^2 = 5.84974e+06
+iter: 75   obj = 2019.41   ||g||^2 = 5.94951e+06
+iter: 76   obj = 1937.62   ||g||^2 = 5.62739e+06
+iter: 77   obj = 1934.53   ||g||^2 = 5.42979e+06
+iter: 78   obj = 1925.53   ||g||^2 = 5.9031e+06
+iter: 79   obj = 1922.58   ||g||^2 = 5.62544e+06
+iter: 80   obj = 1921.87   ||g||^2 = 5.67122e+06
+iter: 81   obj = 1901.99   ||g||^2 = 6.06634e+06
+iter: 82   obj = 1895.78   ||g||^2 = 6.4303e+06
+iter: 83   obj = 1891.65   ||g||^2 = 5.95682e+06
+iter: 84   obj = 1877.14   ||g||^2 = 5.63248e+06
+iter: 85   obj = 1870.38   ||g||^2 = 5.63419e+06
+iter: 86   obj = 913.879   ||g||^2 = 3.86696e+06
+iter: 87   obj = 866.698   ||g||^2 = 2.26547e+06
+iter: 88   obj = 858.08   ||g||^2 = 1.2053e+06
+iter: 89   obj = 851.193   ||g||^2 = 1.43416e+06
+iter: 90   obj = 841.117   ||g||^2 = 1.08047e+06
+iter: 91   obj = 840.749   ||g||^2 = 1.07922e+06
+iter: 92   obj = 821.39   ||g||^2 = 1.20906e+06
+iter: 93   obj = 821.04   ||g||^2 = 1.23823e+06
+iter: 94   obj = 788.894   ||g||^2 = 1.10892e+06
+iter: 95   obj = 788.508   ||g||^2 = 1.20498e+06
+iter: 96   obj = 780.435   ||g||^2 = 1.15181e+06
+iter: 97   obj = 768.27   ||g||^2 = 1.1242e+06
+iter: 98   obj = 768.14   ||g||^2 = 1.14833e+06
+iter: 99   obj = 745.913   ||g||^2 = 1.39278e+06
+iter: 100   obj = 742.821   ||g||^2 = 1.20397e+06
+iter: 101   obj = 742.583   ||g||^2 = 1.20756e+06
+iter: 102   obj = 740.016   ||g||^2 = 1.31871e+06
+iter: 103   obj = 738.855   ||g||^2 = 1.43003e+06
+iter: 104   obj = 738.357   ||g||^2 = 1.33599e+06
+iter: 105   obj = 735.047   ||g||^2 = 1.18401e+06
+iter: 106   obj = 733.094   ||g||^2 = 1.14736e+06
+iter: 107   obj = 590.706   ||g||^2 = 467091
+iter: 108   obj = 587.854   ||g||^2 = 187617
+iter: 109   obj = 587.625   ||g||^2 = 104569
+iter: 110   obj = 586.252   ||g||^2 = 74872.2
+iter: 111   obj = 585.335   ||g||^2 = 166930
+iter: 112   obj = 584.458   ||g||^2 = 42819.7
+iter: 113   obj = 580.109   ||g||^2 = 52584.5
+iter: 114   obj = 579.936   ||g||^2 = 76720.9
+iter: 115   obj = 563.482   ||g||^2 = 69317.8
+iter: 116   obj = 563.445   ||g||^2 = 71157.5
+iter: 117   obj = 563.107   ||g||^2 = 59727.3
+iter: 118   obj = 561.997   ||g||^2 = 27554.9
+iter: 119   obj = 561.949   ||g||^2 = 22700.4
+iter: 120   obj = 557.64   ||g||^2 = 33279.2
+iter: 121   obj = 557.157   ||g||^2 = 25476.7
+iter: 122   obj = 557.123   ||g||^2 = 25873.4
+iter: 123   obj = 556.406   ||g||^2 = 34789.8
+iter: 124   obj = 555.986   ||g||^2 = 55681.3
+iter: 125   obj = 554.847   ||g||^2 = 25431.1
+iter: 126   obj = 553.056   ||g||^2 = 51226.6
+iter: 127   obj = 552.776   ||g||^2 = 31062.8
+iter: 128   obj = 549.269   ||g||^2 = 6939.25
+iter: 129   obj = 549.218   ||g||^2 = 4661.89
+iter: 130   obj = 549.093   ||g||^2 = 37212.7
+iter: 131   obj = 548.125   ||g||^2 = 4140.05
+iter: 132   obj = 547.96   ||g||^2 = 10071
+iter: 133   obj = 547.879   ||g||^2 = 4380.18
+iter: 134   obj = 545.881   ||g||^2 = 4417.19
+iter: 135   obj = 545.647   ||g||^2 = 26099.7
+iter: 136   obj = 543.952   ||g||^2 = 1832.93
+iter: 137   obj = 543.931   ||g||^2 = 5196.9
+iter: 138   obj = 543.834   ||g||^2 = 1876.06
+iter: 139   obj = 543.667   ||g||^2 = 1790.52
+iter: 140   obj = 543.652   ||g||^2 = 3851.91
+iter: 141   obj = 542.521   ||g||^2 = 1234.04
+iter: 142   obj = 542.411   ||g||^2 = 2018.68
+iter: 143   obj = 542.399   ||g||^2 = 2783.03
+iter: 144   obj = 541.749   ||g||^2 = 1287.26
+iter: 145   obj = 541.729   ||g||^2 = 1610.96
+iter: 146   obj = 541.707   ||g||^2 = 1345.4
+iter: 147   obj = 541.631   ||g||^2 = 1606.33
+iter: 148   obj = 541.617   ||g||^2 = 1780.72
+iter: 149   obj = 541.518   ||g||^2 = 1367.86
+iter: 150   obj = 541.515   ||g||^2 = 1425.75
+iter: 151   obj = 541.506   ||g||^2 = 3404.99
+iter: 152   obj = 541.441   ||g||^2 = 1527.15
+iter: 153   obj = 541.424   ||g||^2 = 2512.24
+iter: 154   obj = 541.408   ||g||^2 = 1657.54
+iter: 155   obj = 541.127   ||g||^2 = 1238.32
+iter: 156   obj = 541.119   ||g||^2 = 763.484
+iter: 157   obj = 541.092   ||g||^2 = 721.655
+iter: 158   obj = 541.088   ||g||^2 = 1256.2
+iter: 159   obj = 541.068   ||g||^2 = 965.085
+iter: 160   obj = 541.027   ||g||^2 = 411.239
+iter: 161   obj = 541.019   ||g||^2 = 1003.03
+iter: 162   obj = 540.696   ||g||^2 = 457.274
+iter: 163   obj = 540.663   ||g||^2 = 271.756
+iter: 164   obj = 540.66   ||g||^2 = 303.379
+iter: 165   obj = 540.542   ||g||^2 = 289.825
+iter: 166   obj = 540.531   ||g||^2 = 281.167
+iter: 167   obj = 540.516   ||g||^2 = 358.475
+iter: 168   obj = 540.467   ||g||^2 = 282.162
+iter: 169   obj = 540.464   ||g||^2 = 296.086
+iter: 170   obj = 540.438   ||g||^2 = 626.722
+iter: 171   obj = 540.433   ||g||^2 = 559.508
+iter: 172   obj = 540.401   ||g||^2 = 3428.76
+iter: 173   obj = 540.335   ||g||^2 = 395.804
+iter: 174   obj = 540.193   ||g||^2 = 3216.95
+iter: 175   obj = 540.169   ||g||^2 = 332.482
+iter: 176   obj = 540.042   ||g||^2 = 184.203
+iter: 177   obj = 540.041   ||g||^2 = 240.936
+iter: 178   obj = 540.026   ||g||^2 = 202.02
+iter: 179   obj = 540.015   ||g||^2 = 1272.41
+iter: 180   obj = 539.996   ||g||^2 = 138.964
+iter: 181   obj = 539.99   ||g||^2 = 117.923
+iter: 182   obj = 539.989   ||g||^2 = 156.726
+iter: 183   obj = 539.965   ||g||^2 = 112.013
+iter: 184   obj = 539.957   ||g||^2 = 151.027
+iter: 185   obj = 539.956   ||g||^2 = 264.01
+iter: 186   obj = 539.89   ||g||^2 = 93.5049
+iter: 187   obj = 539.887   ||g||^2 = 147.704
+iter: 188   obj = 539.882   ||g||^2 = 115.581
+iter: 189   obj = 539.871   ||g||^2 = 98.6357
+iter: 190   obj = 539.87   ||g||^2 = 115.211
+iter: 191   obj = 539.839   ||g||^2 = 581.133
+iter: 192   obj = 539.834   ||g||^2 = 84.0808
+iter: 193   obj = 539.832   ||g||^2 = 279.996
+iter: 194   obj = 539.824   ||g||^2 = 126.581
+iter: 195   obj = 539.816   ||g||^2 = 227.499
+iter: 196   obj = 539.815   ||g||^2 = 112.074
+iter: 197   obj = 539.788   ||g||^2 = 36.5634
+iter: 198   obj = 539.788   ||g||^2 = 108.049
+iter: 199   obj = 539.782   ||g||^2 = 60.5266
+iter: 200   obj = 539.78   ||g||^2 = 121.707
+iter: 201   obj = 539.779   ||g||^2 = 68.6262
+iter: 202   obj = 539.758   ||g||^2 = 337.471
+iter: 203   obj = 539.735   ||g||^2 = 2212.82
+iter: 204   obj = 539.709   ||g||^2 = 115.063
+iter: 205   obj = 539.707   ||g||^2 = 158.203
+iter: 206   obj = 539.706   ||g||^2 = 157.13
+iter: 207   obj = 539.697   ||g||^2 = 105.012
+iter: 208   obj = 539.697   ||g||^2 = 118.283
+iter: 209   obj = 539.696   ||g||^2 = 102.164
+iter: 210   obj = 539.693   ||g||^2 = 123.544
+iter: 211   obj = 539.693   ||g||^2 = 107.025
+iter: 212   obj = 539.692   ||g||^2 = 162.317
+iter: 213   obj = 539.691   ||g||^2 = 80.0825
+iter: 214   obj = 539.691   ||g||^2 = 67.7522
+iter: 215   obj = 539.691   ||g||^2 = 74.2081
+iter: 216   obj = 539.689   ||g||^2 = 138.152
+iter: 217   obj = 539.689   ||g||^2 = 91.388
+iter: 218   obj = 539.683   ||g||^2 = 81.0044
+iter: 219   obj = 539.683   ||g||^2 = 88.4755
+iter: 220   obj = 539.683   ||g||^2 = 83.6564
+iter: 221   obj = 539.682   ||g||^2 = 79.2529
+iter: 222   obj = 539.682   ||g||^2 = 80.5972
+iter: 223   obj = 539.671   ||g||^2 = 71.2438
+iter: 224   obj = 539.67   ||g||^2 = 136.076
+iter: 225   obj = 539.669   ||g||^2 = 5.13305
+iter: 226   obj = 539.669   ||g||^2 = 4.99227
+iter: 227   obj = 539.669   ||g||^2 = 6.63587
+iter: 228   obj = 539.667   ||g||^2 = 4.27796
+iter: 229   obj = 539.667   ||g||^2 = 4.85958
+iter: 230   obj = 539.667   ||g||^2 = 4.58206
+iter: 231   obj = 539.666   ||g||^2 = 4.69718
+iter: 232   obj = 539.666   ||g||^2 = 5.49541
+iter: 233   obj = 539.666   ||g||^2 = 13.6354
+iter: 234   obj = 539.666   ||g||^2 = 7.25554
+iter: 235   obj = 539.666   ||g||^2 = 9.04573
+iter: 236   obj = 539.665   ||g||^2 = 6.00008
+iter: 237   obj = 539.665   ||g||^2 = 17.9789
+iter: 238   obj = 539.665   ||g||^2 = 5.50241
+iter: 239   obj = 539.664   ||g||^2 = 5.21838
+iter: 240   obj = 539.664   ||g||^2 = 7.40353
+iter: 241   obj = 539.663   ||g||^2 = 5.86042
+iter: 242   obj = 539.663   ||g||^2 = 4.43992
+iter: 243   obj = 539.663   ||g||^2 = 4.1442
+iter: 244   obj = 539.66   ||g||^2 = 3.20175
+iter: 245   obj = 539.66   ||g||^2 = 6.85424
+iter: 246   obj = 539.66   ||g||^2 = 2.10154
+iter: 247   obj = 539.66   ||g||^2 = 3.579
+iter: 248   obj = 539.66   ||g||^2 = 10.9431
+iter: 249   obj = 539.659   ||g||^2 = 2.13039
+iter: 250   obj = 539.659   ||g||^2 = 2.24967
+iter: 251   obj = 539.659   ||g||^2 = 2.12074
+iter: 252   obj = 539.659   ||g||^2 = 2.135
+iter: 253   obj = 539.659   ||g||^2 = 2.38775
+iter: 254   obj = 539.658   ||g||^2 = 1.50376
+iter: 255   obj = 539.658   ||g||^2 = 2.20525
+iter: 256   obj = 539.658   ||g||^2 = 4.87658
+iter: 257   obj = 539.658   ||g||^2 = 1.45102
+iter: 258   obj = 539.658   ||g||^2 = 9.5347
+iter: 259   obj = 539.658   ||g||^2 = 0.863435
+iter: 260   obj = 539.658   ||g||^2 = 1.21623
+iter: 261   obj = 539.658   ||g||^2 = 3.35275
+iter: 262   obj = 539.658   ||g||^2 = 1.36285
+iter: 263   obj = 539.657   ||g||^2 = 10.9384
+iter: 264   obj = 539.657   ||g||^2 = 0.60426
+iter: 265   obj = 539.656   ||g||^2 = 0.389229
+iter: 266   obj = 539.656   ||g||^2 = 0.838203
+iter: 267   obj = 539.656   ||g||^2 = 0.393098
+iter: 268   obj = 539.656   ||g||^2 = 0.392277
+iter: 269   obj = 539.656   ||g||^2 = 0.644058
+iter: 270   obj = 539.656   ||g||^2 = 0.233434
+iter: 271   obj = 539.656   ||g||^2 = 0.425694
+iter: 272   obj = 539.656   ||g||^2 = 0.224919
+iter: 273   obj = 539.656   ||g||^2 = 0.3965
+iter: 274   obj = 539.656   ||g||^2 = 0.253694
+iter: 275   obj = 539.656   ||g||^2 = 0.182369
+iter: 276   obj = 539.656   ||g||^2 = 0.189615
+iter: 277   obj = 539.656   ||g||^2 = 0.508442
+iter: 278   obj = 539.656   ||g||^2 = 0.121489
+iter: 279   obj = 539.656   ||g||^2 = 0.566443
+iter: 280   obj = 539.656   ||g||^2 = 0.101186
+iter: 281   obj = 539.656   ||g||^2 = 0.229717
+iter: 282   obj = 539.656   ||g||^2 = 0.42327
+iter: 283   obj = 539.656   ||g||^2 = 0.248473
+iter: 284   obj = 539.656   ||g||^2 = 1.23258
+iter: 285   obj = 539.656   ||g||^2 = 0.0871849
+iter: 286   obj = 539.656   ||g||^2 = 0.0971034
+iter: 287   obj = 539.656   ||g||^2 = 0.18564
+iter: 288   obj = 539.656   ||g||^2 = 0.0602809
+iter: 289   obj = 539.656   ||g||^2 = 0.122242
+iter: 290   obj = 539.656   ||g||^2 = 0.332142
+iter: 291   obj = 539.656   ||g||^2 = 0.0456203
+iter: 292   obj = 539.656   ||g||^2 = 0.129455
+iter: 293   obj = 539.656   ||g||^2 = 0.0462227
+iter: 294   obj = 539.656   ||g||^2 = 0.0477529
+iter: 295   obj = 539.656   ||g||^2 = 0.0494631
+iter: 296   obj = 539.656   ||g||^2 = 0.0393797
+iter: 297   obj = 539.656   ||g||^2 = 0.0491549
+iter: 298   obj = 539.656   ||g||^2 = 0.109031
+iter: 299   obj = 539.656   ||g||^2 = 0.0351619
+iter: 300   obj = 539.656   ||g||^2 = 0.16949
+iter: 301   obj = 539.656   ||g||^2 = 0.0209863
+iter: 302   obj = 539.656   ||g||^2 = 0.0259834
+iter: 303   obj = 539.656   ||g||^2 = 0.081217
+iter: 304   obj = 539.656   ||g||^2 = 0.0256306
+iter: 305   obj = 539.656   ||g||^2 = 0.127399
+iter: 306   obj = 539.656   ||g||^2 = 0.0153347
+iter: 307   obj = 539.656   ||g||^2 = 0.0110877
+iter: 308   obj = 539.656   ||g||^2 = 0.0263182
+iter: 309   obj = 539.656   ||g||^2 = 0.0142345
+iter: 310   obj = 539.656   ||g||^2 = 0.0186714
+iter: 311   obj = 539.656   ||g||^2 = 0.0274494
+iter: 312   obj = 539.656   ||g||^2 = 0.00862711
+iter: 313   obj = 539.656   ||g||^2 = 0.0345288
+iter: 314   obj = 539.656   ||g||^2 = 0.013142
+iter: 315   obj = 539.656   ||g||^2 = 0.0230069
+iter: 316   obj = 539.656   ||g||^2 = 0.019288
+iter: 317   obj = 539.656   ||g||^2 = 0.0147991
+iter: 318   obj = 539.656   ||g||^2 = 0.0149736
+iter: 319   obj = 539.656   ||g||^2 = 0.0414623
+iter: 320   obj = 539.656   ||g||^2 = 0.0103465
+iter: 321   obj = 539.656   ||g||^2 = 0.0153794
+iter: 322   obj = 539.656   ||g||^2 = 0.011355
+iter: 323   obj = 539.656   ||g||^2 = 0.00406543
+iter: 324   obj = 539.656   ||g||^2 = 0.0236225
+iter: 325   obj = 539.656   ||g||^2 = 0.00627937
+iter: 326   obj = 539.656   ||g||^2 = 0.0797719
+iter: 327   obj = 539.656   ||g||^2 = 0.00575935
+iter: 328   obj = 539.656   ||g||^2 = 0.00352362
+iter: 329   obj = 539.656   ||g||^2 = 0.0103682
+iter: 330   obj = 539.656   ||g||^2 = 0.00497768
+iter: 331   obj = 539.656   ||g||^2 = 0.00327858
+iter: 332   obj = 539.656   ||g||^2 = 0.0057668
+iter: 333   obj = 539.656   ||g||^2 = 0.00304044
+iter: 334   obj = 539.656   ||g||^2 = 0.00459668
+iter: 335   obj = 539.656   ||g||^2 = 0.00316316
+iter: 336   obj = 539.656   ||g||^2 = 0.00361856
+iter: 337   obj = 539.656   ||g||^2 = 0.00305981
+iter: 338   obj = 539.656   ||g||^2 = 0.00415171
+iter: 339   obj = 539.656   ||g||^2 = 0.00516583
+iter: 340   obj = 539.656   ||g||^2 = 0.00613031
+iter: 341   obj = 539.656   ||g||^2 = 0.00381784
+iter: 342   obj = 539.656   ||g||^2 = 0.00473988
+iter: 343   obj = 539.656   ||g||^2 = 0.00284977
+iter: 344   obj = 539.656   ||g||^2 = 0.00288216
+iter: 345   obj = 539.656   ||g||^2 = 0.00150626
+iter: 346   obj = 539.656   ||g||^2 = 0.00175368
+iter: 347   obj = 539.656   ||g||^2 = 0.00728034
+iter: 348   obj = 539.656   ||g||^2 = 0.00103677
+iter: 349   obj = 539.656   ||g||^2 = 0.000800191
+iter: 350   obj = 539.656   ||g||^2 = 0.000814222
+iter: 351   obj = 539.656   ||g||^2 = 0.000666893
+iter: 352   obj = 539.656   ||g||^2 = 0.00131185
+iter: 353   obj = 539.656   ||g||^2 = 0.00337831
+iter: 354   obj = 539.656   ||g||^2 = 0.000540135
+iter: 355   obj = 539.656   ||g||^2 = 0.00543084
+iter: 356   obj = 539.656   ||g||^2 = 0.000866098
+iter: 357   obj = 539.656   ||g||^2 = 0.000519312
+iter: 358   obj = 539.656   ||g||^2 = 0.00119525
+iter: 359   obj = 539.656   ||g||^2 = 0.00116791
+iter: 360   obj = 539.656   ||g||^2 = 0.00138362
+iter: 361   obj = 539.656   ||g||^2 = 0.000948716
+iter: 362   obj = 539.656   ||g||^2 = 0.000898925
+iter: 363   obj = 539.656   ||g||^2 = 0.00108412
+iter: 364   obj = 539.656   ||g||^2 = 0.000849354
+iter: 365   obj = 539.656   ||g||^2 = 0.000335777
+iter: 366   obj = 539.656   ||g||^2 = 0.000394241
+iter: 367   obj = 539.656   ||g||^2 = 0.000385132
+iter: 368   obj = 539.656   ||g||^2 = 0.00104382
+iter: 369   obj = 539.656   ||g||^2 = 0.000331479
+iter: 370   obj = 539.656   ||g||^2 = 0.000406931
+iter: 371   obj = 539.656   ||g||^2 = 0.0005859
+iter: 372   obj = 539.656   ||g||^2 = 0.000700376
+iter: 373   obj = 539.656   ||g||^2 = 0.000311134
+iter: 374   obj = 539.656   ||g||^2 = 0.00095624
+iter: 375   obj = 539.656   ||g||^2 = 0.000709573
+iter: 376   obj = 539.656   ||g||^2 = 8.35001e-05
+iter: 377   obj = 539.656   ||g||^2 = 0.000152299
+iter: 378   obj = 539.656   ||g||^2 = 7.67587e-05
+iter: 379   obj = 539.656   ||g||^2 = 0.000160815
+iter: 380   obj = 539.656   ||g||^2 = 0.000172287
+iter: 381   obj = 539.656   ||g||^2 = 0.000223859
+iter: 382   obj = 539.656   ||g||^2 = 0.000322352
+iter: 383   obj = 539.656   ||g||^2 = 0.000124053
+iter: 384   obj = 539.656   ||g||^2 = 0.000206613
+iter: 385   obj = 539.656   ||g||^2 = 0.000109394
+iter: 386   obj = 539.656   ||g||^2 = 0.000124804
+iter: 387   obj = 539.656   ||g||^2 = 0.000152134
+iter: 388   obj = 539.656   ||g||^2 = 0.000126744
+iter: 389   obj = 539.656   ||g||^2 = 0.000568935
+iter: 390   obj = 539.656   ||g||^2 = 8.24877e-05
+iter: 391   obj = 539.656   ||g||^2 = 7.50585e-05
+iter: 392   obj = 539.656   ||g||^2 = 9.54428e-05
+iter: 393   obj = 539.656   ||g||^2 = 0.000137114
+iter: 394   obj = 539.656   ||g||^2 = 5.38912e-05
+iter: 395   obj = 539.656   ||g||^2 = 0.000123649
+iter: 396   obj = 539.656   ||g||^2 = 6.41009e-05
+iter: 397   obj = 539.656   ||g||^2 = 4.45389e-05
+iter: 398   obj = 539.656   ||g||^2 = 6.30562e-05
+iter: 399   obj = 539.656   ||g||^2 = 3.83573e-05
+iter: 400   obj = 539.656   ||g||^2 = 4.82853e-05
+iter: 401   obj = 539.656   ||g||^2 = 3.1215e-05
+iter: 402   obj = 539.656   ||g||^2 = 4.06086e-05
+iter: 403   obj = 539.656   ||g||^2 = 0.000160551
+iter: 404   obj = 539.656   ||g||^2 = 2.56225e-05
+iter: 405   obj = 539.656   ||g||^2 = 6.99397e-05
+iter: 406   obj = 539.656   ||g||^2 = 3.09729e-05
+iter: 407   obj = 539.656   ||g||^2 = 4.6056e-05
+iter: 408   obj = 539.656   ||g||^2 = 9.30779e-05
+iter: 409   obj = 539.656   ||g||^2 = 5.39964e-05
+iter: 410   obj = 539.656   ||g||^2 = 0.000417141
+iter: 411   obj = 539.656   ||g||^2 = 2.32834e-05
+iter: 412   obj = 539.656   ||g||^2 = 1.09876e-05
+iter: 413   obj = 539.656   ||g||^2 = 2.28762e-05
+iter: 414   obj = 539.656   ||g||^2 = 2.02975e-05
+iter: 415   obj = 539.656   ||g||^2 = 1.3084e-05
+Skipping update due to curvature condition!
+iter: 416   obj = 539.656   ||g||^2 = 1.28422e-05
+iter: 417   obj = 539.656   ||g||^2 = 1.70494e-05
+iter: 418   obj = 539.656   ||g||^2 = 2.28157e-05
+iter: 419   obj = 539.656   ||g||^2 = 8.56176e-06
+iter: 420   obj = 539.656   ||g||^2 = 1.71687e-05
+iter: 421   obj = 539.656   ||g||^2 = 9.04358e-06
+iter: 422   obj = 539.656   ||g||^2 = 9.1619e-06
+Skipping update due to curvature condition!
+iter: 423   obj = 539.656   ||g||^2 = 1.0177e-05
+Skipping update due to curvature condition!
+iter: 424   obj = 539.656   ||g||^2 = 9.43016e-06
+Skipping update due to curvature condition!
+iter: 425   obj = 539.656   ||g||^2 = 8.95821e-06
+iter: 426   obj = 539.656   ||g||^2 = 5.78033e-05
+iter: 427   obj = 539.656   ||g||^2 = 0.000194918
+iter: 428   obj = 539.656   ||g||^2 = 2.58752e-05
+Skipping update due to curvature condition!
+iter: 429   obj = 539.656   ||g||^2 = 2.3071e-05
+Skipping update due to curvature condition!
+iter: 430   obj = 539.656   ||g||^2 = 2.45043e-05
+Skipping update due to curvature condition!
+iter: 431   obj = 539.656   ||g||^2 = 2.30387e-05
+Skipping update due to curvature condition!
+iter: 432   obj = 539.656   ||g||^2 = 2.78038e-05
+Skipping update due to curvature condition!
+iter: 433   obj = 539.656   ||g||^2 = 2.32021e-05
+Skipping update due to curvature condition!
+iter: 434   obj = 539.656   ||g||^2 = 2.38994e-05
+Skipping update due to curvature condition!
+iter: 435   obj = 539.656   ||g||^2 = 2.30763e-05
+Skipping update due to curvature condition!
+iter: 436   obj = 539.656   ||g||^2 = 2.50374e-05
+Skipping update due to curvature condition!
+iter: 437   obj = 539.656   ||g||^2 = 2.30939e-05
+Skipping update due to curvature condition!
+iter: 438   obj = 539.656   ||g||^2 = 2.3999e-05
+Skipping update due to curvature condition!
+iter: 439   obj = 539.656   ||g||^2 = 2.30377e-05
+Skipping update due to curvature condition!
+iter: 440   obj = 539.656   ||g||^2 = 2.53086e-05
+Skipping update due to curvature condition!
+iter: 441   obj = 539.656   ||g||^2 = 2.29111e-05
+Skipping update due to curvature condition!
+iter: 442   obj = 539.656   ||g||^2 = 2.41498e-05
+Skipping update due to curvature condition!
+iter: 443   obj = 539.656   ||g||^2 = 2.28945e-05
+Skipping update due to curvature condition!
+iter: 444   obj = 539.656   ||g||^2 = 2.69847e-05
+Skipping update due to curvature condition!
+iter: 445   obj = 539.656   ||g||^2 = 2.30588e-05
+Skipping update due to curvature condition!
+iter: 446   obj = 539.656   ||g||^2 = 2.36211e-05
+Skipping update due to curvature condition!
+iter: 447   obj = 539.656   ||g||^2 = 2.29536e-05
+Skipping update due to curvature condition!
+iter: 448   obj = 539.656   ||g||^2 = 2.45616e-05
+Skipping update due to curvature condition!
+iter: 449   obj = 539.656   ||g||^2 = 2.29754e-05
+Skipping update due to curvature condition!
+iter: 450   obj = 539.656   ||g||^2 = 2.36538e-05
+Skipping update due to curvature condition!
+iter: 451   obj = 539.656   ||g||^2 = 2.29278e-05
+Skipping update due to curvature condition!
+iter: 452   obj = 539.656   ||g||^2 = 2.47092e-05
+Skipping update due to curvature condition!
+iter: 453   obj = 539.656   ||g||^2 = 2.28182e-05
+Skipping update due to curvature condition!
+iter: 454   obj = 539.656   ||g||^2 = 2.38589e-05
+Skipping update due to curvature condition!
+iter: 455   obj = 539.656   ||g||^2 = 2.28114e-05
+Skipping update due to curvature condition!
+iter: 456   obj = 539.656   ||g||^2 = 2.61823e-05
+Skipping update due to curvature condition!
+iter: 457   obj = 539.656   ||g||^2 = 2.29621e-05
+Skipping update due to curvature condition!
+iter: 458   obj = 539.656   ||g||^2 = 2.33748e-05
+Skipping update due to curvature condition!
+iter: 459   obj = 539.656   ||g||^2 = 2.2874e-05
+Skipping update due to curvature condition!
+iter: 460   obj = 539.656   ||g||^2 = 2.55062e-05
+Skipping update due to curvature condition!
+iter: 461   obj = 539.656   ||g||^2 = 2.27821e-05
+Skipping update due to curvature condition!
+iter: 462   obj = 539.656   ||g||^2 = 2.35041e-05
+Skipping update due to curvature condition!
+iter: 463   obj = 539.656   ||g||^2 = 2.27726e-05
+Skipping update due to curvature condition!
+iter: 464   obj = 539.656   ||g||^2 = 2.67446e-05
+Skipping update due to curvature condition!
+iter: 465   obj = 539.656   ||g||^2 = 2.29367e-05
+Skipping update due to curvature condition!
+iter: 466   obj = 539.656   ||g||^2 = 2.30304e-05
+Skipping update due to curvature condition!
+iter: 467   obj = 539.656   ||g||^2 = 2.28131e-05
+Skipping update due to curvature condition!
+iter: 468   obj = 539.656   ||g||^2 = 2.55251e-05
+Skipping update due to curvature condition!
+iter: 469   obj = 539.656   ||g||^2 = 2.27345e-05
+Skipping update due to curvature condition!
+iter: 470   obj = 539.656   ||g||^2 = 2.34925e-05
+Skipping update due to curvature condition!
+iter: 471   obj = 539.656   ||g||^2 = 2.2724e-05
+Skipping update due to curvature condition!
+iter: 472   obj = 539.656   ||g||^2 = 2.68799e-05
+Skipping update due to curvature condition!
+iter: 473   obj = 539.656   ||g||^2 = 2.28993e-05
+Skipping update due to curvature condition!
+iter: 474   obj = 539.656   ||g||^2 = 2.27937e-05
+Skipping update due to curvature condition!
+iter: 475   obj = 539.656   ||g||^2 = 2.31164e-05
+Skipping update due to curvature condition!
+iter: 476   obj = 539.656   ||g||^2 = 2.27075e-05
+Skipping update due to curvature condition!
+iter: 477   obj = 539.656   ||g||^2 = 2.33501e-05
+Skipping update due to curvature condition!
+iter: 478   obj = 539.656   ||g||^2 = 2.27044e-05
+Skipping update due to curvature condition!
+iter: 479   obj = 539.656   ||g||^2 = 2.61083e-05
+Skipping update due to curvature condition!
+iter: 480   obj = 539.656   ||g||^2 = 2.28509e-05
+Skipping update due to curvature condition!
+iter: 481   obj = 539.656   ||g||^2 = 2.29043e-05
+Skipping update due to curvature condition!
+iter: 482   obj = 539.656   ||g||^2 = 2.27417e-05
+Skipping update due to curvature condition!
+iter: 483   obj = 539.656   ||g||^2 = 2.50228e-05
+Skipping update due to curvature condition!
+iter: 484   obj = 539.656   ||g||^2 = 2.26711e-05
+Skipping update due to curvature condition!
+iter: 485   obj = 539.656   ||g||^2 = 2.33207e-05
+Skipping update due to curvature condition!
+iter: 486   obj = 539.656   ||g||^2 = 2.2667e-05
+Skipping update due to curvature condition!
+iter: 487   obj = 539.656   ||g||^2 = 2.61856e-05
+Skipping update due to curvature condition!
+iter: 488   obj = 539.656   ||g||^2 = 2.28202e-05
+Skipping update due to curvature condition!
+iter: 489   obj = 539.656   ||g||^2 = 2.27134e-05
+Skipping update due to curvature condition!
+iter: 490   obj = 539.656   ||g||^2 = 2.27966e-05
+Skipping update due to curvature condition!
+iter: 491   obj = 539.656   ||g||^2 = 2.28175e-05
+Skipping update due to curvature condition!
+iter: 492   obj = 539.656   ||g||^2 = 2.27015e-05
+Skipping update due to curvature condition!
+iter: 493   obj = 539.656   ||g||^2 = 2.45484e-05
+Skipping update due to curvature condition!
+iter: 494   obj = 539.656   ||g||^2 = 2.26329e-05
+Skipping update due to curvature condition!
+iter: 495   obj = 539.656   ||g||^2 = 2.31989e-05
+Skipping update due to curvature condition!
+iter: 496   obj = 539.656   ||g||^2 = 2.26459e-05
+Skipping update due to curvature condition!
+iter: 497   obj = 539.656   ||g||^2 = 2.28538e-05
+Skipping update due to curvature condition!
+iter: 498   obj = 539.656   ||g||^2 = 2.27571e-05
+Skipping update due to curvature condition!
+iter: 499   obj = 539.656   ||g||^2 = 2.26802e-05
+Skipping update due to curvature condition!
+iter: 500   obj = 539.656   ||g||^2 = 2.56024e-05
+Skipping update due to curvature condition!
+iter: 501   obj = 539.656   ||g||^2 = 2.26193e-05
+Skipping update due to curvature condition!
+iter: 502   obj = 539.656   ||g||^2 = 2.30101e-05
+Skipping update due to curvature condition!
+iter: 503   obj = 539.656   ||g||^2 = 2.26142e-05
+Skipping update due to curvature condition!
+iter: 504   obj = 539.656   ||g||^2 = 2.60183e-05
+Skipping update due to curvature condition!
+iter: 505   obj = 539.656   ||g||^2 = 2.27569e-05
+Skipping update due to curvature condition!
+iter: 506   obj = 539.656   ||g||^2 = 2.26513e-05
+Skipping update due to curvature condition!
+iter: 507   obj = 539.656   ||g||^2 = 2.27307e-05
+Skipping update due to curvature condition!
+iter: 508   obj = 539.656   ||g||^2 = 2.27406e-05
+Skipping update due to curvature condition!
+iter: 509   obj = 539.656   ||g||^2 = 2.26399e-05
+Skipping update due to curvature condition!
+iter: 510   obj = 539.656   ||g||^2 = 2.41136e-05
+Skipping update due to curvature condition!
+iter: 511   obj = 539.656   ||g||^2 = 2.25662e-05
+Skipping update due to curvature condition!
+iter: 512   obj = 539.656   ||g||^2 = 2.30542e-05
+Skipping update due to curvature condition!
+iter: 513   obj = 539.656   ||g||^2 = 2.25708e-05
+Skipping update due to curvature condition!
+iter: 514   obj = 539.656   ||g||^2 = 2.50632e-05
+Skipping update due to curvature condition!
+iter: 515   obj = 539.656   ||g||^2 = 2.26943e-05
+Skipping update due to curvature condition!
+iter: 516   obj = 539.656   ||g||^2 = 2.26928e-05
+Skipping update due to curvature condition!
+iter: 517   obj = 539.656   ||g||^2 = 2.261e-05
+Skipping update due to curvature condition!
+iter: 518   obj = 539.656   ||g||^2 = 2.41422e-05
+Skipping update due to curvature condition!
+iter: 519   obj = 539.656   ||g||^2 = 2.25462e-05
+Skipping update due to curvature condition!
+iter: 520   obj = 539.656   ||g||^2 = 2.30432e-05
+Skipping update due to curvature condition!
+iter: 521   obj = 539.656   ||g||^2 = 2.25492e-05
+Skipping update due to curvature condition!
+iter: 522   obj = 539.656   ||g||^2 = 2.50999e-05
+Skipping update due to curvature condition!
+iter: 523   obj = 539.656   ||g||^2 = 2.26693e-05
+Skipping update due to curvature condition!
+iter: 524   obj = 539.656   ||g||^2 = 2.26727e-05
+Skipping update due to curvature condition!
+iter: 525   obj = 539.656   ||g||^2 = 2.25832e-05
+Skipping update due to curvature condition!
+iter: 526   obj = 539.656   ||g||^2 = 2.41817e-05
+Skipping update due to curvature condition!
+iter: 527   obj = 539.656   ||g||^2 = 2.25175e-05
+Skipping update due to curvature condition!
+iter: 528   obj = 539.656   ||g||^2 = 2.27913e-05
+Skipping update due to curvature condition!
+iter: 529   obj = 539.656   ||g||^2 = 2.25119e-05
+Skipping update due to curvature condition!
+iter: 530   obj = 539.656   ||g||^2 = 2.29532e-05
+Skipping update due to curvature condition!
+iter: 531   obj = 539.656   ||g||^2 = 2.25172e-05
+Skipping update due to curvature condition!
+iter: 532   obj = 539.656   ||g||^2 = 2.46951e-05
+Skipping update due to curvature condition!
+iter: 533   obj = 539.656   ||g||^2 = 2.2625e-05
+Skipping update due to curvature condition!
+iter: 534   obj = 539.656   ||g||^2 = 2.26078e-05
+Skipping update due to curvature condition!
+iter: 535   obj = 539.656   ||g||^2 = 2.25494e-05
+Skipping update due to curvature condition!
+iter: 536   obj = 539.656   ||g||^2 = 2.38366e-05
+Skipping update due to curvature condition!
+iter: 537   obj = 539.656   ||g||^2 = 2.24841e-05
+Skipping update due to curvature condition!
+iter: 538   obj = 539.656   ||g||^2 = 2.27277e-05
+Skipping update due to curvature condition!
+iter: 539   obj = 539.656   ||g||^2 = 2.24812e-05
+Skipping update due to curvature condition!
+iter: 540   obj = 539.656   ||g||^2 = 2.28497e-05
+Skipping update due to curvature condition!
+iter: 541   obj = 539.656   ||g||^2 = 2.24822e-05
+Skipping update due to curvature condition!
+iter: 542   obj = 539.656   ||g||^2 = 2.27839e-05
+Skipping update due to curvature condition!
+iter: 543   obj = 539.656   ||g||^2 = 2.24769e-05
+Skipping update due to curvature condition!
+iter: 544   obj = 539.656   ||g||^2 = 2.27309e-05
+Skipping update due to curvature condition!
+iter: 545   obj = 539.656   ||g||^2 = 2.24734e-05
+Skipping update due to curvature condition!
+iter: 546   obj = 539.656   ||g||^2 = 2.28604e-05
+Skipping update due to curvature condition!
+iter: 547   obj = 539.656   ||g||^2 = 2.24759e-05
+Skipping update due to curvature condition!
+iter: 548   obj = 539.656   ||g||^2 = 2.26355e-05
+Skipping update due to curvature condition!
+iter: 549   obj = 539.656   ||g||^2 = 2.25292e-05
+Skipping update due to curvature condition!
+iter: 550   obj = 539.656   ||g||^2 = 2.26132e-05
+Skipping update due to curvature condition!
+iter: 551   obj = 539.656   ||g||^2 = 2.25065e-05
+Skipping update due to curvature condition!
+iter: 552   obj = 539.656   ||g||^2 = 2.25909e-05
+Skipping update due to curvature condition!
+iter: 553   obj = 539.656   ||g||^2 = 2.24877e-05
+Skipping update due to curvature condition!
+iter: 554   obj = 539.656   ||g||^2 = 2.25727e-05
+Skipping update due to curvature condition!
+iter: 555   obj = 539.656   ||g||^2 = 2.25336e-05
+Skipping update due to curvature condition!
+iter: 556   obj = 539.656   ||g||^2 = 2.25099e-05
+Skipping update due to curvature condition!
+iter: 557   obj = 539.656   ||g||^2 = 2.34464e-05
+Skipping update due to curvature condition!
+iter: 558   obj = 539.656   ||g||^2 = 2.24509e-05
+Skipping update due to curvature condition!
+iter: 559   obj = 539.656   ||g||^2 = 2.26537e-05
+Skipping update due to curvature condition!
+iter: 560   obj = 539.656   ||g||^2 = 2.24648e-05
+Skipping update due to curvature condition!
+iter: 561   obj = 539.656   ||g||^2 = 2.25471e-05
+Skipping update due to curvature condition!
+iter: 562   obj = 539.656   ||g||^2 = 2.26158e-05
+Skipping update due to curvature condition!
+iter: 563   obj = 539.656   ||g||^2 = 2.25027e-05
+Skipping update due to curvature condition!
+iter: 564   obj = 539.656   ||g||^2 = 2.33684e-05
+Skipping update due to curvature condition!
+iter: 565   obj = 539.656   ||g||^2 = 2.24335e-05
+Skipping update due to curvature condition!
+iter: 566   obj = 539.656   ||g||^2 = 2.27842e-05
+Skipping update due to curvature condition!
+iter: 567   obj = 539.656   ||g||^2 = 2.24342e-05
+Skipping update due to curvature condition!
+iter: 568   obj = 539.656   ||g||^2 = 2.27229e-05
+Skipping update due to curvature condition!
+iter: 569   obj = 539.656   ||g||^2 = 2.24282e-05
+Skipping update due to curvature condition!
+iter: 570   obj = 539.656   ||g||^2 = 2.26823e-05
+Skipping update due to curvature condition!
+iter: 571   obj = 539.656   ||g||^2 = 2.24245e-05
+Skipping update due to curvature condition!
+iter: 572   obj = 539.656   ||g||^2 = 2.281e-05
+Skipping update due to curvature condition!
+iter: 573   obj = 539.656   ||g||^2 = 2.24268e-05
+Skipping update due to curvature condition!
+iter: 574   obj = 539.656   ||g||^2 = 2.27417e-05
+Skipping update due to curvature condition!
+iter: 575   obj = 539.656   ||g||^2 = 2.24321e-05
+Skipping update due to curvature condition!
+iter: 576   obj = 539.656   ||g||^2 = 2.49709e-05
+Skipping update due to curvature condition!
+iter: 577   obj = 539.656   ||g||^2 = 2.25468e-05
+Skipping update due to curvature condition!
+iter: 578   obj = 539.656   ||g||^2 = 2.24077e-05
+Skipping update due to curvature condition!
+iter: 579   obj = 539.656   ||g||^2 = 2.26828e-05
+Skipping update due to curvature condition!
+iter: 580   obj = 539.656   ||g||^2 = 2.2403e-05
+Skipping update due to curvature condition!
+iter: 581   obj = 539.656   ||g||^2 = 2.25287e-05
+Skipping update due to curvature condition!
+iter: 582   obj = 539.656   ||g||^2 = 2.24262e-05
+Skipping update due to curvature condition!
+iter: 583   obj = 539.656   ||g||^2 = 2.251e-05
+Skipping update due to curvature condition!
+iter: 584   obj = 539.656   ||g||^2 = 2.24728e-05
+Skipping update due to curvature condition!
+iter: 585   obj = 539.656   ||g||^2 = 2.24465e-05
+Skipping update due to curvature condition!
+iter: 586   obj = 539.656   ||g||^2 = 2.34007e-05
+Skipping update due to curvature condition!
+iter: 587   obj = 539.656   ||g||^2 = 2.23863e-05
+Skipping update due to curvature condition!
+iter: 588   obj = 539.656   ||g||^2 = 2.27571e-05
+Skipping update due to curvature condition!
+iter: 589   obj = 539.656   ||g||^2 = 2.23927e-05
+Skipping update due to curvature condition!
+iter: 590   obj = 539.656   ||g||^2 = 2.44122e-05
+Skipping update due to curvature condition!
+iter: 591   obj = 539.656   ||g||^2 = 2.24891e-05
+Skipping update due to curvature condition!
+iter: 592   obj = 539.656   ||g||^2 = 2.24653e-05
+Skipping update due to curvature condition!
+iter: 593   obj = 539.656   ||g||^2 = 2.24175e-05
+Skipping update due to curvature condition!
+iter: 594   obj = 539.656   ||g||^2 = 2.29637e-05
+Skipping update due to curvature condition!
+iter: 595   obj = 539.656   ||g||^2 = 2.23591e-05
+Skipping update due to curvature condition!
+iter: 596   obj = 539.656   ||g||^2 = 2.2831e-05
+Skipping update due to curvature condition!
+iter: 597   obj = 539.656   ||g||^2 = 2.23642e-05
+Skipping update due to curvature condition!
+iter: 598   obj = 539.656   ||g||^2 = 2.31882e-05
+Skipping update due to curvature condition!
+iter: 599   obj = 539.656   ||g||^2 = 2.24262e-05
+Skipping update due to curvature condition!
+iter: 600   obj = 539.656   ||g||^2 = 2.25321e-05
+Skipping update due to curvature condition!
+iter: 601   obj = 539.656   ||g||^2 = 2.24072e-05
+Skipping update due to curvature condition!
+iter: 602   obj = 539.656   ||g||^2 = 2.28101e-05
+Skipping update due to curvature condition!
+iter: 603   obj = 539.656   ||g||^2 = 2.24189e-05
+Skipping update due to curvature condition!
+iter: 604   obj = 539.656   ||g||^2 = 2.24159e-05
+Skipping update due to curvature condition!
+iter: 605   obj = 539.656   ||g||^2 = 2.23872e-05
+Skipping update due to curvature condition!
+iter: 606   obj = 539.656   ||g||^2 = 2.33657e-05
+Skipping update due to curvature condition!
+iter: 607   obj = 539.656   ||g||^2 = 2.23268e-05
+Skipping update due to curvature condition!
+iter: 608   obj = 539.656   ||g||^2 = 2.25355e-05
+Skipping update due to curvature condition!
+iter: 609   obj = 539.656   ||g||^2 = 2.23665e-05
+Skipping update due to curvature condition!
+iter: 610   obj = 539.656   ||g||^2 = 2.37531e-05
+Skipping update due to curvature condition!
+iter: 611   obj = 539.656   ||g||^2 = 2.22965e-05
+Skipping update due to curvature condition!
+iter: 612   obj = 539.656   ||g||^2 = 2.25495e-05
+Skipping update due to curvature condition!
+iter: 613   obj = 539.656   ||g||^2 = 2.23077e-05
+Skipping update due to curvature condition!
+iter: 614   obj = 539.656   ||g||^2 = 2.41985e-05
+Skipping update due to curvature condition!
+iter: 615   obj = 539.656   ||g||^2 = 2.24038e-05
+Skipping update due to curvature condition!
+iter: 616   obj = 539.656   ||g||^2 = 2.23037e-05
+Skipping update due to curvature condition!
+iter: 617   obj = 539.656   ||g||^2 = 2.23872e-05
+Skipping update due to curvature condition!
+iter: 618   obj = 539.656   ||g||^2 = 2.22834e-05
+Skipping update due to curvature condition!
+iter: 619   obj = 539.656   ||g||^2 = 2.26153e-05
+Skipping update due to curvature condition!
+iter: 620   obj = 539.656   ||g||^2 = 2.22918e-05
+Skipping update due to curvature condition!
+iter: 621   obj = 539.656   ||g||^2 = 2.32237e-05
+Skipping update due to curvature condition!
+iter: 622   obj = 539.656   ||g||^2 = 2.22717e-05
+Skipping update due to curvature condition!
+iter: 623   obj = 539.656   ||g||^2 = 2.26134e-05
+Skipping update due to curvature condition!
+iter: 624   obj = 539.656   ||g||^2 = 2.22772e-05
+Skipping update due to curvature condition!
+iter: 625   obj = 539.656   ||g||^2 = 2.32425e-05
+Skipping update due to curvature condition!
+iter: 626   obj = 539.656   ||g||^2 = 2.23406e-05
+Skipping update due to curvature condition!
+iter: 627   obj = 539.656   ||g||^2 = 2.23442e-05
+Skipping update due to curvature condition!
+iter: 628   obj = 539.656   ||g||^2 = 2.22648e-05
+Skipping update due to curvature condition!
+iter: 629   obj = 539.656   ||g||^2 = 2.29812e-05
+Skipping update due to curvature condition!
+iter: 630   obj = 539.656   ||g||^2 = 2.22512e-05
+Skipping update due to curvature condition!
+iter: 631   obj = 539.656   ||g||^2 = 2.29882e-05
+Skipping update due to curvature condition!
+iter: 632   obj = 539.656   ||g||^2 = 2.23139e-05
+Skipping update due to curvature condition!
+iter: 633   obj = 539.656   ||g||^2 = 2.23899e-05
+Skipping update due to curvature condition!
+iter: 634   obj = 539.656   ||g||^2 = 2.22464e-05
+Skipping update due to curvature condition!
+iter: 635   obj = 539.656   ||g||^2 = 2.28344e-05
+Skipping update due to curvature condition!
+iter: 636   obj = 539.656   ||g||^2 = 2.22418e-05
+Skipping update due to curvature condition!
+iter: 637   obj = 539.656   ||g||^2 = 2.28644e-05
+Skipping update due to curvature condition!
+iter: 638   obj = 539.656   ||g||^2 = 2.2238e-05
+Skipping update due to curvature condition!
+iter: 639   obj = 539.656   ||g||^2 = 2.28881e-05
+Skipping update due to curvature condition!
+iter: 640   obj = 539.656   ||g||^2 = 2.22929e-05
+Skipping update due to curvature condition!
+iter: 641   obj = 539.656   ||g||^2 = 2.23429e-05
+Skipping update due to curvature condition!
+iter: 642   obj = 539.656   ||g||^2 = 2.22758e-05
+Skipping update due to curvature condition!
+iter: 643   obj = 539.656   ||g||^2 = 2.25405e-05
+Skipping update due to curvature condition!
+iter: 644   obj = 539.656   ||g||^2 = 2.22847e-05
+Skipping update due to curvature condition!
+iter: 645   obj = 539.656   ||g||^2 = 2.22615e-05
+Skipping update due to curvature condition!
+iter: 646   obj = 539.656   ||g||^2 = 2.22588e-05
+Skipping update due to curvature condition!
+iter: 647   obj = 539.656   ||g||^2 = 2.29269e-05
+Skipping update due to curvature condition!
+iter: 648   obj = 539.656   ||g||^2 = 2.21977e-05
+Skipping update due to curvature condition!
+iter: 649   obj = 539.656   ||g||^2 = 2.24961e-05
+Skipping update due to curvature condition!
+iter: 650   obj = 539.656   ||g||^2 = 2.22072e-05
+Skipping update due to curvature condition!
+iter: 651   obj = 539.656   ||g||^2 = 2.34661e-05
+Skipping update due to curvature condition!
+iter: 652   obj = 539.656   ||g||^2 = 2.22803e-05
+Skipping update due to curvature condition!
+iter: 653   obj = 539.656   ||g||^2 = 2.22263e-05
+Skipping update due to curvature condition!
+iter: 654   obj = 539.656   ||g||^2 = 2.23101e-05
+Skipping update due to curvature condition!
+iter: 655   obj = 539.656   ||g||^2 = 2.21844e-05
+Skipping update due to curvature condition!
+iter: 656   obj = 539.656   ||g||^2 = 2.22015e-05
+Skipping update due to curvature condition!
+iter: 657   obj = 539.656   ||g||^2 = 2.59353e-05
+Skipping update due to curvature condition!
+iter: 658   obj = 539.656   ||g||^2 = 2.23401e-05
+Skipping update due to curvature condition!
+iter: 659   obj = 539.656   ||g||^2 = 2.21593e-05
+Skipping update due to curvature condition!
+iter: 660   obj = 539.656   ||g||^2 = 2.24202e-05
+Skipping update due to curvature condition!
+iter: 661   obj = 539.656   ||g||^2 = 2.2155e-05
+Skipping update due to curvature condition!
+iter: 662   obj = 539.656   ||g||^2 = 2.2275e-05
+Skipping update due to curvature condition!
+iter: 663   obj = 539.656   ||g||^2 = 2.21526e-05
+Skipping update due to curvature condition!
+iter: 664   obj = 539.656   ||g||^2 = 2.22192e-05
+Skipping update due to curvature condition!
+iter: 665   obj = 539.656   ||g||^2 = 2.21922e-05
+Skipping update due to curvature condition!
+iter: 666   obj = 539.656   ||g||^2 = 2.21934e-05
+Skipping update due to curvature condition!
+iter: 667   obj = 539.656   ||g||^2 = 2.28086e-05
+Skipping update due to curvature condition!
+iter: 668   obj = 539.656   ||g||^2 = 2.21303e-05
+Skipping update due to curvature condition!
+iter: 669   obj = 539.656   ||g||^2 = 2.22937e-05
+Skipping update due to curvature condition!
+iter: 670   obj = 539.656   ||g||^2 = 2.21679e-05
+Skipping update due to curvature condition!
+iter: 671   obj = 539.656   ||g||^2 = 2.34288e-05
+Skipping update due to curvature condition!
+iter: 672   obj = 539.656   ||g||^2 = 2.21116e-05
+Skipping update due to curvature condition!
+iter: 673   obj = 539.656   ||g||^2 = 2.23497e-05
+Skipping update due to curvature condition!
+iter: 674   obj = 539.656   ||g||^2 = 2.21229e-05
+Skipping update due to curvature condition!
+iter: 675   obj = 539.656   ||g||^2 = 2.31581e-05
+Skipping update due to curvature condition!
+iter: 676   obj = 539.656   ||g||^2 = 2.21826e-05
+Skipping update due to curvature condition!
+iter: 677   obj = 539.656   ||g||^2 = 2.21241e-05
+Skipping update due to curvature condition!
+iter: 678   obj = 539.656   ||g||^2 = 2.21398e-05
+Skipping update due to curvature condition!
+iter: 679   obj = 539.656   ||g||^2 = 2.26043e-05
+Skipping update due to curvature condition!
+iter: 680   obj = 539.656   ||g||^2 = 2.2082e-05
+Skipping update due to curvature condition!
+iter: 681   obj = 539.656   ||g||^2 = 2.23294e-05
+Skipping update due to curvature condition!
+iter: 682   obj = 539.656   ||g||^2 = 2.20777e-05
+Skipping update due to curvature condition!
+iter: 683   obj = 539.656   ||g||^2 = 2.22872e-05
+Skipping update due to curvature condition!
+iter: 684   obj = 539.656   ||g||^2 = 2.20904e-05
+Skipping update due to curvature condition!
+iter: 685   obj = 539.656   ||g||^2 = 2.35502e-05
+Skipping update due to curvature condition!
+iter: 686   obj = 539.656   ||g||^2 = 2.21638e-05
+Skipping update due to curvature condition!
+iter: 687   obj = 539.656   ||g||^2 = 2.21175e-05
+Skipping update due to curvature condition!
+iter: 688   obj = 539.656   ||g||^2 = 2.20705e-05
+Skipping update due to curvature condition!
+iter: 689   obj = 539.656   ||g||^2 = 2.26399e-05
+Skipping update due to curvature condition!
+iter: 690   obj = 539.656   ||g||^2 = 2.20566e-05
+Skipping update due to curvature condition!
+iter: 691   obj = 539.656   ||g||^2 = 2.24059e-05
+Skipping update due to curvature condition!
+iter: 692   obj = 539.656   ||g||^2 = 2.20573e-05
+Skipping update due to curvature condition!
+iter: 693   obj = 539.656   ||g||^2 = 2.26594e-05
+Skipping update due to curvature condition!
+iter: 694   obj = 539.656   ||g||^2 = 2.20466e-05
+Skipping update due to curvature condition!
+iter: 695   obj = 539.656   ||g||^2 = 2.22785e-05
+Skipping update due to curvature condition!
+iter: 696   obj = 539.656   ||g||^2 = 2.20828e-05
+Skipping update due to curvature condition!
+iter: 697   obj = 539.656   ||g||^2 = 2.22987e-05
+Skipping update due to curvature condition!
+iter: 698   obj = 539.656   ||g||^2 = 2.20982e-05
+Skipping update due to curvature condition!
+iter: 699   obj = 539.656   ||g||^2 = 2.20669e-05
+Skipping update due to curvature condition!
+iter: 700   obj = 539.656   ||g||^2 = 2.2149e-05
+Skipping update due to curvature condition!
+iter: 701   obj = 539.656   ||g||^2 = 2.20271e-05
+Skipping update due to curvature condition!
+iter: 702   obj = 539.656   ||g||^2 = 2.20936e-05
+Skipping update due to curvature condition!
+iter: 703   obj = 539.656   ||g||^2 = 2.20666e-05
+Skipping update due to curvature condition!
+iter: 704   obj = 539.656   ||g||^2 = 2.21482e-05
+Skipping update due to curvature condition!
+iter: 705   obj = 539.656   ||g||^2 = 2.20253e-05
+Skipping update due to curvature condition!
+iter: 706   obj = 539.656   ||g||^2 = 2.23102e-05
+Skipping update due to curvature condition!
+iter: 707   obj = 539.656   ||g||^2 = 2.20191e-05
+Skipping update due to curvature condition!
+iter: 708   obj = 539.656   ||g||^2 = 2.21482e-05
+Skipping update due to curvature condition!
+iter: 709   obj = 539.656   ||g||^2 = 2.20336e-05
+Skipping update due to curvature condition!
+iter: 710   obj = 539.656   ||g||^2 = 2.3603e-05
+Skipping update due to curvature condition!
+iter: 711   obj = 539.656   ||g||^2 = 2.20939e-05
+Skipping update due to curvature condition!
+iter: 712   obj = 539.656   ||g||^2 = 2.19867e-05
+Skipping update due to curvature condition!
+iter: 713   obj = 539.656   ||g||^2 = 2.20974e-05
+Skipping update due to curvature condition!
+iter: 714   obj = 539.656   ||g||^2 = 2.19854e-05
+Skipping update due to curvature condition!
+iter: 715   obj = 539.656   ||g||^2 = 2.21955e-05
+Skipping update due to curvature condition!
+iter: 716   obj = 539.656   ||g||^2 = 2.19991e-05
+Skipping update due to curvature condition!
+iter: 717   obj = 539.656   ||g||^2 = 2.28682e-05
+Skipping update due to curvature condition!
+iter: 718   obj = 539.656   ||g||^2 = 2.20554e-05
+Skipping update due to curvature condition!
+iter: 719   obj = 539.656   ||g||^2 = 2.19944e-05
+Skipping update due to curvature condition!
+iter: 720   obj = 539.656   ||g||^2 = 2.20169e-05
+Skipping update due to curvature condition!
+iter: 721   obj = 539.656   ||g||^2 = 2.2349e-05
+Skipping update due to curvature condition!
+iter: 722   obj = 539.656   ||g||^2 = 2.19631e-05
+Skipping update due to curvature condition!
+iter: 723   obj = 539.656   ||g||^2 = 2.21719e-05
+Skipping update due to curvature condition!
+iter: 724   obj = 539.656   ||g||^2 = 2.19585e-05
+Skipping update due to curvature condition!
+iter: 725   obj = 539.656   ||g||^2 = 2.20166e-05
+Skipping update due to curvature condition!
+iter: 726   obj = 539.656   ||g||^2 = 2.20279e-05
+Skipping update due to curvature condition!
+iter: 727   obj = 539.656   ||g||^2 = 2.20039e-05
+Skipping update due to curvature condition!
+iter: 728   obj = 539.656   ||g||^2 = 2.21481e-05
+Skipping update due to curvature condition!
+iter: 729   obj = 539.656   ||g||^2 = 2.2007e-05
+Skipping update due to curvature condition!
+iter: 730   obj = 539.656   ||g||^2 = 2.2013e-05
+Skipping update due to curvature condition!
+iter: 731   obj = 539.656   ||g||^2 = 2.19913e-05
+Skipping update due to curvature condition!
+iter: 732   obj = 539.656   ||g||^2 = 2.21464e-05
+Skipping update due to curvature condition!
+iter: 733   obj = 539.656   ||g||^2 = 2.19414e-05
+Skipping update due to curvature condition!
+iter: 734   obj = 539.656   ||g||^2 = 2.21936e-05
+Skipping update due to curvature condition!
+iter: 735   obj = 539.656   ||g||^2 = 2.19342e-05
+Skipping update due to curvature condition!
+iter: 736   obj = 539.656   ||g||^2 = 2.20529e-05
+Skipping update due to curvature condition!
+iter: 737   obj = 539.656   ||g||^2 = 2.19372e-05
+Skipping update due to curvature condition!
+iter: 738   obj = 539.656   ||g||^2 = 2.2204e-05
+Skipping update due to curvature condition!
+iter: 739   obj = 539.656   ||g||^2 = 2.19429e-05
+Skipping update due to curvature condition!
+iter: 740   obj = 539.656   ||g||^2 = 2.26695e-05
+Skipping update due to curvature condition!
+iter: 741   obj = 539.656   ||g||^2 = 2.19923e-05
+Skipping update due to curvature condition!
+iter: 742   obj = 539.656   ||g||^2 = 2.19711e-05
+Skipping update due to curvature condition!
+iter: 743   obj = 539.656   ||g||^2 = 2.19655e-05
+Skipping update due to curvature condition!
+iter: 744   obj = 539.656   ||g||^2 = 2.20692e-05
+Skipping update due to curvature condition!
+iter: 745   obj = 539.656   ||g||^2 = 2.19694e-05
+Skipping update due to curvature condition!
+iter: 746   obj = 539.656   ||g||^2 = 2.19271e-05
+Skipping update due to curvature condition!
+iter: 747   obj = 539.656   ||g||^2 = 2.19503e-05
+Skipping update due to curvature condition!
+iter: 748   obj = 539.656   ||g||^2 = 2.2258e-05
+Skipping update due to curvature condition!
+iter: 749   obj = 539.656   ||g||^2 = 2.18966e-05
+Skipping update due to curvature condition!
+iter: 750   obj = 539.656   ||g||^2 = 2.21099e-05
+Skipping update due to curvature condition!
+iter: 751   obj = 539.656   ||g||^2 = 2.1891e-05
+Skipping update due to curvature condition!
+iter: 752   obj = 539.656   ||g||^2 = 2.19946e-05
+Skipping update due to curvature condition!
+iter: 753   obj = 539.656   ||g||^2 = 2.18959e-05
+Skipping update due to curvature condition!
+iter: 754   obj = 539.656   ||g||^2 = 2.21156e-05
+Skipping update due to curvature condition!
+iter: 755   obj = 539.656   ||g||^2 = 2.18871e-05
+Skipping update due to curvature condition!
+iter: 756   obj = 539.656   ||g||^2 = 2.19946e-05
+Skipping update due to curvature condition!
+iter: 757   obj = 539.656   ||g||^2 = 2.18855e-05
+Skipping update due to curvature condition!
+iter: 758   obj = 539.656   ||g||^2 = 2.19984e-05
+Skipping update due to curvature condition!
+iter: 759   obj = 539.656   ||g||^2 = 2.19011e-05
+Skipping update due to curvature condition!
+iter: 760   obj = 539.656   ||g||^2 = 2.19819e-05
+Skipping update due to curvature condition!
+iter: 761   obj = 539.656   ||g||^2 = 2.18809e-05
+Skipping update due to curvature condition!
+iter: 762   obj = 539.656   ||g||^2 = 2.1984e-05
+Skipping update due to curvature condition!
+iter: 763   obj = 539.656   ||g||^2 = 2.18854e-05
+Skipping update due to curvature condition!
+iter: 764   obj = 539.656   ||g||^2 = 2.22476e-05
+Skipping update due to curvature condition!
+iter: 765   obj = 539.656   ||g||^2 = 2.19272e-05
+Skipping update due to curvature condition!
+iter: 766   obj = 539.656   ||g||^2 = 2.19828e-05
+Skipping update due to curvature condition!
+iter: 767   obj = 539.656   ||g||^2 = 2.1879e-05
+Skipping update due to curvature condition!
+iter: 768   obj = 539.656   ||g||^2 = 2.2177e-05
+Skipping update due to curvature condition!
+iter: 769   obj = 539.656   ||g||^2 = 2.18668e-05
+Skipping update due to curvature condition!
+iter: 770   obj = 539.656   ||g||^2 = 2.19021e-05
+Skipping update due to curvature condition!
+iter: 771   obj = 539.656   ||g||^2 = 2.27003e-05
+Skipping update due to curvature condition!
+iter: 772   obj = 539.656   ||g||^2 = 2.18496e-05
+Skipping update due to curvature condition!
+iter: 773   obj = 539.656   ||g||^2 = 2.19089e-05
+Skipping update due to curvature condition!
+iter: 774   obj = 539.656   ||g||^2 = 2.18689e-05
+Skipping update due to curvature condition!
+iter: 775   obj = 539.656   ||g||^2 = 2.18886e-05
+Skipping update due to curvature condition!
+iter: 776   obj = 539.656   ||g||^2 = 2.22771e-05
+Skipping update due to curvature condition!
+iter: 777   obj = 539.656   ||g||^2 = 2.18365e-05
+Skipping update due to curvature condition!
+iter: 778   obj = 539.656   ||g||^2 = 2.20615e-05
+Skipping update due to curvature condition!
+iter: 779   obj = 539.656   ||g||^2 = 2.18466e-05
+Skipping update due to curvature condition!
+iter: 780   obj = 539.656   ||g||^2 = 2.24278e-05
+Skipping update due to curvature condition!
+iter: 781   obj = 539.656   ||g||^2 = 2.18868e-05
+Skipping update due to curvature condition!
+iter: 782   obj = 539.656   ||g||^2 = 2.18528e-05
+Skipping update due to curvature condition!
+iter: 783   obj = 539.656   ||g||^2 = 2.18636e-05
+Skipping update due to curvature condition!
+iter: 784   obj = 539.656   ||g||^2 = 2.20669e-05
+Skipping update due to curvature condition!
+iter: 785   obj = 539.656   ||g||^2 = 2.18751e-05
+Skipping update due to curvature condition!
+iter: 786   obj = 539.656   ||g||^2 = 2.18439e-05
+Skipping update due to curvature condition!
+iter: 787   obj = 539.656   ||g||^2 = 2.18198e-05
+Skipping update due to curvature condition!
+iter: 788   obj = 539.656   ||g||^2 = 2.21073e-05
+Skipping update due to curvature condition!
+iter: 789   obj = 539.656   ||g||^2 = 2.18117e-05
+Skipping update due to curvature condition!
+iter: 790   obj = 539.656   ||g||^2 = 2.21559e-05
+Skipping update due to curvature condition!
+iter: 791   obj = 539.656   ||g||^2 = 2.18452e-05
+Skipping update due to curvature condition!
+iter: 792   obj = 539.656   ||g||^2 = 2.18252e-05
+Skipping update due to curvature condition!
+iter: 793   obj = 539.656   ||g||^2 = 2.18344e-05
+Skipping update due to curvature condition!
+iter: 794   obj = 539.656   ||g||^2 = 2.18992e-05
+Skipping update due to curvature condition!
+iter: 795   obj = 539.656   ||g||^2 = 2.17933e-05
+Skipping update due to curvature condition!
+iter: 796   obj = 539.656   ||g||^2 = 2.20932e-05
+Skipping update due to curvature condition!
+iter: 797   obj = 539.656   ||g||^2 = 2.17934e-05
+Skipping update due to curvature condition!
+iter: 798   obj = 539.656   ||g||^2 = 2.23068e-05
+Skipping update due to curvature condition!
+iter: 799   obj = 539.656   ||g||^2 = 2.18369e-05
+Skipping update due to curvature condition!
+iter: 800   obj = 539.656   ||g||^2 = 2.17777e-05
+Skipping update due to curvature condition!
+iter: 801   obj = 539.656   ||g||^2 = 2.18108e-05
+Skipping update due to curvature condition!
+iter: 802   obj = 539.656   ||g||^2 = 2.2524e-05
+Skipping update due to curvature condition!
+iter: 803   obj = 539.656   ||g||^2 = 2.17537e-05
+Skipping update due to curvature condition!
+iter: 804   obj = 539.656   ||g||^2 = 2.18533e-05
+Skipping update due to curvature condition!
+iter: 805   obj = 539.656   ||g||^2 = 2.17618e-05
+Skipping update due to curvature condition!
+iter: 806   obj = 539.656   ||g||^2 = 2.17899e-05
+Skipping update due to curvature condition!
+iter: 807   obj = 539.656   ||g||^2 = 2.20247e-05
+Skipping update due to curvature condition!
+iter: 808   obj = 539.656   ||g||^2 = 2.17393e-05
+Skipping update due to curvature condition!
+iter: 809   obj = 539.656   ||g||^2 = 2.19145e-05
+Skipping update due to curvature condition!
+iter: 810   obj = 539.656   ||g||^2 = 2.1749e-05
+Skipping update due to curvature condition!
+iter: 811   obj = 539.656   ||g||^2 = 2.27944e-05
+Skipping update due to curvature condition!
+iter: 812   obj = 539.656   ||g||^2 = 2.18064e-05
+Skipping update due to curvature condition!
+iter: 813   obj = 539.656   ||g||^2 = 2.17424e-05
+Skipping update due to curvature condition!
+iter: 814   obj = 539.656   ||g||^2 = 2.43944e-05
+Skipping update due to curvature condition!
+iter: 815   obj = 539.656   ||g||^2 = 2.18304e-05
+Skipping update due to curvature condition!
+iter: 816   obj = 539.656   ||g||^2 = 2.16876e-05
+Skipping update due to curvature condition!
+iter: 817   obj = 539.656   ||g||^2 = 2.18081e-05
+Skipping update due to curvature condition!
+iter: 818   obj = 539.656   ||g||^2 = 2.16837e-05
+Skipping update due to curvature condition!
+iter: 819   obj = 539.656   ||g||^2 = 2.17501e-05
+Skipping update due to curvature condition!
+iter: 820   obj = 539.656   ||g||^2 = 2.16835e-05
+Skipping update due to curvature condition!
+iter: 821   obj = 539.656   ||g||^2 = 2.18613e-05
+Skipping update due to curvature condition!
+iter: 822   obj = 539.656   ||g||^2 = 2.18279e-05
+Skipping update due to curvature condition!
+iter: 823   obj = 539.656   ||g||^2 = 2.17356e-05
+Skipping update due to curvature condition!
+iter: 824   obj = 539.656   ||g||^2 = 2.17502e-05
+Skipping update due to curvature condition!
+iter: 825   obj = 539.656   ||g||^2 = 2.16717e-05
+Skipping update due to curvature condition!
+iter: 826   obj = 539.656   ||g||^2 = 2.17299e-05
+Skipping update due to curvature condition!
+iter: 827   obj = 539.656   ||g||^2 = 2.16706e-05
+Skipping update due to curvature condition!
+iter: 828   obj = 539.656   ||g||^2 = 2.17035e-05
+Skipping update due to curvature condition!
+iter: 829   obj = 539.656   ||g||^2 = 2.20235e-05
+Skipping update due to curvature condition!
+iter: 830   obj = 539.656   ||g||^2 = 2.16456e-05
+Skipping update due to curvature condition!
+iter: 831   obj = 539.656   ||g||^2 = 2.17669e-05
+Skipping update due to curvature condition!
+iter: 832   obj = 539.656   ||g||^2 = 2.16423e-05
+Skipping update due to curvature condition!
+iter: 833   obj = 539.656   ||g||^2 = 2.16765e-05
+Skipping update due to curvature condition!
+iter: 834   obj = 539.656   ||g||^2 = 2.22361e-05
+Skipping update due to curvature condition!
+iter: 835   obj = 539.656   ||g||^2 = 2.16285e-05
+Skipping update due to curvature condition!
+iter: 836   obj = 539.656   ||g||^2 = 2.17189e-05
+Skipping update due to curvature condition!
+iter: 837   obj = 539.656   ||g||^2 = 2.16341e-05
+Skipping update due to curvature condition!
+iter: 838   obj = 539.656   ||g||^2 = 2.18174e-05
+Skipping update due to curvature condition!
+iter: 839   obj = 539.656   ||g||^2 = 2.16385e-05
+Skipping update due to curvature condition!
+iter: 840   obj = 539.656   ||g||^2 = 2.21093e-05
+Skipping update due to curvature condition!
+iter: 841   obj = 539.656   ||g||^2 = 2.16211e-05
+Skipping update due to curvature condition!
+iter: 842   obj = 539.656   ||g||^2 = 2.17379e-05
+Skipping update due to curvature condition!
+iter: 843   obj = 539.656   ||g||^2 = 2.16144e-05
+Skipping update due to curvature condition!
+iter: 844   obj = 539.656   ||g||^2 = 2.17192e-05
+Skipping update due to curvature condition!
+iter: 845   obj = 539.656   ||g||^2 = 2.16137e-05
+Skipping update due to curvature condition!
+iter: 846   obj = 539.656   ||g||^2 = 2.17034e-05
+Skipping update due to curvature condition!
+iter: 847   obj = 539.656   ||g||^2 = 2.16137e-05
+Skipping update due to curvature condition!
+iter: 848   obj = 539.656   ||g||^2 = 2.16199e-05
+Skipping update due to curvature condition!
+iter: 849   obj = 539.656   ||g||^2 = 2.2336e-05
+Skipping update due to curvature condition!
+iter: 850   obj = 539.656   ||g||^2 = 2.16593e-05
+Skipping update due to curvature condition!
+iter: 851   obj = 539.656   ||g||^2 = 2.15985e-05
+Skipping update due to curvature condition!
+iter: 852   obj = 539.656   ||g||^2 = 2.16258e-05
+Skipping update due to curvature condition!
+iter: 853   obj = 539.656   ||g||^2 = 2.17149e-05
+Skipping update due to curvature condition!
+iter: 854   obj = 539.656   ||g||^2 = 2.15861e-05
+Skipping update due to curvature condition!
+iter: 855   obj = 539.656   ||g||^2 = 2.171e-05
+Skipping update due to curvature condition!
+iter: 856   obj = 539.656   ||g||^2 = 2.16622e-05
+Skipping update due to curvature condition!
+iter: 857   obj = 539.656   ||g||^2 = 2.15978e-05
+Skipping update due to curvature condition!
+iter: 858   obj = 539.656   ||g||^2 = 2.32031e-05
+Skipping update due to curvature condition!
+iter: 859   obj = 539.656   ||g||^2 = 2.16611e-05
+Skipping update due to curvature condition!
+iter: 860   obj = 539.656   ||g||^2 = 2.15537e-05
+Skipping update due to curvature condition!
+iter: 861   obj = 539.656   ||g||^2 = 2.16141e-05
+Skipping update due to curvature condition!
+iter: 862   obj = 539.656   ||g||^2 = 2.15542e-05
+Skipping update due to curvature condition!
+iter: 863   obj = 539.656   ||g||^2 = 2.15499e-05
+Skipping update due to curvature condition!
+iter: 864   obj = 539.656   ||g||^2 = 2.16043e-05
+Skipping update due to curvature condition!
+iter: 865   obj = 539.656   ||g||^2 = 2.15612e-05
+Skipping update due to curvature condition!
+iter: 866   obj = 539.656   ||g||^2 = 2.15457e-05
+Function value converges!
+######## Timing statistics ########
+total time    : 0.021229s
+total time evaluation : 0.000738s  (3.47638 %)
+eval_f time   : 0.00029s  ( #evals: 32362 -> avg 0.00000s )
+eval_grad time: 0.00045s  ( #evals: 867 -> avg 0.00000s, factor: 57.66287)
+eval_hess time: 0.00000s  ( #evals: 0 -> avg nans, factor: nan)
+Saving optimized spring graph to assets/spring_systems/l_bfgs/spring_withLength_5x5_opt_*.csv

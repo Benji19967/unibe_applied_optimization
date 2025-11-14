@@ -1,0 +1,15 @@
+
+Initial MassSpring system energy is 4.05053e+08
+Saving initial spring graph to assets/spring_systems/projected_newton/spring_noLength_20x20_*.csv
+******** Newton Method with projected hessian ********
+iter: 1   obj = 4.05053e+08   ||lambda||^2 = 8.10103e+08   n_projection_steps = 0
+iter: 2   obj = 2.53176e+07   ||lambda||^2 = 5.06314e+07   n_projection_steps = 0
+iter: 3   obj = 1.58411e+06   ||lambda||^2 = 3.16446e+06   n_projection_steps = 0
+iter: 4   obj = 1878.42   ||lambda||^2 = 4.76681e-24   n_projection_steps = 0
+######## Timing statistics ########
+total time    : 0.004782s
+total time evaluation : 0.001066s  (22.2919 %)
+eval_f time   : 0.00006s  ( #evals: 12 -> avg 0.00001s )
+eval_grad time: 0.00004s  ( #evals: 4 -> avg 0.00001s, factor: 2.20000)
+eval_hess time: 0.00096s  ( #evals: 4 -> avg 0.00024s, factor: 48.10000)
+Saving optimized spring graph to assets/spring_systems/projected_newton/spring_noLength_20x20_opt_*.csv
