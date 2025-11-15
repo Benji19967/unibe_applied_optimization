@@ -28,7 +28,9 @@ metrics -- see:
  - assets/obj_function_values
  - assets/total_run_times
 
- Fastest: projected newton seems to consistently perform best.
+Fastest: projected newton seems to consistently perform best.
+
+A summary of the metrics can be found at assets/summary.csv
 
 ### A line search algorithm for the Wolfe conditions (Bonus (1 pt))
 
