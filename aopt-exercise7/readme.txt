@@ -42,4 +42,10 @@ A summary of the metrics can be found at assets/summary.csv
 
 ### A line search algorithm for the Wolfe conditions (Bonus (1 pt))
 
-Done by:
+Attempted by: Benjamin Labrecque
+
+Started with algorithm described in book. 
+
+Left todo: 
+- interpolation to get an initial tj in zoom function. 
+- making sure the algorithm is robust
