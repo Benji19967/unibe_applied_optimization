@@ -27,13 +27,16 @@ Done by: Benjamin Labrecque
 Created bash script (compare_methods.sh) to generate timings. 
 Created python script (compare_timings.py) to parse num iterations, total run times, 
 and objective function value progression from timing outputs. Also created plots for the
-metrics:
-     - assets/num_iterations
-     - assets/obj_function_values
-     - assets/total_run_times
+metrics, see
+    - report.md 
+    
+For detailed plots, see:
+    - assets/num_iterations
+    - assets/obj_function_values
+    - assets/total_run_times
 
 Fastest: projected newton seems to consistently perform best.
-Notes: gradient descent seems to converge to a different min than the other methods (see assets/objective_function_value.png)
+Notes: gradient descent seems to converge to a different min than the other methods
 
 A summary of the metrics can be found at assets/summary.csv
 
