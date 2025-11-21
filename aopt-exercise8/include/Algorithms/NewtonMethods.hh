@@ -317,8 +317,23 @@ namespace AOPT {
 
             //------------------------------------------------------//
             //TODO: project x to the hyperplane Ax = b
+            // Compute the residual: The amount we have to "add" to satisfy Ax = b
+            // We want the minimum-norm solution δx such that A(x0 + δx) = b
+            Vec r = _b - _A * _x;
             
-            
+            // M is symmetric positive‑definite when A has full row rank.
+            SMat M = _A * _A.transpose();   // p*p
+
+            // Factorize M with Cholesky's
+            Eigen::SimplicialLLT<SMat> llt(M);
+            if (llt.info() == Eigen::NumericalIssue) {
+                std::cerr << "Warning: LLT factorization of A*A^T has numerical issue!" << std::endl;
+                return;
+            }
+            // A*A^T y = r
+            Vec y = llt.solve(r);
+            // Update x as x + δx
+            _x += _A.transpose() * y;       
             //------------------------------------------------------//
 
             // check result
