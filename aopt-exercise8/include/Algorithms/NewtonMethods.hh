@@ -260,7 +260,49 @@ namespace AOPT {
             //TODO: implement the Newton with equality constraints
             //Hint: the function to set up the KKT matrix is
             //      provided below
-            
+            double fp = std::numeric_limits<double>::max();
+
+            do {
+                ++iter;
+
+                // Initialize the left hand side
+                _problem->eval_hessian(x, H);
+                setup_KKT_matrix(H, _A, K);
+                // Initialize the right hand side (gradient, b)
+                _problem->eval_gradient(x, g);
+                rhs << -g, Vec::Zero(p);
+
+                // K (x,v) = (-g,0)
+                solver.compute(K);
+                if(solver.info() == Eigen::NumericalIssue) {
+                    std::cerr << "Warning: LU factorization has numerical issue!" << std::endl;
+                    break;
+                }
+
+                dxl = solver.solve(rhs);
+                // Extract the delta x
+                dx = dxl.head(n);
+
+                // Newton decrement
+                double lambda2 = -g.transpose() * dx;
+
+                double f = _problem->eval_f(x);
+
+                // print status
+                std::cout << "iter: " << iter <<
+                          "   obj = " << f <<
+                          "   ||lambda||^2 = " << lambda2 << std::endl;
+
+                if (lambda2 <= eps2 || fp <= f) break;
+
+                // step size
+                double t = LineSearch::backtracking_line_search(_problem, x, g, dx, 1.0);
+
+                // update
+                x += t * dx;
+                fp = f;
+
+            } while (iter < _max_iters);
             //------------------------------------------------------//
 
 
