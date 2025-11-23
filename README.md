@@ -23,6 +23,9 @@ ctest -R <regex to select tests>
 
 ### Contour and Surface plots
 
+https://slides.cgg.unibe.ch/aopt20/plots/plot2d_create.html
+
+Using a custom csv file:
 https://slides.cgg.unibe.ch/aopt20/plots/plot2d_custom.html
 
 ### Spring System
