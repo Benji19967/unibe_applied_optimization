@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Problem 2: Solving the KKT system (0.5 pt)}
+
+Solve the following convex quadratic problem in $\mathbb{R}^3$ with linear equality constraints:
+\begin{equation*}
+\begin{aligned}
+\min_{x\in\mathbb{R}^3}\quad & f(x)
+= (-3\ -2\ 7)x
++ \tfrac12 x^\top
+\begin{pmatrix}
+6 & 0 & 2\\
+0 & 4 & 0\\
+2 & 0 & 6
+\end{pmatrix}
+x \\[0.4em]
+\text{s.t.}\quad &
+\begin{pmatrix}
+1 & 1 & 2\\
+0 & 1 & 1
+\end{pmatrix}x =
+\begin{pmatrix}
+0\\
+2
+\end{pmatrix}.
+\end{aligned}
+\end{equation*}
+\noindent
+\textit{Hint:} use Gaussian elimination or QR decomposition to solve the resulting KKT system.
+
+\paragraph{Solution 2.}
+
+We write the problem in the standard quadratic form
+\begin{equation*}
+\min_{x\in\mathbb{R}^3} \ \tfrac12 x^\top Q x + c^\top x
+\quad\text{s.t.}\quad Cx = d,
+\end{equation*}
+with
+\begin{equation*}
+Q =
+\begin{pmatrix}
+6 & 0 & 2\\
+0 & 4 & 0\\
+2 & 0 & 6
+\end{pmatrix},\qquad
+c =
+\begin{pmatrix}
+-3\\
+-2\\
+7
+\end{pmatrix},\qquad
+C =
+\begin{pmatrix}
+1 & 1 & 2\\
+0 & 1 & 1
+\end{pmatrix},\qquad
+d =
+\begin{pmatrix}
+0\\
+2
+\end{pmatrix}.
+\end{equation*}
+Introducing Lagrange multipliers $\lambda\in\mathbb{R}^2$ for the equality constraints, the KKT conditions are
+\begin{align*}
+Qx + c + C^\top\lambda &= 0,\\
+Cx - d &= 0.
+\end{align*}
+Equivalently, we obtain the linear KKT system
+\begin{equation*}
+\begin{pmatrix}
+6 & 0 & 2 & 1 & 0\\
+0 & 4 & 0 & 1 & 1\\
+2 & 0 & 6 & 2 & 1\\
+1 & 1 & 2 & 0 & 0\\
+0 & 1 & 1 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+x_1\\ x_2\\ x_3\\ \lambda_1\\ \lambda_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+3\\ 2\\ -7\\ 0\\ 2
+\end{pmatrix},
+\end{equation*}
+where the right-hand side comes from $Qx + C^\top\lambda = -c$ and $Cx = d$.
+
+We now solve this linear system using Gaussian elimination.
+The augmented matrix is
+\begin{equation*}
+\left[
+\begin{array}{ccccc|c}
+6 & 0 & 2 & 1 & 0 & 3\\
+0 & 4 & 0 & 1 & 1 & 2\\
+2 & 0 & 6 & 2 & 1 & -7\\
+1 & 1 & 2 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0 & 2
+\end{array}
+\right].
+\end{equation*}
+Applying Gaussian elimination (row operations), we reduce it to row-echelon form and then to reduced row-echelon form.
+The resulting matrix is
+\begin{equation*}
+\left[
+\begin{array}{ccccc|c}
+1 & 0 & 0 & 0 & 0 & -1\\
+0 & 1 & 0 & 0 & 0 & 3\\
+0 & 0 & 1 & 0 & 0 & -1\\
+0 & 0 & 0 & 1 & 0 & 11\\
+0 & 0 & 0 & 0 & 1 & -21
+\end{array}
+\right],
+\end{equation*}
+which is the reduced row-echelon form of the KKT system.
+
+From this we read off the unique solution
+\begin{equation*}
+x_1^\star = -1,\qquad x_2^\star = 3,\qquad x_3^\star = -1,
+\end{equation*}
+and the corresponding Lagrange multipliers
+\begin{equation*}
+\lambda_1^\star = 11,\qquad \lambda_2^\star = -21.
+\end{equation*}
+One can verify that the constraints are satisfied:
+\begin{align*}
+x_1^\star + x_2^\star + 2x_3^\star &= -1 + 3 + 2(-1) = 0,\\
+x_2^\star + x_3^\star &= 3 + (-1) = 2.
+\end{align*}
+Since $Q$ is positive definite, the quadratic objective is strictly convex and the KKT conditions are sufficient for optimality. Therefore $x^\star = (-1,3,-1)^\top$ is the unique minimizer of the problem.
+
+The minimal objective value is
+\begin{equation*}
+f(x^\star)
+= (-3\ -2\ 7)x^\star + \tfrac12 (x^\star)^\top Q x^\star
+= 16.
+\end{equation*}
+
+\end{document}
