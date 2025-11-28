@@ -2,7 +2,15 @@
 
 ## Theory
 
-Done by: 
+### Problem 1: Constraints Elimination (0.5 pt)
+
+Done by: Benjamin Labrecque
+
+Solved by applying the ideas from the lecture slides.
+
+### Problem 2: Solving the KKT system (0.5 pt)
+
+Done by: Horacio Lisdero
 
 Solved by applying the ideas from the lecture slides.
 
@@ -12,14 +20,13 @@ Solved by applying the ideas from the lecture slides.
 
 Done by: Beñat Solaegui
 
-Solved by implementing the algorithm described in the lecture slides. 
+Solved by implementing the algorithm described in the lecture slides.
 
 ### Hybrid Newton Method (Bonus 0.5 pt)
 
 Done by: Beñat Solaegui
 
 The algorithm was not explicitly given in the slides. I implemented it like this: when the iterate is infeasible (Ax-b larger than epsilon), it performs an infeasible-step Newton update. Once the iterate is sufficiently feasible, it switches to a feasible-step Newton update.
-
 
 Ran the executable `EqualityConstrainedNewtonInfeasibleStart` for the three methods (fesible start, infeasible start and hybrid).
 See the images in `assets/screenshots` and time statistics in `assets/statistics.txt`.
