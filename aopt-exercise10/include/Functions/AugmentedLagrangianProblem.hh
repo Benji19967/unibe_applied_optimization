@@ -42,7 +42,13 @@ namespace AOPT {
 
             //------------------------------------------------------//
             //TODO: accumulate function values (objective function + constraint functions (including squared ones))
-            
+
+            energy += obj_->eval_f(_x);
+            for (size_t i = 0; i < constraints_.size(); i++) {
+              double hi = constraints_[i]->eval_f(_x);
+              energy += nu_[i] * hi;
+              energy += mu_over_2_ * squared_constraints_[i]->eval_f(_x);
+            }
             
             //------------------------------------------------------//
 
@@ -56,6 +62,16 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: accumulate gradients (objective function + constraint functions (including squared ones))
             
+            obj_->eval_gradient(_x, g_);
+            _g += g_;
+
+            for (size_t i = 0; i < constraints_.size(); i++) {
+              constraints_[i]->eval_gradient(_x, g_);
+              _g += nu_[i] * g_;
+
+              squared_constraints_[i]->eval_gradient(_x, g_);
+              _g += mu_over_2_ * g_;
+            }
             
             //------------------------------------------------------//
         }
@@ -68,7 +84,17 @@ namespace AOPT {
 
             //------------------------------------------------------//
             //TODO: accumulate hessian matrices (objective function + constraint functions (including squared ones))
-            
+
+            obj_->eval_hessian(_x, h_);
+            _h += h_;
+
+            for (size_t i = 0; i < constraints_.size(); i++) {
+              constraints_[i]->eval_hessian(_x, h_);
+              _h += nu_[i] * h_;
+
+              squared_constraints_[i]->eval_hessian(_x, h_);
+              _h += mu_over_2_ * h_;
+            }
             
             //------------------------------------------------------//
         }
