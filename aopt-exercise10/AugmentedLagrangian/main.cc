@@ -43,12 +43,13 @@ int main(int _argc, const char* _argv[]) {
 
     filename += "_opt";
 
-
+    opt_st->start_recording();
     AOPT::AugmentedLagrangian::Vec x = AOPT::AugmentedLagrangian::solve(opt_st.get(),
                                                                         start_pts,
                                                                         mss.get_constraints(),
                                                                         mss.get_constraints_squared(),
                                                                         1e-4, 1e-4, max_iter);
+    opt_st->print_statistics();
 
     mss.set_spring_graph_points(x);
     std::cout<<"Saving optimized spring graph to "<<filename<<"_*.csv"<<std::endl;

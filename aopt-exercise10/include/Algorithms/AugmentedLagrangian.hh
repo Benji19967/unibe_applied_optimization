@@ -4,6 +4,7 @@
 #include <Functions/AugmentedLagrangianProblem.hh>
 #include <Utils/OptimizationStatistic.hh>
 #include <Algorithms/NewtonMethods.hh>
+#include <iostream>
 #include "LBFGS.hh"
 
 
@@ -62,6 +63,36 @@ namespace AOPT {
             //          class to apply the change of nu and mu
             
             //------------------------------------------------------//
+
+            int iter = 0;
+            do {
+              iter++;
+
+              bool converged = false;
+              x = AOPT::NewtonMethods::solve_with_projected_hessian(&problem, converged, x, 10.0, tau);
+
+              for (size_t i = 0; i < _constraints.size(); i++) {
+                h[i] = _constraints[i]->eval_f(x);
+              }
+              hnorm = h.norm();
+              if (hnorm <= eta) {
+                problem.eval_gradient(x, g);
+                if (hnorm < _eta && g.norm() <= _tau) {
+                  return x;
+                }
+                nu = nu + mu * h;
+                eta = eta / std::pow(mu, 0.9);
+                tau = tau / mu;
+              } else {
+                mu = 100 * mu;
+                eta = 1 / std::pow(mu, 0.1);
+                tau = 1 / mu;
+              }
+              problem.set_mu(mu);
+              problem.set_nu(nu);
+            } while (iter < _max_iters);
+
+            std::cout << "Stopped after " << iter << " iterations" << std::endl;
 
             opt_st->print_statistics();
 

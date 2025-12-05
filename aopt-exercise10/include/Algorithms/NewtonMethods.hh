@@ -158,7 +158,7 @@ namespace AOPT {
                 int cnt = 0;
                 double delta = 0.;
                 
-                std::cout<<" H = "<<H<<std::endl;
+                // std::cout<<" H = "<<H<<std::endl;
 
 
                 solver.compute(H);
