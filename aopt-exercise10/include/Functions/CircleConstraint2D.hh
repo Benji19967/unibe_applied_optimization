@@ -36,8 +36,8 @@ namespace AOPT {
             _g.setZero();
             //------------------------------------------------------//
             //Todo: implement the gradient and store in _g
-            _g[0] = 2*(_x[2*idx_] - center_x_);
-            _g[1] = 2*(_x[2*idx_+1] - center_y_);
+            _g[2*idx_] = 2*(_x[2*idx_] - center_x_);
+            _g[2*idx_ + 1] = 2*(_x[2*idx_+1] - center_y_);
             //------------------------------------------------------//
         }
 
@@ -48,10 +48,10 @@ namespace AOPT {
             //------------------------------------------------------//
             //Todo: implement the hessian matrix and store in _h
             std::vector<T> triplets;
-            triplets.push_back(T(0, 0, 2));
-            triplets.push_back(T(0, 1, 0));
-            triplets.push_back(T(1, 0, 0));
-            triplets.push_back(T(1, 1, 2));
+            triplets.push_back(T(2*idx_, 2*idx_, 2));
+            triplets.push_back(T(2*idx_, 2*idx_+1, 0));
+            triplets.push_back(T(2*idx_+1, 2*idx_, 0));
+            triplets.push_back(T(2*idx_+1, 2*idx_+1, 2));
             _h.setFromTriplets(triplets.begin(), triplets.end());
             //------------------------------------------------------//
         }
