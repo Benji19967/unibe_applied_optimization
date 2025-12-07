@@ -100,4 +100,281 @@ x_{\text{feasible}} = \begin{pmatrix}2\\[0.2em]2\end{pmatrix},
 \]
 which satisfies all original constraints and can be used to start the active-set method.
 
+\section*{"Big M" method for initial feasible point (Bonus 0.5 pt)}
+
+We introduce the variable
+\[
+z := \begin{pmatrix}x\\y\\s\end{pmatrix} \in \mathbb{R}^3
+\]
+and rewrite the Big M formulation as a quadratic program of the form
+\[
+\min_{z} \; \frac12 z^\top Q z + q^\top z + r
+\quad\text{subject to}\quad
+Bz \le b.
+\]
+
+The Big M objective is
+\[
+F_M(x,y,s) = (x-1)^2 + (y-2.5)^2 + 100\,s,
+\]
+so
+\[
+Q = \begin{pmatrix}
+2 & 0 & 0\\
+0 & 2 & 0\\
+0 & 0 & 0
+\end{pmatrix},\qquad
+q = \begin{pmatrix}-2\\-5\\100\end{pmatrix},\qquad
+r = 7.25.
+\]
+
+The constraints
+\[
+\begin{aligned}
+&-x + 2y - 2 \le s,\\
+&x + 2y - 6 \le 0,\\
+&x - 2y - 2 \le 0,\\
+&-x \le 0,\quad -y \le 0,\quad s \ge 0
+\end{aligned}
+\]
+are written as
+\[
+Bz \le b,\quad B\in\mathbb{R}^{6\times 3},\; b\in\mathbb{R}^6,
+\]
+with rows
+\[
+B =
+\begin{pmatrix}
+-1 & 2  & -1\\
+ 1 & 2  &  0\\
+ 1 & -2 &  0\\
+-1 & 0  &  0\\
+ 0 & -1 &  0\\
+ 0 & 0  & -1
+\end{pmatrix},\qquad
+b = \begin{pmatrix}2\\6\\2\\0\\0\\0\end{pmatrix}.
+\]
+
+The starting point is
+\[
+z_0 = \begin{pmatrix}1\\[0.1em]2.5\\[0.1em]2\end{pmatrix},
+\]
+for which
+\[
+Bz_0 - b = \begin{pmatrix}
+0\\[0.1em]0\\[0.1em]-6\\[0.1em]-1\\[0.1em]-2.5\\[0.1em]-2
+\end{pmatrix}\le 0,
+\]
+so \(z_0\) is feasible and constraints 1 and 2 are active:
+\[
+\mathcal{A}_0 = \{1,2\}.
+\]
+
+\subsection*{Active-set method for the Big M QP}
+
+For a given active set \(\mathcal{A}_k\), let \(B_k\) and \(b_k\) collect the
+corresponding rows of \(B\) and entries of \(b\). The active-set subproblem is
+\[
+\min_{z} \;\frac12 z^\top Q z + q^\top z + r
+\quad\text{s.t.}\quad B_k z = b_k,
+\]
+whose KKT system is
+\[
+\begin{pmatrix}
+Q & B_k^\top\\
+B_k & 0
+\end{pmatrix}
+\begin{pmatrix}
+z_{k+1}^{\text{cand}}\\[0.2em] \lambda_{k+1,\mathcal{A}_k}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-q\\[0.2em] b_k
+\end{pmatrix}.
+\]
+This gives a candidate point \(z_{k+1}^{\text{cand}}\); the search direction is
+\(
+p_k = z_{k+1}^{\text{cand}} - z_k
+\),
+and we choose a step length \(\alpha_k\in(0,1]\) so that
+\(z_k + \alpha_k p_k\) remains feasible. If \(\alpha_k < 1\), a new constraint
+becomes active. If \(p_k = 0\), we inspect the multipliers and possibly drop a
+constraint with negative multiplier.
+
+\paragraph{Iteration 0.}
+Active set: \(\mathcal{A}_0 = \{1,2\}\), so
+\[
+B_0 = \begin{pmatrix}
+-1 & 2 & -1\\
+ 1 & 2 &  0
+\end{pmatrix},\qquad
+b_0 = \begin{pmatrix}2\\6\end{pmatrix}.
+\]
+The KKT system
+\[
+\begin{pmatrix}
+Q & B_0^\top\\
+B_0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+z_1^{\text{cand}}\\ \lambda_{1,\mathcal{A}_0}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-q\\ b_0
+\end{pmatrix}
+\]
+yields
+\[
+z_1^{\text{cand}} = \begin{pmatrix}81\\[0.1em]-37.5\\[0.1em]-158\end{pmatrix},
+\qquad
+\lambda_{1,1} = 100,\;\lambda_{1,2} = -60.
+\]
+The search direction is
+\[
+p_0 = z_1^{\text{cand}} - z_0
+    = \begin{pmatrix}80\\[0.1em]-40\\[0.1em]-160\end{pmatrix}.
+\]
+
+The inactive constraints along \(z(\alpha)=z_0+\alpha p_0\) satisfy
+\[
+\begin{pmatrix}
+160\alpha-6\\[0.1em]-80\alpha-1\\[0.1em]40\alpha-2.5\\[0.1em]160\alpha-2
+\end{pmatrix}\le 0,
+\]
+which gives
+\[
+\alpha_0 \le \min\!\left\{\frac{6}{160},\frac{2.5}{40},\frac{2}{160}\right\}
+= \frac{1}{80}.
+\]
+The blocking constraint is 6, so \(\alpha_0 = 1/80\) and
+\[
+z_1 = z_0 + \alpha_0 p_0
+    = \begin{pmatrix}2\\[0.1em]2\\[0.1em]0\end{pmatrix}.
+\]
+At \(z_1\),
+\(
+Bz_1 - b = (0,0,-4,-2,-2,0)^\top
+\),
+so
+\[
+\mathcal{A}_1 = \{1,2,6\}.
+\]
+
+\paragraph{Iteration 1.}
+With \(\mathcal{A}_1 = \{1,2,6\}\),
+\[
+B_1 = \begin{pmatrix}
+-1 & 2 & -1\\
+ 1 & 2 &  0\\
+ 0 & 0 & -1
+\end{pmatrix},\qquad
+b_1 = \begin{pmatrix}2\\6\\0\end{pmatrix}.
+\]
+Solving
+\[
+\begin{pmatrix}
+Q & B_1^\top\\
+B_1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+z_2^{\text{cand}}\\ \lambda_{2,\mathcal{A}_1}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-q\\ b_1
+\end{pmatrix}
+\]
+gives
+\[
+z_2^{\text{cand}} = \begin{pmatrix}2\\[0.1em]2\\[0.1em]0\end{pmatrix}
+= z_1,\qquad
+\lambda_{2,1} = \tfrac{5}{4},\;
+\lambda_{2,2} = -\tfrac{3}{4},\;
+\lambda_{2,6} = \tfrac{395}{4}.
+\]
+Hence \(p_1 = 0\). Since one multiplier is negative (\(\lambda_{2,2}<0\)),
+constraint 2 is removed from the active set:
+\[
+\mathcal{A}_2 = \{1,6\},\qquad z_2 := z_1.
+\]
+
+\paragraph{Iteration 2.}
+Now
+\[
+B_2 = \begin{pmatrix}
+-1 & 2 & -1\\
+ 0 & 0 & -1
+\end{pmatrix},\qquad
+b_2 = \begin{pmatrix}2\\0\end{pmatrix}.
+\]
+The KKT system
+\[
+\begin{pmatrix}
+Q & B_2^\top\\
+B_2 & 0
+\end{pmatrix}
+\begin{pmatrix}
+z_3^{\text{cand}}\\ \lambda_{3,\mathcal{A}_2}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-q\\ b_2
+\end{pmatrix}
+\]
+yields
+\[
+z_3^{\text{cand}} =
+\begin{pmatrix}
+\frac{7}{5}\\[0.1em]\frac{17}{10}\\[0.1em]0
+\end{pmatrix},\qquad
+\lambda_{3,1} = \frac{4}{5},\;
+\lambda_{3,6} = \frac{496}{5}.
+\]
+The search direction is
+\[
+p_2 = z_3^{\text{cand}} - z_2
+    = \begin{pmatrix}-\tfrac{3}{5}\\[0.1em]-\tfrac{3}{10}\\[0.1em]0\end{pmatrix}.
+\]
+
+Along \(z(\alpha)=z_2+\alpha p_2\), the inactive constraints satisfy
+\[
+\begin{pmatrix}
+-\tfrac{6}{5}\alpha\\[0.1em]-4\\[0.1em]\tfrac{3}{5}\alpha-2\\[0.1em]\tfrac{3}{10}\alpha-2
+\end{pmatrix}\le 0
+\]
+for all \(\alpha\in[0,1]\). Thus no new constraint blocks the step and we take
+\(\alpha_2 = 1\):
+\[
+z_3 = z_2 + p_2 =
+\begin{pmatrix}
+\frac{7}{5}\\[0.1em]\frac{17}{10}\\[0.1em]0
+\end{pmatrix}.
+\]
+At \(z_3\),
+\(
+Bz_3 - b = (0,-\tfrac{6}{5},-4,-\tfrac{7}{5},-\tfrac{17}{10},0)^\top
+\),
+so
+\[
+\mathcal{A}_3 = \{1,6\}.
+\]
+
+\paragraph{Iteration 3 (optimality).}
+Solving the KKT system again with \(\mathcal{A}_3 = \{1,6\}\) returns
+\[
+z_4^{\text{cand}} = z_3,\qquad
+\lambda_{4,1} = \frac{4}{5},\;
+\lambda_{4,6} = \frac{496}{5},
+\]
+so \(p_3 = 0\) and all multipliers of active constraints are nonnegative.
+Therefore the KKT conditions are satisfied and the active-set method terminates
+at
+\[
+(x^\star,y^\star,s^\star) =
+\left(\frac{7}{5},\,\frac{17}{10},\,0\right) = \left(1.4, 1.7, 0\right).
+\]
+
+This matches the solution we found in the first exercise as expected.
+
 \end{document}
