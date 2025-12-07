@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\begin{document}
+
+\section*{“Phase I” method for initial feasible point (0.25 pt)}
+
+We consider the original constraints:
+\[
+\begin{aligned}
+\text{(C1)}\;& x - 2y + 2 \ge 0,\\
+\text{(C2)}\;& -x - 2y + 6 \ge 0,\\
+\text{(C3)}\;& -x + 2y + 2 \ge 0,\\
+\text{(C4)}\;& x \ge 0,\\
+\text{(C5)}\;& y \ge 0.
+\end{aligned}
+\]
+
+Given the starting point
+\[
+x_{0} = \begin{pmatrix}1\\[0.2em]2.5\end{pmatrix},
+\]
+we first check feasibility:
+\[
+\begin{aligned}
+\text{C1: } &1 - 2\cdot 2.5 + 2 = -2 \quad (\text{violated by }2),\\
+\text{C2: } &-1 - 2\cdot 2.5 + 6 = 0 \quad (\text{active}),\\
+\text{C3: } &-1 + 2\cdot 2.5 + 2 = 6 \quad (>0),\\
+\text{C4: } &1 \ge 0,\qquad
+\text{C5: } 2.5 \ge 0.
+\end{aligned}
+\]
+Only Constraint (C1) is violated.
+
+\subsection*{Phase I reformulation}
+
+Introduce the slack variable \(s \ge 0\) to account for infeasibility and modify the constraints to follow the convention used in the lecture:
+\[
+\begin{aligned}
+\min_{x,y,s}\quad & s\\[0.3em]
+\text{s.t.}\quad
+& -x + 2y - 2 \le s,\\
+& x + 2y - 6 \le 0,\\
+& x - 2y - 2 \le 0,\\
+& -x \le 0,\quad -y \le 0,\quad s \ge 0.
+\end{aligned}
+\]
+
+Choose \(s_{0} = 2 = \max(0, g_1(x_{0}))\) so that Constraint (C1) becomes satisfied at the starting point:
+\[
+-1 + 2\cdot 2.5 - 2 = 2.
+\]
+Thus \((x_{0}, y_{0}, s_{0}) = (1,\, 2.5,\, 2)\) is feasible for the Phase I problem.
+
+\subsection*{Solving Phase I}
+
+Because the original problem is feasible, the minimum of Phase I is \(s^\star = 0\), attained at any point satisfying (C1)–(C5).
+
+A suitable feasible point is found by intersecting (C1) and (C2):
+\[
+\begin{cases}
+-x + 2y - 2 = 0,\\
+x + 2y - 6 = 0.
+\end{cases}
+\]
+Solve the system:
+\[
+x = 2y - 2,
+\]
+\[
+(2y - 2) + 2y - 6 = 0
+\;\Rightarrow\; 4y - 8 = 0
+\;\Rightarrow\; y = 2,
+\]
+\[
+x = 2\cdot 2 - 2 = 2.
+\]
+
+Thus the candidate point is:
+\[
+(x,y,s) = (2,2,0).
+\]
+
+Check feasibility:
+\[
+\begin{aligned}
+\text{C1: } &2 - 2\cdot 2 + 2 = 0 \ge 0,\\
+\text{C2: } &-2 - 2\cdot 2 + 6 = 0 \ge 0,\\
+\text{C3: } &-2 + 2\cdot 2 + 2 = 4 \ge 0,\\
+\text{C4: } &2 \ge 0,\qquad
+\text{C5: } 2 \ge 0,\\
+s &= 0.
+\end{aligned}
+\]
+
+Thus, a valid feasible point for the original problem, produced by the Phase I method, is
+\[
+x_{\text{feasible}} = \begin{pmatrix}2\\[0.2em]2\end{pmatrix},
+\]
+which satisfies all original constraints and can be used to start the active-set method.
+
+\end{document}
