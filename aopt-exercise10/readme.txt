@@ -2,17 +2,19 @@
 
 ## Active set method for convex quadratic problem (0.75 pt)
 
-Done by: 
-
+Done by: Beñat Solaegui
 
 ## ”Phase I” method for initial feasible point (0.25 pt)
 
-Done by: 
+Done by: Horacio Lisdero
 
+Solved by running the algorithm described in the lecture slides. Use matrixcalc.org and Wolfram Alpha for the calculations.
 
 ## ”Big M” method for initial feasible point (Bonus 0.5 pt)
 
-Done by:
+Done by: Horacio Lisdero
+
+Solved by running the algorithm described in the lecture slides. Use matrixcalc.org and Wolfram Alpha for the calculations.
 
 ## Programming (1 pt)
 
