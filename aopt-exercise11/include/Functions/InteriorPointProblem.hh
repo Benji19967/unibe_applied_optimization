@@ -32,7 +32,13 @@ namespace AOPT {
         virtual double eval_f(const Vec &_x) override {
             //------------------------------------------------------//
             //TODO: add function value (objective function + barrier function)
-            
+            double value = (-t_) * obj_->eval_f(_x);  // The -t term will be cancelled later
+
+            for (size_t i = 0; i < constraints_.size(); ++i) {
+                value += log_of_minus_function(constraints_[i], _x);
+            }
+            // Divide once here, thus saving us having to divide n times in the for loop
+            return value / (-t_);
             //------------------------------------------------------//
         }
 
@@ -40,8 +46,15 @@ namespace AOPT {
         virtual void eval_gradient(const Vec &_x, Vec &_g) override {
             //------------------------------------------------------//
             //TODO: add gradients (objective function + barrier function)
-        
+            obj_->eval_gradient(_x, _g);
             
+            _g *= (-t_); // The -t term will be cancelled later
+
+            for (size_t i = 0; i < constraints_.size(); ++i) {
+                add_grad_of_log_of_function(constraints_[i], _x, _g);
+            }
+            // Divide once here, thus saving us having to divide n times in the for loop
+            _g /= (-t_);
             //------------------------------------------------------//
         }
 
@@ -49,8 +62,15 @@ namespace AOPT {
         virtual void eval_hessian(const Vec &_x, SMat &_H) override {
             //------------------------------------------------------//
             //TODO: add hessian matrices (objective function + barrier function)
-            
+            obj_->eval_hessian(_x, _H);  
 
+            _H *= (-t_); // The -t term will be cancelled later
+
+            for (size_t i = 0; i < constraints_.size(); ++i) {
+                add_hess_of_log_of_function(constraints_[i], _x, _H);
+            }
+            // Divide once here, thus saving us having to divide n times in the for loop
+            _H /= (-t_);
             //------------------------------------------------------//
         }
 
