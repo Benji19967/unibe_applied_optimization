@@ -38,8 +38,30 @@ namespace AOPT {
             //------------------------------------------------------//
             //TODO: implement the interior point method
             //Hint: Use projected newton method to solve for an approximated x.
-            
-            
+            bool converged = false;
+
+            for (; iter < _max_iters; ++iter) {
+                problem.t() = t;  // Set the t for the problem explicitly!
+                x = NewtonMethods::solve_with_projected_hessian(opt_st.get(), converged, x, 10., _eps, _max_iters);
+
+                // Sanity check, report the situation at least
+                if (!converged) {
+                    std::cerr << "NewtonMethods::solve_with_projected_hessian did not converge in solver for Interior Point Problem";
+                }
+
+                // stopping criterion from lecture
+                if (m / t < _eps)
+                    break;
+
+                // print status
+                std::cerr << "----------> IP iter: " << iter <<
+                          "   obj = " << opt_st->eval_f(x) <<
+                          "   t = " << t << 
+                          "   _mu = " << _mu << std::endl << std::endl;
+
+                // Update barrier parameter
+                t *= _mu;
+            }
             //------------------------------------------------------//
 
             opt_st->print_statistics();
