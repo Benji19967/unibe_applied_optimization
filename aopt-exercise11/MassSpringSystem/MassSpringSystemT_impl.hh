@@ -171,9 +171,18 @@ namespace AOPT {
         //                /  |
         //              /    |
         //          2 o----- o 0
-
-        
-        
+        for(size_t i = 0; i < n_grid_x_; ++i) {
+            for (size_t j = 0; j < n_grid_y_; ++j){
+                // Triangle with right angle at bottom left
+                area_constraints_.emplace_back(n_unknowns_, get_grid_index(i,   j),   get_grid_index(i+1, j  ), get_grid_index(i,   j+1));
+                // Triangle with right angle at bottom right
+                area_constraints_.emplace_back(n_unknowns_, get_grid_index(i+1, j),   get_grid_index(i+1, j+1), get_grid_index(i,   j));
+                // Triangle with right angle at top right
+                area_constraints_.emplace_back(n_unknowns_, get_grid_index(i+1, j+1), get_grid_index(i,   j+1), get_grid_index(i+1, j));
+                // Triangle with right angle at top left
+                area_constraints_.emplace_back(n_unknowns_, get_grid_index(i, j+1),   get_grid_index(i,   j  ), get_grid_index(i+1, j+1));
+            }
+        }
         //------------------------------------------------------//
 
 
