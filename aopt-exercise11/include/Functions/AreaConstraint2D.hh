@@ -23,8 +23,13 @@ namespace AOPT {
         inline virtual double eval_f(const Vec &_x) override {
             //------------------------------------------------------//
             //Todo: implement the constraint function value
-            
-            
+            // Define the three points (x, y) of the triangle
+            double x0(_x[2*idx0_]), y0(_x[2*idx0_+1]);
+            double x1(_x[2*idx1_]), y1(_x[2*idx1_+1]);
+            double x2(_x[2*idx2_]), y2(_x[2*idx2_+1]);
+
+            double determinant = (x1 - x0)*(y2 - y0) - (y1 - y0)*(x2 - x0);
+            return -0.5 * determinant + eps_;
             //------------------------------------------------------//
         }
 
@@ -33,8 +38,19 @@ namespace AOPT {
             _g.setZero();
             //------------------------------------------------------//
             //Todo: implement the gradient and store in _g
-            
-            
+            // Define the three points (x, y) of the triangle
+            double x0(_x[2*idx0_]), y0(_x[2*idx0_+1]);
+            double x1(_x[2*idx1_]), y1(_x[2*idx1_+1]);
+            double x2(_x[2*idx2_]), y2(_x[2*idx2_+1]);
+
+            _g[2*idx0_] = y1-y2;
+            _g[2*idx0_+1] = x2-x1;
+            _g[2*idx1_] = y2-y0;
+            _g[2*idx1_+1] = x0-x2;
+            _g[2*idx2_] = y0-y1;
+            _g[2*idx2_+1] = x1-x0;
+
+            _g *= -0.5;
             //------------------------------------------------------//
         }
 
@@ -43,7 +59,27 @@ namespace AOPT {
             _h.setZero();
             //------------------------------------------------------//
             //Todo: implement the hessian matrix and store in _h
-            
+
+            // Second derivatives of _g[2*idx0_] with respect to y1 and y2
+            _h.insert(2*idx0_, 2*idx1_+1) =  1;
+            _h.insert(2*idx0_, 2*idx2_+1) = -1;
+            // Second derivatives of _g[2*idx0_+1] with respect to x1 and x2
+            _h.insert(2*idx0_+1, 2*idx1_) = -1;
+            _h.insert(2*idx0_+1, 2*idx2_) =  1;
+            // Second derivatives of _g[2*idx1_] with respect to y0 and y1
+            _h.insert(2*idx1_, 2*idx0_+1) = -1;
+            _h.insert(2*idx1_, 2*idx2_+1) =  1;
+            // Second derivatives of _g[2*idx1_+1] with respect to x0 and x2
+            _h.insert(2*idx1_+1, 2*idx0_) =  1;
+            _h.insert(2*idx1_+1, 2*idx2_) = -1;
+            // Second derivatives of _g[2*idx2_] with respect to y0 and y1
+            _h.insert(2*idx2_, 2*idx0_+1) =  1;
+            _h.insert(2*idx2_, 2*idx1_+1) = -1;
+            // Second derivatives of _g[2*idx2_+1] with respect to x0 and x1
+            _h.insert(2*idx2_+1, 2*idx0_) = -1;
+            _h.insert(2*idx2_+1, 2*idx1_) =  1;
+
+            _h *= -0.5;
             //------------------------------------------------------//
         }
 
